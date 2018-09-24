@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    siteUrl: 'https://ppl.netlify.com',
+    title: 'Gatsby + Netlify CMS Starter'
   },
   plugins: [
     'gatsby-plugin-catch-links',
