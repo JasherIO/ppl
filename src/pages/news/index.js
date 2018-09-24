@@ -11,7 +11,7 @@ export default class NewsPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <Layout helmet="News | PPL" title="Latest News">
+      <Layout helmet="News" title="Latest News">
         {posts
           .map(({ node: post }) => (
             <Content style={{ border: '1px solid #eaecee', padding: '2em 4em' }}

@@ -13,7 +13,7 @@ library.add(fab)
 const TemplateWrapper = ({ children, helmet, title }) => (
   <div>
     { helmet && helmet.length > 0
-      ? <Helmet title={helmet} />
+      ? <Helmet title={`${helmet} | PPL`} />
       : <Helmet title="Pulsar Premier League" />
     }
     <Navbar />
