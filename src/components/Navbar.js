@@ -9,6 +9,7 @@ import { Container,
          NavbarMenu,
          NavbarStart } from 'bloomer'
 import { Link } from 'gatsby'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Nav extends React.Component {
   constructor(props) { 
@@ -48,12 +49,17 @@ class Nav extends React.Component {
               </NavbarDropdown>
             </NavbarItem> */}
 
-            {/* <NavbarItem href='https://twitter.com/pulsarpremierleague'>
-              <FontAwesomeIcon icon={['fab', 'github']} />
-            </NavbarItem> */}
-            {/* <NavbarItem href='https://twitter.com/pulsarpremierleague'>
+            <NavbarItem href='https://discord.gg/fV4VrQ4' isHidden='desktop'>
+              <FontAwesomeIcon icon={['fab', 'discord']} />
+            </NavbarItem>
+
+            <NavbarItem href='https://twitch.tv/pulsarpremierleague' isHidden='desktop'>
+              <FontAwesomeIcon icon={['fab', 'twitch']} />
+            </NavbarItem>
+            
+            <NavbarItem href='https://twitter.com/pulsarpremierleague' isHidden='desktop'>
               <FontAwesomeIcon icon={['fab', 'twitter']} />
-            </NavbarItem> */}
+            </NavbarItem>
 
             <NavbarBurger isActive={this.state.isActive} onClick={this.onClickNav} />
           </NavbarBrand>
@@ -83,7 +89,17 @@ class Nav extends React.Component {
 
             </NavbarStart>
             <NavbarEnd>
-              {/* <NavbarItem href='#/'>Home</NavbarItem> */}
+              <NavbarItem href='https://discord.gg/fV4VrQ4' isHidden='touch'>
+                <FontAwesomeIcon icon={['fab', 'discord']} />
+              </NavbarItem>
+
+              <NavbarItem href='https://twitch.tv/pulsarpremierleague' isHidden='touch'>
+                <FontAwesomeIcon icon={['fab', 'twitch']} />
+              </NavbarItem>
+              
+              <NavbarItem href='https://twitter.com/pulsarpremierleague' isHidden='touch'>
+                <FontAwesomeIcon icon={['fab', 'twitter']} />
+              </NavbarItem>
             </NavbarEnd>
           </NavbarMenu>
         </Container>
