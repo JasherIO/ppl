@@ -3,15 +3,17 @@ import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
+// import { Image } from 'bloomer'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
 export const BlogPostTemplate = ({
   content,
   contentComponent,
-  description,
-  tags,
+  // description,
+  cover,
   title,
+  tags,
   helmet,
 }) => {
   const PostContent = contentComponent || Content
@@ -22,10 +24,12 @@ export const BlogPostTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
+            <figure className="image">
+              <img src={cover} style={{ boxShadow: '1px 1px 3px 0px rgba(0,0,0,0.75)'}} alt="Cover" />
+            </figure>
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <p>{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -49,8 +53,10 @@ export const BlogPostTemplate = ({
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
+  // description: PropTypes.string,
+  cover: PropTypes.string,
   title: PropTypes.string,
+  tags: PropTypes.string,
   helmet: PropTypes.instanceOf(Helmet),
 }
 
@@ -62,10 +68,11 @@ const BlogPost = ({ data }) => {
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
-        helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}
-        tags={post.frontmatter.tags}
+        // description={post.frontmatter.description}
+        cover={post.frontmatter.cover}
         title={post.frontmatter.title}
+        tags={post.frontmatter.tags}
+        helmet={<Helmet title={`${post.frontmatter.title} | PPL`} />}
       />
     </Layout>
   )
@@ -86,8 +93,8 @@ export const pageQuery = graphql`
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
+        cover
         title
-        description
         tags
       }
     }

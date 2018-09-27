@@ -25,7 +25,7 @@ export default class NewsPage extends React.Component {
                 <small>{post.frontmatter.date}</small>
               </p>
               <p>
-                {post.excerpt}
+                {post.frontmatter.description}
                 <br />
                 <br />
                 <Link to={post.fields.slug}>
@@ -63,8 +63,9 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            title
             templateKey
+            title
+            description
             date(formatString: "MMMM DD, YYYY")
           }
         }
