@@ -25,11 +25,11 @@ class Nav extends React.Component {
 
   render() {
     return (
-      <Navbar isTransparent className='is-dark'>
+      <Navbar isTransparent className=''>
         <Container isFluid>
           <NavbarBrand>
             <Link to='/' className='navbar-item'>
-              <img src="/img/white-transparent.png" alt="Logo"></img>
+              <img src="/img/purple-transparent.png" alt="Logo"></img>
             </Link>
 
             <NavbarItem href='https://discord.gg/fV4VrQ4' isHidden='desktop'>

@@ -1,21 +1,25 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import { Card, CardContent, CardImage } from 'bloomer'
 
 export default class IndexPage extends React.Component {
   render() {
     return (
       <Layout helmet="Home">
-        <Card style={{ borderRadius: '10px' }}>
-          <CardImage>
-            <figure className="image">
-              <img src='/img/register.png' alt="Cover" />
-            </figure>
-          </CardImage>
-          <CardContent>
-            Blah
-          </CardContent>
-        </Card>
+        <section className="hero is-primary is-medium has-bg-image">
+          <div className="hero-body">
+            <div className="container">
+              <div className="title">
+                Welcome to Pulsar Premier League!
+              </div>
+              <div className="subtitle">
+                Seasonal leagues, statistics, and more...
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+
+        </section>
       </Layout>
     )
   }
