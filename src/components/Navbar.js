@@ -77,7 +77,7 @@ class Nav extends React.Component {
                 <FontAwesomeIcon icon={['fab', 'twitch']} />
               </NavbarItem>
               
-              <NavbarItem href='https://twitter.com/pulsarpremierleague' isHidden='touch'>
+              <NavbarItem href='https://twitter.com/pulsarpremier' isHidden='touch'>
                 <FontAwesomeIcon icon={['fab', 'twitter']} />
               </NavbarItem>
             </NavbarEnd>
