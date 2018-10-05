@@ -5,6 +5,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import './all.sass'
 
 library.add(fab)
@@ -20,6 +21,7 @@ const TemplateWrapper = ({ children, helmet, title }) => (
       <div className="title is-2" style={{marginBottom: "1rem"}}>{title}</div>
     }
     {children}
+    <Footer />
   </div>
 )
 
