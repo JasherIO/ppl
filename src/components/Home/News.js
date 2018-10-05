@@ -40,7 +40,7 @@ const Card = ({ node: post }) => (
             <div className="level is-mobile">
               <div className="level-left">
                 <div className="level-item">
-                  <span className="is-uppercase has-text-weight-semibold">{post.frontmatter.category}</span>
+                  <span className="has-text-dark is-uppercase has-text-weight-bold">{post.frontmatter.category}</span>
                 </div>
               </div>
               <div className="level-right">
