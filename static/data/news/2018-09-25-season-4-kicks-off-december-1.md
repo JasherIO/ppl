@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 cover: '/img/GrandChampion.png'
-title: 'Season 4 Kicks off December 1st'
+title: 'S4 Kicks off December 1st'
 date: '2018-09-25T09:30:00-05:00'
 description: 'Season 4 Kicks off'
 category: 'News'
