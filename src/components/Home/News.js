@@ -72,7 +72,7 @@ const Section = ({ data }) => {
   )
 }
 
-export const query = graphql`
+const query = graphql`
   query {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
