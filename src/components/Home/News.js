@@ -31,12 +31,12 @@ const Card = ({ node: post }) => (
       </div>
       <div className="card-content">
         <div className="content">
-          <p className="title is-4">
+          <div className="title is-4">
             <Link to={post.fields.slug}>
               {post.frontmatter.title}
             </Link>
-          </p>
-          <p className="subtitle is-6">
+          </div>
+          <div className="subtitle is-6">
             <div className="level is-mobile">
               <div className="level-left">
                 <div className="level-item">
@@ -49,7 +49,7 @@ const Card = ({ node: post }) => (
                 </div>
               </div>
             </div>
-          </p>
+          </div>
         </div>
       </div>
     </div>

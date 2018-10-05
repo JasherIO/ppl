@@ -1,15 +1,22 @@
 import React from 'react'
-import { Container,
-         Navbar, 
-         NavbarBrand,
-         NavbarBurger,
-         NavbarDropdown,
-         NavbarEnd,
-         NavbarItem,
-         NavbarMenu,
-         NavbarStart } from 'bloomer'
 import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+const Social = ({ device }) => (
+  <>
+    <a className={`navbar-item is-hidden-${device}`} href='https://discord.gg/fV4VrQ4'>
+      <FontAwesomeIcon icon={['fab', 'discord']} />
+    </a>
+
+    <a className={`navbar-item is-hidden-${device}`} href='https://twitch.tv/pulsarpremierleague'>
+      <FontAwesomeIcon icon={['fab', 'twitch']} />
+    </a>
+
+    <a className={`navbar-item is-hidden-${device}`} href='https://twitter.com/pulsarpremier'>
+      <FontAwesomeIcon icon={['fab', 'twitter']} />
+    </a>
+  </>
+)
 
 class Nav extends React.Component {
   constructor(props) { 
@@ -25,65 +32,53 @@ class Nav extends React.Component {
 
   render() {
     return (
-      <Navbar isTransparent className=''>
-        <Container isFluid>
-          <NavbarBrand>
+      <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
+        <div className="container is-fluid">
+          
+          <div className="navbar-brand">
             <Link to='/' className='navbar-item'>
               <img src="/img/purple-transparent.png" alt="Logo"></img>
             </Link>
 
-            <NavbarItem href='https://discord.gg/fV4VrQ4' isHidden='desktop'>
-              <FontAwesomeIcon icon={['fab', 'discord']} />
-            </NavbarItem>
+            <Social device='desktop' />
 
-            <NavbarItem href='https://twitch.tv/pulsarpremierleague' isHidden='desktop'>
-              <FontAwesomeIcon icon={['fab', 'twitch']} />
-            </NavbarItem>
-            
-            <NavbarItem href='https://twitter.com/pulsarpremier' isHidden='desktop'>
-              <FontAwesomeIcon icon={['fab', 'twitter']} />
-            </NavbarItem>
+            <a role="button" className={this.state.isActive ? "navbar-burger burger is-active" : "navbar-burger burger"} onClick={this.onClickNav}>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
 
-            <NavbarBurger isActive={this.state.isActive} onClick={this.onClickNav} />
-          </NavbarBrand>
+          <div className="navbar-menu" className={this.state.isActive ? "navbar-menu is-active" : "navbar-menu"} onClick={this.onClickNav}>
 
-          <NavbarMenu isActive={this.state.isActive} onClick={this.onClickNav}>
-            <NavbarStart>
+            <div className="navbar-start">
               <Link to="/news" className='navbar-item' activeClassName="is-active">
                 News
               </Link>
-              
-              <NavbarItem hasDropdown isHoverable>
+
+              <div className="navbar-item has-dropdown is-hoverable">
                 <Link to="/premier" className='navbar-link' activeClassName="is-active">
                   Premier
                 </Link>
-                <NavbarDropdown isBoxed>
+                <div className="navbar-dropdown is-boxed">
                   <Link to="/premier/standings" className='navbar-item' activeClassName="is-active">
                     Standings
                   </Link>
                   <Link to="/premier/stats" className='navbar-item' activeClassName="is-active">
                     Stats
                   </Link>
-                </NavbarDropdown>
-              </NavbarItem>
+                </div>
+              </div>
+            </div>
 
-            </NavbarStart>
-            <NavbarEnd>
-              <NavbarItem href='https://discord.gg/fV4VrQ4' isHidden='touch'>
-                <FontAwesomeIcon icon={['fab', 'discord']} />
-              </NavbarItem>
+            <div className="navbar-end">
+              <Social device='touch' />
+            </div>
 
-              <NavbarItem href='https://twitch.tv/pulsarpremierleague' isHidden='touch'>
-                <FontAwesomeIcon icon={['fab', 'twitch']} />
-              </NavbarItem>
-              
-              <NavbarItem href='https://twitter.com/pulsarpremier' isHidden='touch'>
-                <FontAwesomeIcon icon={['fab', 'twitter']} />
-              </NavbarItem>
-            </NavbarEnd>
-          </NavbarMenu>
-        </Container>
-      </Navbar>
+          </div>
+
+        </div>
+      </nav>
     )
   }
 }

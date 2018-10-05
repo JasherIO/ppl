@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 
-import { Button, Content } from 'bloomer'
-
 export default class NewsPage extends React.Component {
   render() {
     const { data } = this.props
@@ -14,7 +12,7 @@ export default class NewsPage extends React.Component {
       <Layout helmet="News" title="Latest News">
         {posts
           .map(({ node: post }) => (
-            <Content style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
+            <div className="content" style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
               key={post.id}
             >
               <p>
@@ -29,12 +27,12 @@ export default class NewsPage extends React.Component {
                 <br />
                 <br />
                 <Link to={post.fields.slug}>
-                  <Button isSize='small'>
+                  <a className='button is-small'>
                     Keep Reading →
-                  </Button>
+                  </a>
                 </Link>
               </p>
-            </Content>
+            </div>
           ))}
       </Layout>
     )

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
-// import { Image } from 'bloomer'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
