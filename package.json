@@ -31,6 +31,7 @@
     "gatsby-transformer-sharp": "^2.1.1",
     "lodash": "^4.17.5",
     "lodash-webpack-plugin": "^0.11.4",
+    "momentjs": "^2.0.0",
     "netlify-cms": "^2.1.1",
     "node-sass": "^4.9.2",
     "parcel-bundler": "^1.9.4",
