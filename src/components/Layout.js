@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { Content } from 'bloomer'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 
@@ -18,9 +17,7 @@ const TemplateWrapper = ({ children, helmet, title }) => (
     }
     <Navbar />
     { title && title.length > 0 &&
-      <Content>
-        <h2 className="has-text-weight-bold is-size-2" style={{marginBottom: "1rem"}}>{title}</h2>
-      </Content>
+      <div className="title is-2" style={{marginBottom: "1rem"}}>{title}</div>
     }
     {children}
   </div>

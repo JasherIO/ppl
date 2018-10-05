@@ -46,6 +46,7 @@ export default class IndexPage extends React.Component {
         
         <section className="section">
           <div className="container">
+
             <div className="level">
               <div className="level-left">
                 <div className="level-item">
