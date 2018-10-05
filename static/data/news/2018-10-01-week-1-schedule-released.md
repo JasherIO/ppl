@@ -1,9 +1,10 @@
 ---
 templateKey: blog-post
-cover: /img/schedule.png
-title: Week 1 Schedule Released
-date: 2018-09-26T15:04:11.000Z
-description: Exciting matches abound in Week 1 of Season 4. Click here for the full details!
+cover: '/img/XDevil.jpg'
+title: 'Week 1 Schedule Released'
+date: '2018-10-01T09:30:00-05:00'
+description: 'Exciting matches abound in Week 1 of Season 4. Click here for the full details!'
+category: 'News'
 tags:
   - season 4
 ---

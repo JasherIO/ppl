@@ -1,10 +1,10 @@
 ---
-templateKey: 'blog-post'
-cover: /img/watch.png
-title: Watch Pulsar Premier League
-date: 2018-09-25T15:04:10.000Z
-description: >-
-  Tune into our Twitch channel for quality, high octane, competitive play!
+templateKey: blog-post
+cover: '/img/GrandChampion.png'
+title: 'Season 4 Kicks off December 1st'
+date: '2018-09-25T09:30:00-05:00'
+description: 'Season 4 Kicks off'
+category: 'News'
 tags:
   - season 4
 ---

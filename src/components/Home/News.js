@@ -1,30 +1,6 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql, StaticQuery } from 'gatsby'
 import moment from 'moment'
-
-const posts = [
-  {
-    'id': 1,
-    'img': '/img/Batmobile.jpg',
-    'title': 'Season 4: Week 1 In Review',
-    'category': 'Review',
-    'date': '2018-10-04 09:30:00+07:00'
-  },
-  {
-    'id': 2,
-    'img': '/img/XDevil.jpg',
-    'title': 'Week 1 Schedule Released',
-    'category': 'News',
-    'date': '2018-10-01 09:30:00+07:00'
-  },
-  {
-    'id': 3,
-    'img': '/img/GrandChampion.png',
-    'title': 'Season 4 Kicks Off December 1st!',
-    'category': 'News',
-    'date': '2018-09-25 09:30:00+07:00'
-  }
-]
 
 const Level = () => (
   <div className="level is-mobile">
@@ -43,21 +19,36 @@ const Level = () => (
   </div>
 )
 
-const Card = (post) => (
+const Card = ({ node: post }) => (
   <div className="column" key={post.id}>
     <div className="card">
       <div className="card-image">
         <figure className="image is-16by9">
-          <img src={post.img} />
+          <Link to={post.fields.slug}>
+            <img src={post.frontmatter.cover} alt={post.frontmatter.title} />
+          </Link>
         </figure>
       </div>
       <div className="card-content">
         <div className="content">
-          <p className="title is-4">{post.title}</p>
+          <p className="title is-4">
+            <Link to={post.fields.slug}>
+              {post.frontmatter.title}
+            </Link>
+          </p>
           <p className="subtitle is-6">
-            <span className="has-text-primary is-uppercase has-text-weight-semibold">{post.category}</span>
-            &nbsp;
-            <time dateTime={post.date} className="has-text-weight-light">{moment(post.date).fromNow()}</time>
+            <div className="level is-mobile">
+              <div className="level-left">
+                <div className="level-item">
+                  <span className="is-uppercase has-text-weight-semibold">{post.frontmatter.category}</span>
+                </div>
+              </div>
+              <div className="level-right">
+                <div className="level-item">
+                  <time dateTime={post.frontmatter.date} className="has-text-weight-light">{moment(post.frontmatter.date).fromNow()}</time>
+                </div>
+              </div>
+            </div>
           </p>
         </div>
       </div>
@@ -65,17 +56,47 @@ const Card = (post) => (
   </div>
 )
 
-const Section = () => (
-  <section className="section">
-    <div className="container">
-      <Level />
+const Section = ({ data }) => {
+  const { edges: posts } = data.allMarkdownRemark
 
-      <div className="columns">
-        {posts.map(Card)}
+  return (
+    <section className="section">
+      <div className="container">
+        <Level />
+
+        <div className="columns">
+          {posts.map(Card)}
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  )
+}
+
+export const query = graphql`
+  query {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] },
+      filter: { frontmatter: { templateKey: { eq: "blog-post" } }}
+      limit: 3
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            cover
+            category
+            date(formatString: "MMMM DD, YYYY")
+          }
+        }
+      }
+    }
+  }
+`
+
+export default props => (
+  <StaticQuery query={query} render={data => <Section data={data} {...props} />} />
 )
-
-export default Section
-

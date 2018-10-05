@@ -1,9 +1,10 @@
 ---
-templateKey: blog-post
-cover: /img/register.png
-title: Season 4 Registration Open
-date: 2018-09-26T15:04:10.000Z
-description: Join us for Season 4 of Pulsar Premier League, the community's premier source of league play events
+templateKey: 'blog-post'
+cover: '/img/Batmobile.jpg'
+title: 'Season 4: Week 1 In Review'
+date: '2018-10-04T09:30:00-05:00'
+description: 'Season 4: Week 1 In Review'
+category: 'Review'
 tags:
   - season 4
 ---
