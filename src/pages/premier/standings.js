@@ -6,14 +6,18 @@ import blue from '../../../static/data/premier/standings/blue.json'
 import orange from '../../../static/data/premier/standings/orange.json'
 
 const PremierStandingsPage = () => (
-  <Layout helmet="Premier Standings" title="Premier Standings">
-    <h5 className="title is-5" style={{marginBottom: "0.5rem"}}>Blue Conference</h5>
-    <Table data={blue.data} />
+  <Layout helmet="Premier Standings">
+    <section className="section">
+      <div className="container">
+        <p className="title is-3">Premier Standings</p>
 
-    <br />
+        <p className="subtitle is-5">Blue Conference</p>
+        <Table data={blue.data} />
 
-    <h5 className="title is-5" style={{marginBottom: "0.5rem"}}>Orange Conference</h5>
-    <Table data={orange.data} />
+        <p className="subtitle is-5">Orange Conference</p>
+        <Table data={orange.data} />
+      </div>
+    </section>
   </Layout>
 )
 
