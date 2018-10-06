@@ -1,18 +1,20 @@
+/* eslint-disable */
+
 import React from 'react'
 import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Social = ({ device }) => (
   <>
-    <a className={`navbar-item is-hidden-${device}`} href='https://discord.gg/fV4VrQ4'>
+    <a href='https://discord.gg/fV4VrQ4' className={`navbar-item is-hidden-${device}`}  rel='external'>
       <FontAwesomeIcon icon={['fab', 'discord']} />
     </a>
 
-    <a className={`navbar-item is-hidden-${device}`} href='https://twitch.tv/pulsarpremierleague'>
+    <a href='https://twitch.tv/pulsarpremierleague' className={`navbar-item is-hidden-${device}`}  rel='external'>
       <FontAwesomeIcon icon={['fab', 'twitch']} />
     </a>
 
-    <a className={`navbar-item is-hidden-${device}`} href='https://twitter.com/pulsarpremier'>
+    <a href='https://twitter.com/pulsarpremier' className={`navbar-item is-hidden-${device}`}  rel='external'>
       <FontAwesomeIcon icon={['fab', 'twitter']} />
     </a>
   </>
@@ -42,7 +44,7 @@ class Nav extends React.Component {
 
             <Social device='desktop' />
 
-            <a role="button" className={this.state.isActive ? "navbar-burger burger is-active" : "navbar-burger burger"} onClick={this.onClickNav}>
+            <a role="button" href="#" className={this.state.isActive ? "navbar-burger burger is-active" : "navbar-burger burger"} onClick={this.onClickNav}>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
