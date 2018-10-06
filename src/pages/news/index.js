@@ -1,7 +1,38 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
+import Card from '../../components/News/Card'
+
+const Title = () => (
+  <div className="level is-mobile">
+    <div className="level-left">
+      <div className="level-item">
+        <p className="title is-3">Recent News</p>
+      </div>
+    </div>
+    {/* <div className="level-right">
+      <div className="level-item">
+        <div className="field is-horizontal">
+          <div className="field-label is-normal">
+            <label className="label">Category</label>
+          </div>
+          <div className="field-body">
+            <div className="field">
+              <div className="select is-primary">
+                <select>
+                  <option>News</option>
+                  <option>Review</option>
+                  <option>Video</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> */}
+  </div>
+)
 
 export default class NewsPage extends React.Component {
   render() {
@@ -9,31 +40,23 @@ export default class NewsPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <Layout helmet="News" title="Latest News">
-        {posts
-          .map(({ node: post }) => (
-            <div className="content" style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
-              key={post.id}
-            >
-              <p>
-                <Link className="has-text-primary" to={post.fields.slug}>
-                  {post.frontmatter.title}
-                </Link>
-                <span> &bull; </span>
-                <small>{post.frontmatter.date}</small>
-              </p>
-              <p>
-                {post.frontmatter.description}
-                <br />
-                <br />
-                <Link to={post.fields.slug}>
-                  <a className='button is-small'>
-                    Keep Reading →
-                  </a>
-                </Link>
-              </p>
+      <Layout helmet="News">
+        <div className="container">
+          <section className="section">
+
+            <Title />
+
+            <div className="columns is-multiline">
+              {posts.map(({ node: post }) => { 
+                return (
+                  <div className="column is-one-third" key={post.id}>
+                    <Card post={post} />
+                  </div>
+                )
+              })}
             </div>
-          ))}
+          </section>
+        </div>
       </Layout>
     )
   }
@@ -61,8 +84,9 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            templateKey
             title
+            cover
+            category
             description
             date(formatString: "MMMM DD, YYYY")
           }
