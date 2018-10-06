@@ -45,13 +45,6 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/static/data`,
-        name: 'pages',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
         path: `${__dirname}/src/pages`,
         name: 'pages',
       },
@@ -59,7 +52,14 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/img`,
+        path: `${__dirname}/static/data`,
+        name: 'data',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/img`,
         name: 'images',
       },
     },
