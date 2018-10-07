@@ -1,51 +1,93 @@
 import React from 'react'
 
-// See My Recent Work http://mattfarley.ca
+const sponsors = [
+  {
+    'id': 1,
+    'title': 'All Yours Buffet',
+    'description': 'All the colored eggs you could ever want!',
+    'img': '/img/AllYours.png',
+    'href': 'https://google.com'
+  },
+  {
+    'id': 2,
+    'title': 'What a Save Esports',
+    'description': 'The cost cutting esports organization saving the world!',
+    'img': '/img/WhatASave.png',
+    'href': 'https://google.com'
+  },
+  {
+    'id': 3,
+    'title': 'Egging Grocers',
+    'description': 'Egg Grocers! Just do it! #JorbyApproved',
+    'img': '/img/EggingGrocers.png',
+    'href': 'https://google.com'
+  }
+]
+
+// const Card = ({ sponsor }) => (
+//   <figure className="image is-1b1">
+//     <img src={sponsor.img} alt={sponsor.title} />          
+//     <figcaption className="has-text-centered">
+//       <p className="title is-5">
+//         {sponsor.description}
+//       </p>
+//       <a href={sponsor.href} class="button is-primary is-outlined">Visit Website</a>
+//     </figcaption>
+//   </figure>
+// )
+
+// const Section = () => (
+//   <section className="section bg-hexellence">
+//     <div className="container is-narrow">
+//       <p className="title is-4">Sponsored By</p>
+
+//       <div className="columns">
+        
+//         {sponsors.map((sponsor) => { 
+//           return (
+//             <div className="column is-one-third" key={sponsor.id}>
+//               <Card sponsor={sponsor} />
+//             </div>
+//           )
+//         })}
+
+//       </div>
+//     </div>
+//   </section>
+// )
+
+const Level = () => (
+  <div className="level is-mobile">
+    <div className="level-left">
+      <div className="level-item">
+        <p className="title is-4">Sponsored By</p>
+      </div>
+    </div>
+    <div className="level-right">
+      {sponsors.map((sponsor) => { 
+        return (
+          <div className="level-item">
+            <figure className="image is-96x96 is-hidden-touch">
+              <a href={sponsor.href}>
+                <img src={sponsor.img} alt={sponsor.title} />
+              </a>
+            </figure>
+            <figure className="image is-48x48 is-hidden-desktop">
+              <a href={sponsor.href}>
+                <img src={sponsor.img} alt={sponsor.title} />
+              </a>
+            </figure>
+          </div>
+        )
+      })}
+    </div>
+  </div>
+)
 
 const Section = () => (
-  <section className="section">
-    <div className="container is-narrow">
-      <p className="title is-4">Sponsored By</p>
-
-      <div className="columns">
-        
-        <div className="column is-one-third">
-          <figure className="image is-1b1">
-            <img src='/img/AllYours.png' alt='All Yours Buffet' />          
-            <figcaption className="has-text-centered">
-              <p className="title is-5">
-                All the colored eggs you could ever want!
-              </p>
-              <a href="https://google.com" class="button is-primary is-outlined">Visit Website</a>
-            </figcaption>
-          </figure>
-        </div>
-
-        <div className="column is-one-third">
-          <figure className="image is-1b1">
-            <img src='/img/WhatASave.png' alt='What a Save Esports' />          
-            <figcaption className="has-text-centered">
-              <p className="title is-5">
-                The cost cutting esports organization saving the world!
-              </p>
-              <a href="https://google.com" class="button is-primary is-outlined">Visit Website</a>
-            </figcaption>
-          </figure>
-        </div>
-
-        <div className="column is-one-third">
-          <figure className="image is-1b1">
-            <img src='/img/EggingGrocers.png' alt='Egging Grocers' />          
-            <figcaption className="has-text-centered">
-              <p className="title is-5">
-                Egg Grocers! Just do it! #JorbyApproved
-              </p>
-              <a href="https://google.com" class="button is-primary is-outlined">Visit Website</a>
-            </figcaption>
-          </figure>
-        </div>
-
-      </div>
+  <section className="section bg-hexellence" style={{ padding: '1rem 1.5rem' }}>
+    <div className="container">
+      <Level />
     </div>
   </section>
 )
