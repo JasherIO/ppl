@@ -6,4 +6,4 @@ import ProductPagePreview from './preview-templates/ProductPagePreview'
 
 CMS.registerPreviewTemplate('about', AboutPagePreview)
 CMS.registerPreviewTemplate('products', ProductPagePreview)
-CMS.registerPreviewTemplate('blog', BlogPostPreview)
+CMS.registerPreviewTemplate('news', BlogPostPreview)
