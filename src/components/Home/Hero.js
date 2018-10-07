@@ -7,8 +7,11 @@ const Section = () => (
         <div className="title">
           Welcome to Pulsar Premier League!
         </div>
-        <div className="subtitle">
+        {/* <div className="subtitle">
           Seasonal leagues, statistics, and more...
+        </div> */}
+        <div className="subtitle">
+          Notice: The site is unfinished and information posted is for demo purposes. 
         </div>
       </div>
     </div>
