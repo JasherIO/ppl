@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Social = ({ device }) => (
   <>
-    <a href='https://discord.gg/fV4VrQ4' className={`navbar-item is-hidden-${device}`}  rel='external'>
+    <a href='https://discord.gg/JT3wRE6' className={`navbar-item is-hidden-${device}`}  rel='external'>
       <FontAwesomeIcon icon={['fab', 'discord']} />
     </a>
 
@@ -58,7 +58,7 @@ class Nav extends React.Component {
                 News
               </Link>
 
-              <div className="navbar-item has-dropdown is-hoverable">
+              {/* <div className="navbar-item has-dropdown is-hoverable">
                 <Link to="/premier" className='navbar-link' activeClassName="is-active">
                   Premier
                 </Link>
@@ -70,7 +70,7 @@ class Nav extends React.Component {
                     Stats
                   </Link>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div className="navbar-end">
