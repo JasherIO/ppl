@@ -1,7 +1,24 @@
+/* eslint-disable */
+
 import React from 'react'
 import { Link } from 'gatsby'
 
-const Level = () => (
+const data = [
+  {
+    'title': 'Players',
+    'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, nisl quis porta bibendum, nulla purus vestibulum sem, sit amet ultrices nisi elit ut odio. Sed rutrum eu velit at rhoncus.'
+  },
+  {
+    'title': 'Teams',
+    'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, nisl quis porta bibendum, nulla purus vestibulum sem, sit amet ultrices nisi elit ut odio. Sed rutrum eu velit at rhoncus.'
+  },
+  {
+    'title': 'Format',
+    'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, nisl quis porta bibendum, nulla purus vestibulum sem, sit amet ultrices nisi elit ut odio. Sed rutrum eu velit at rhoncus.'
+  }
+]
+
+const Title = () => (
   <div className="level is-mobile">
     <div className="level-left">
       <div className="level-item">
@@ -31,9 +48,9 @@ const Tabs = () => (
 
 const Section = () => {
   return (
-    <section className="section">
+    <section className="section is-medium">
       <div className="container">
-        <Level />
+        <Title />
         <Tabs />
       </div>
     </section>
