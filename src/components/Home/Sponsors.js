@@ -64,9 +64,8 @@ const Level = () => (
       </div>
     </div>
     <div className="level-right">
-      {sponsors.map((sponsor) => { 
-        return (
-          <div className="level-item">
+      {sponsors.map((sponsor) => (
+          <div key={sponsor.id} className="level-item">
             <figure className="image is-96x96 is-hidden-touch">
               <a href={sponsor.href}>
                 <img src={sponsor.img} alt={sponsor.title} />
@@ -79,7 +78,7 @@ const Level = () => (
             </figure>
           </div>
         )
-      })}
+      )}
     </div>
   </div>
 )
