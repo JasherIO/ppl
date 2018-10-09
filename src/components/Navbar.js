@@ -3,20 +3,21 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const Social = ({ device }) => (
   <>
-    <a href='https://discord.gg/JT3wRE6' className={`navbar-item is-hidden-${device}`}  rel='external'>
+    <OutboundLink href='https://discord.gg/JT3wRE6' className={`navbar-item is-hidden-${device}`}  rel='external'>
       <FontAwesomeIcon icon={['fab', 'discord']} />
-    </a>
+    </OutboundLink>
 
-    <a href='https://twitch.tv/pulsarpremierleague' className={`navbar-item is-hidden-${device}`}  rel='external'>
+    <OutboundLink href='https://twitch.tv/pulsarpremierleague' className={`navbar-item is-hidden-${device}`}  rel='external'>
       <FontAwesomeIcon icon={['fab', 'twitch']} />
-    </a>
+    </OutboundLink>
 
-    <a href='https://twitter.com/pulsarpremier' className={`navbar-item is-hidden-${device}`}  rel='external'>
+    <OutboundLink href='https://twitter.com/pulsarpremier' className={`navbar-item is-hidden-${device}`}  rel='external'>
       <FontAwesomeIcon icon={['fab', 'twitter']} />
-    </a>
+    </OutboundLink>
   </>
 )
 

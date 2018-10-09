@@ -1,4 +1,5 @@
 import React from 'react'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const sponsors = [
   {
@@ -35,14 +36,14 @@ const Level = () => (
       {sponsors.map((sponsor) => (
           <div key={sponsor.id} className="level-item">
             <figure className="image is-96x96 is-hidden-touch">
-              <a href={sponsor.href}>
+              <OutboundLink href={sponsor.href}>
                 <img src={sponsor.img} alt={sponsor.title} />
-              </a>
+              </OutboundLink>
             </figure>
             <figure className="image is-48x48 is-hidden-desktop">
-              <a href={sponsor.href}>
+              <OutboundLink href={sponsor.href}>
                 <img src={sponsor.img} alt={sponsor.title} />
-              </a>
+              </OutboundLink>
             </figure>
           </div>
         )
