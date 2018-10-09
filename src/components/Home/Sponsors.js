@@ -52,7 +52,7 @@ const Level = () => (
 )
 
 const Section = () => (
-  <section className="section background is-honeycomb" style={{ padding: '1rem 1.5rem' }}>
+  <section className="section background is-hexellence" style={{ padding: '1rem 1.5rem' }}>
     <div className="container">
       <Level />
     </div>
