@@ -24,38 +24,6 @@ const sponsors = [
   }
 ]
 
-// const Card = ({ sponsor }) => (
-//   <figure className="image is-1b1">
-//     <img src={sponsor.img} alt={sponsor.title} />          
-//     <figcaption className="has-text-centered">
-//       <p className="title is-5">
-//         {sponsor.description}
-//       </p>
-//       <a href={sponsor.href} class="button is-primary is-outlined">Visit Website</a>
-//     </figcaption>
-//   </figure>
-// )
-
-// const Section = () => (
-//   <section className="section bg-hexellence">
-//     <div className="container is-narrow">
-//       <p className="title is-4">Sponsored By</p>
-
-//       <div className="columns">
-        
-//         {sponsors.map((sponsor) => { 
-//           return (
-//             <div className="column is-one-third" key={sponsor.id}>
-//               <Card sponsor={sponsor} />
-//             </div>
-//           )
-//         })}
-
-//       </div>
-//     </div>
-//   </section>
-// )
-
 const Level = () => (
   <div className="level is-mobile">
     <div className="level-left">
@@ -84,7 +52,7 @@ const Level = () => (
 )
 
 const Section = () => (
-  <section className="section bg-honeycomb" style={{ padding: '1rem 1.5rem' }}>
+  <section className="section background is-honeycomb" style={{ padding: '1rem 1.5rem' }}>
     <div className="container">
       <Level />
     </div>

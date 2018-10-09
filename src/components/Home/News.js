@@ -23,7 +23,7 @@ const Section = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
 
   return (
-    <section className="section is-medium bg-hexellence">
+    <section className="section is-medium background is-hexellence">
       <div className="container">
         <Title />
 

@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Section = () => (
-  <section className="hero is-primary is-medium has-bg-image">
+  <section className="hero is-primary is-medium hero-background is-shiawese">
     <div className="hero-body">
       <div className="container">
         <div className="title">
