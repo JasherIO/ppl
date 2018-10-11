@@ -57,12 +57,13 @@ const Section = ({ data }) => {
   const { sponsors } = data.markdownRemark.frontmatter
 
   return (
-  <section className="section is-small background is-hexellence">
-    <div className="container">
-      <Level sponsors={sponsors} />
-    </div>
-  </section>
-)}
+    <section className="section is-small background is-hexellence">
+      <div className="container">
+        <Level sponsors={sponsors} />
+      </div>
+    </section>
+  )
+}
 
 const query = graphql`
   query {
