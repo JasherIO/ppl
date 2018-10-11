@@ -1,0 +1,3 @@
+---
+templateKey: sponsor-post
+---

@@ -14,10 +14,10 @@ collections:
     label_singular: "Post"
     folder: "static/data/news"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Cover", name: "cover", widget: "image"}
+      - {label: "Image", name: "cover", widget: "image"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       # - {label: "Description", name: "description", widget: "text"}
@@ -34,6 +34,20 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+
+      - file: "static/data/sponsors/index.md"
+        label: "Sponsors"
+        name: "sponsors"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "sponsor-page"}
+          - {label: "Sponsors", name: "sponsors", widget: "list", 
+              fields: [
+                {label: "Name", name: "name", widget: "string"},
+                {label: "Link", name: "link", widget: "string"},
+                {label: "Image", name: "img", widget: "image"}
+              ]
+            }
+
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
