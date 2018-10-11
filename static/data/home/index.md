@@ -1,12 +1,24 @@
 ---
 templateKey: home-post
+hero:
+  subtitle: 'Notice: The site is unfinished and information posted is for demo purposes. '
+  title: Welcome to Pulsar Premier League!
 tabs:
-  - name: Players
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, nisl quis porta bibendum, nulla purus vestibulum sem, sit amet ultrices nisi elit ut odio. Sed rutrum eu velit at rhoncus.'
-  - name: Teams
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, nisl quis porta bibendum, nulla purus vestibulum sem, sit amet ultrices nisi elit ut odio. Sed rutrum eu velit at rhoncus.'
-  - name: Format
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, nisl quis porta bibendum, nulla purus vestibulum sem, sit amet ultrices nisi elit ut odio. Sed rutrum eu velit at rhoncus.'
+  - description: >-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+      facilisis, nisl quis porta bibendum, nulla purus vestibulum sem, sit amet
+      ultrices nisi elit ut odio. Sed rutrum eu velit at rhoncus.
+    name: Players
+  - description: >-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+      facilisis, nisl quis porta bibendum, nulla purus vestibulum sem, sit amet
+      ultrices nisi elit ut odio. Sed rutrum eu velit at rhoncus.
+    name: Teams
+  - description: >-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+      facilisis, nisl quis porta bibendum, nulla purus vestibulum sem, sit amet
+      ultrices nisi elit ut odio. Sed rutrum eu velit at rhoncus.
+    name: Format
 sponsors:
   - img: /img/AllYours.png
     link: 'https://google.com'
