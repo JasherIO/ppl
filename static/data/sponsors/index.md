@@ -1,5 +1,4 @@
 ---
-templateKey: sponsor-post
 sponsors:
   - img: /img/AllYours.png
     link: 'https://google.com'
