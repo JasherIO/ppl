@@ -2,30 +2,6 @@ import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
-// const sponsors = [
-//   {
-//     'id': 1,
-//     'title': 'All Yours Buffet',
-//     'description': 'All the colored eggs you could ever want!',
-//     'img': '/img/AllYours.png',
-//     'href': 'https://google.com'
-//   },
-//   {
-//     'id': 2,
-//     'title': 'What a Save Esports',
-//     'description': 'The cost cutting esports organization saving the world!',
-//     'img': '/img/WhatASave.png',
-//     'href': 'https://google.com'
-//   },
-//   {
-//     'id': 3,
-//     'title': 'Egging Grocers',
-//     'description': 'Egg Grocers! Just do it! #JorbyApproved',
-//     'img': '/img/EggingGrocers.png',
-//     'href': 'https://google.com'
-//   }
-// ]
-
 const Level = ({ sponsors }) => (
   <div className="level is-mobile">
     <div className="level-left">
@@ -67,7 +43,7 @@ const Section = ({ data }) => {
 
 const query = graphql`
   query {
-    markdownRemark(frontmatter: { templateKey: { eq: "sponsor-post" } }) {
+    markdownRemark(frontmatter: { templateKey: { eq: "home-post" } }) {
       frontmatter {
         sponsors {
           name

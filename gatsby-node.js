@@ -8,7 +8,6 @@ exports.createPages = ({ actions, graphql }) => {
   return graphql(`
     {
       allMarkdownRemark(
-        filter: { frontmatter: { templateKey: { eq: "blog-post" } }}
         limit: 1000
       ) {
         edges {
@@ -34,6 +33,11 @@ exports.createPages = ({ actions, graphql }) => {
     const posts = result.data.allMarkdownRemark.edges
 
     posts.forEach(edge => {
+      if (edge.node.frontmatter.templateKey === "home-post") {
+        return
+      }
+
+
       const id = edge.node.id
       createPage({
         path: edge.node.fields.slug,

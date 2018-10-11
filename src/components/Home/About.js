@@ -1,22 +1,7 @@
 /* eslint-disable */
 
 import React from 'react'
-import { Link } from 'gatsby'
-
-const data = [
-  {
-    'name': 'Players',
-    'content': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, nisl quis porta bibendum, nulla purus vestibulum sem, sit amet ultrices nisi elit ut odio. Sed rutrum eu velit at rhoncus.'
-  },
-  {
-    'name': 'Teams',
-    'content': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, nisl quis porta bibendum, nulla purus vestibulum sem, sit amet ultrices nisi elit ut odio. Sed rutrum eu velit at rhoncus.'
-  },
-  {
-    'name': 'Format',
-    'content': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, nisl quis porta bibendum, nulla purus vestibulum sem, sit amet ultrices nisi elit ut odio. Sed rutrum eu velit at rhoncus.'
-  }
-]
+import { graphql, StaticQuery } from 'gatsby'
 
 const Title = () => (
   <div className="level is-mobile">
@@ -24,13 +9,6 @@ const Title = () => (
       <div className="level-item">
         <p className="title is-4 is-hidden-touch">About Pulsar Premier League</p>
         <p className="title is-4 is-hidden-desktop">About PPL</p>
-      </div>
-    </div>
-    <div className="level-right">
-      <div className="level-item">
-        <Link to="/about" className="button is-primary is-outlined">
-          Read More
-        </Link>
       </div>
     </div>
   </div>
@@ -54,8 +32,11 @@ class Section extends React.Component {
   constructor(props) {
     super(props)
 
+    const { tabs } = props.data.markdownRemark.frontmatter
+
     this.state = {
-      active: data[0]
+      active: tabs[0],
+      tabs: tabs
     }
 
     this.onClick = this.onClick.bind(this)
@@ -70,13 +51,28 @@ class Section extends React.Component {
       <section className="section is-medium">
         <div className="container">
           <Title />
-          <Tabs tabs={data} active={this.state.active} onClick={this.onClick} />
+          <Tabs tabs={this.state.tabs} active={this.state.active} onClick={this.onClick} />
 
-          <div>{this.state.active.content}</div>
+          <div>{this.state.active.description}</div>
         </div>
       </section>
     )
   }
 }
 
-export default Section
+const query = graphql`
+  query {
+    markdownRemark(frontmatter: { templateKey: { eq: "home-post" } }) {
+      frontmatter {
+        tabs {
+          name
+          description
+        }
+      }
+    }
+  }
+`
+
+export default props => (
+  <StaticQuery query={query} render={data => <Section data={data} {...props} />} />
+)
