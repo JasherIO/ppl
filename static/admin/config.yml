@@ -37,7 +37,9 @@ collections:
           - {label: "Hero", name: "hero", widget: "object",
               fields: [
                 {label: "Title", name: "title", widget: "string"}, 
-                {label: "Subtitle", name: "subtitle", widget: "string"}]
+                {label: "Subtitle", name: "subtitle", widget: "string"},
+                {label: "Image", name: "img", widget: "image"}
+              ]
             }
           - {label: "About", name: "tabs", widget: "list", 
               fields: [
