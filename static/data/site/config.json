@@ -5,7 +5,7 @@
   "description": "Rocket League seasons and weeklies",
   "copyright": "Copyright © 2018",
   "logo": "/img/purple-transparent.png",
-  "favicon": "/favicon.png",
+  "favicon": "./static/favicon.png",
   "social": {
     "discord": "https://discord.gg/JT3wRE6",
     "github": "https://github.com/jasherio/ppl",

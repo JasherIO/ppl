@@ -1,35 +1,38 @@
 /* eslint-disable */
 
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql, StaticQuery } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
-const Social = ({ device }) => (
+const Social = ({ social, device }) => (
   <>
-    <OutboundLink href='https://discord.gg/JT3wRE6' className={`navbar-item is-hidden-${device}`}  rel='external'>
+    <OutboundLink href={social.discord} className={`navbar-item is-hidden-${device}`}  rel='external'>
       <FontAwesomeIcon icon={['fab', 'discord']} />
     </OutboundLink>
 
-    <OutboundLink href='https://twitch.tv/pulsarpremierleague' className={`navbar-item is-hidden-${device}`}  rel='external'>
+    <OutboundLink href={social.twitch} className={`navbar-item is-hidden-${device}`}  rel='external'>
       <FontAwesomeIcon icon={['fab', 'twitch']} />
     </OutboundLink>
 
-    <OutboundLink href='https://twitter.com/pulsarpremier' className={`navbar-item is-hidden-${device}`}  rel='external'>
+    <OutboundLink href={social.twitter} className={`navbar-item is-hidden-${device}`}  rel='external'>
       <FontAwesomeIcon icon={['fab', 'twitter']} />
     </OutboundLink>
   </>
 )
 
-class Nav extends React.Component {
+export class PureNavbar extends React.Component {
   constructor(props) { 
     super(props)
     
-    this.state = { isActive: false }
-    this.onClickNav = this.onClickNav.bind(this)
+    this.state = { 
+      isActive: false,
+      site: props.data.site.siteMetadata
+    }
+    this.onClick = this.onClick.bind(this)
   }
 
-  onClickNav() {
+  onClick() {
     this.setState({ isActive: !this.state.isActive})
   }
 
@@ -40,19 +43,19 @@ class Nav extends React.Component {
           
           <div className="navbar-brand">
             <Link to='/' className='navbar-item'>
-              <img src="/img/purple-transparent.png" alt="Logo"></img>
+              <img src={this.state.site.logo} alt="Logo"></img>
             </Link>
 
-            <Social device='desktop' />
+            <Social social={this.state.site.social} device='desktop' />
 
-            <a role="button" href="#" className={this.state.isActive ? "navbar-burger burger is-active" : "navbar-burger burger"} onClick={this.onClickNav}>
+            <a role="button" href="#" className={this.state.isActive ? "navbar-burger burger is-active" : "navbar-burger burger"} onClick={this.onClick}>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
             </a>
           </div>
 
-          <div className="navbar-menu" className={this.state.isActive ? "navbar-menu is-active" : "navbar-menu"} onClick={this.onClickNav}>
+          <div className="navbar-menu" className={this.state.isActive ? "navbar-menu is-active" : "navbar-menu"} onClick={this.onClick}>
 
             <div className="navbar-start">
               <Link to="/news" className='navbar-item' activeClassName="is-active">
@@ -75,7 +78,7 @@ class Nav extends React.Component {
             </div>
 
             <div className="navbar-end">
-              <Social device='touch' />
+              <Social social={this.state.site.social} device='touch' />
             </div>
 
           </div>
@@ -86,4 +89,24 @@ class Nav extends React.Component {
   }
 }
 
-export default Nav
+const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        logo
+        social {
+          discord
+          twitch
+          twitter
+        }
+      }
+    }
+  }
+`
+
+export const Navbar = props => (
+  <StaticQuery query={query} render={data => <PureNavbar data={data} {...props} />} />
+)
+
+export default Navbar

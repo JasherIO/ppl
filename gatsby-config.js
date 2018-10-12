@@ -1,18 +1,30 @@
+const config = require('./static/data/site/config.json')
+
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://ppl.netlify.com',
-    title: 'Gatsby + Netlify CMS Starter'
+    siteUrl: config.url || "",
+    title: config.title || "",
+    alternate: config.alternate || "",
+    description: config.description || "",
+    logo: config.logo || "",
+    favicon: config.favicon || "",
+    social: {
+      discord: config.social.discord || "",
+      github: config.social.github || "",
+      twitch: config.social.twitch || "",
+      twitter: config.social.twitter || "",
+      youtube: config.social.youtube || ""
+    },
   },
   plugins: [
     'gatsby-plugin-catch-links',
     {
       resolve: 'gatsby-plugin-favicon',
       options: {
-        logo: "./static/favicon.png",
-  
+        logo: config.favicon,
         // WebApp Manifest Configuration
-        appName: 'Pulsar Premier League',
-        appDescription: null,
+        appName: config.title,
+        appDescription: config.description,
         developerName: null,
         developerURL: null,
         dir: 'auto',
@@ -41,16 +53,10 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-107122749-3",
-        // Puts tracking script in the head instead of the body
         head: true,
-        // Setting this parameter is optional
         anonymize: true,
-        // Setting this parameter is also optional
         respectDNT: true,
-        // Avoids sending pageview hits from custom paths
         exclude: [ "/admin/**" ],
-        // Enables Google Optimize using your container Id
-        // optimizeId: "YOUR_GOOGLE_OPTIMIZE_TRACKING_ID",
       },
     },
     'gatsby-plugin-react-helmet',

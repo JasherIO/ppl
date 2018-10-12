@@ -68,8 +68,8 @@ collections:
           - {label: Alternate, name: alternate, widget: string, required: false}
           - {label: Description, name: description, widget: string}
           - {label: Copyright, name: copyright, widget: hidden}
-          - {label: Logo, name: logo, widget: image, required: false}
-          - {label: Favicon, name: favicon, widget: image, required: false}
+          - {label: Logo, name: logo, widget: image}
+          - {label: Favicon, name: favicon, widget: hidden, required: false}
           - {label: Social, name: social, widget: object, 
               fields: [
                 {label: Discord, name: discord, widget: string, required: false},
@@ -80,6 +80,6 @@ collections:
                 {label: YouTube, name: youtube, widget: string, required: false}
               ]
             }
-          - {label: Google Analytics ID, name: googleAnalyticsId, widget: string, required: false}
+          - {label: Google Analytics ID, name: googleAnalyticsId, widget: string}
           - {label: Path Prefix, name: pathPrefix, widget: hidden}
           - {label: RSS, name: rss, widget: hidden}
