@@ -41,12 +41,12 @@ collections:
           - {label: Favicon, name: favicon, widget: image, required: false}
           - {label: Social, name: social, widget: object, 
               fields: [
-                - {label: Discord, name: github, widget: string, required: false}
-                - {label: GitHub, name: github, widget: hidden, required: false}
-                - {label: LinkedIn, name: linkedin, widget: hidden, required: false}
-                - {label: Twitch, name: twitch, widget: string, required: false}
-                - {label: Twitter, name: twitter, widget: string, required: false}
-                - {label: YouTube, name: youtube, widget: string, required: false}
+                {label: Discord, name: github, widget: string, required: false},
+                {label: GitHub, name: github, widget: hidden, required: false},
+                {label: LinkedIn, name: linkedin, widget: hidden, required: false},
+                {label: Twitch, name: twitch, widget: string, required: false},
+                {label: Twitter, name: twitter, widget: string, required: false},
+                {label: YouTube, name: youtube, widget: string, required: false}
               ]
             }
           - {label: Google Analytics ID, name: googleAnalyticsId, widget: string, required: false}
