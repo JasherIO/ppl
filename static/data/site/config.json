@@ -1,0 +1,19 @@
+{
+  "url": "https://pulsarpremierleague.com",
+  "title": "Pulsar Premier League",
+  "alternate": "PPL",
+  "description": "Rocket League seasons and weeklies",
+  "copyright": "Copyright © 2018",
+  "logo": "/img/purple-transparent.png",
+  "favicon": "/favicon.png",
+  "social": {
+    "discord": "https://discord.gg/JT3wRE6",
+    "github": "https://github.com/jasherio/ppl",
+    "twitch": "https://twitch.tv/PulsarPremierLeague",
+    "twitter": "https://twitter.com/PulsarPremier",
+    "youtube": ""
+  },
+  "googleAnalyticsId": "UA-107122749-3",
+  "pathPrefix": "",
+  "rss": "/rss.xml"
+}
