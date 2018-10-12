@@ -3,7 +3,7 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 
-const Title = () => (
+export const Title = () => (
   <div className="level is-mobile">
     <div className="level-left">
       <div className="level-item">
@@ -14,13 +14,13 @@ const Title = () => (
   </div>
 )
 
-const Tab = ({ tab, active, onClick }) => (
+export const Tab = ({ tab, active, onClick }) => (
   <li className={tab.name === active.name ? "is-active" : "false"} onClick={() => onClick(tab)}>
     <a>{tab.name}</a>
   </li>
 )
 
-const Tabs = ({ tabs, active, onClick }) => (
+export const Tabs = ({ tabs, active, onClick }) => (
   <div className="tabs">
     <ul>
       {tabs.map(tab => <Tab key={tab.name} tab={tab} active={active} onClick={onClick} />)}
@@ -28,7 +28,7 @@ const Tabs = ({ tabs, active, onClick }) => (
   </div>
 )
 
-class Section extends React.Component {
+export class PureSection extends React.Component {
   constructor(props) {
     super(props)
 
@@ -73,6 +73,8 @@ const query = graphql`
   }
 `
 
-export default props => (
-  <StaticQuery query={query} render={data => <Section data={data} {...props} />} />
+export const Section =  props => (
+  <StaticQuery query={query} render={data => <PureSection data={data} {...props} />} />
 )
+
+export default Section

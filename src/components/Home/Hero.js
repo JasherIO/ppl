@@ -1,11 +1,11 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 
-const backgroundImage = (img) => {
+export const backgroundImage = (img) => {
   return `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${img})`
 }
 
-const Section = ({ data }) => {
+export const PureSection = ({ data }) => {
   const { hero } = data.markdownRemark.frontmatter
   
   return (
@@ -38,6 +38,8 @@ const query = graphql`
   }
 `
 
-export default props => (
-  <StaticQuery query={query} render={data => <Section data={data} {...props} />} />
+export const Section = props => (
+  <StaticQuery query={query} render={data => <PureSection data={data} {...props} />} />
 )
+
+export default Section

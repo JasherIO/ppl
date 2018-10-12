@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
-const Level = ({ sponsors }) => (
+export const Level = ({ sponsors }) => (
   <div className="level is-mobile">
     <div className="level-left">
       <div className="level-item">
@@ -29,7 +29,7 @@ const Level = ({ sponsors }) => (
   </div>
 )
 
-const Section = ({ data }) => {
+export const PureSection = ({ data }) => {
   const { sponsors } = data.markdownRemark.frontmatter
 
   return (
@@ -55,6 +55,8 @@ const query = graphql`
   }
 `
 
-export default props => (
-  <StaticQuery query={query} render={data => <Section data={data} {...props} />} />
+export const Section = props => (
+  <StaticQuery query={query} render={data => <PureSection data={data} {...props} />} />
 )
+
+export default Section

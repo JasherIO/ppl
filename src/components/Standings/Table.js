@@ -1,6 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+export const Row = ({ element, index }) => (
+  <tr>
+    <th>{index + 1}</th>
+    <td>{element.name}</td>
+    <td>{element.matchWins}</td>
+    <td>{element.matchLosses}</td>
+    <td className="is-hidden-mobile">{element.gameWins}</td>
+    <td className="is-hidden-mobile">{element.gameLosses}</td>
+    <td className="is-hidden-mobile">{element.goalsFor}</td>
+    <td className="is-hidden-mobile">{element.goalsAgainst}</td>
+    <td className="is-hidden-mobile">{element.goalsFor - element.goalsAgainst}</td>
+  </tr>
+)
+
 const Table = ({ data }) => (
   <table className="table is-striped is-fullwidth is-rounded">
     <thead>
@@ -46,19 +60,5 @@ Table.propTypes = {
     })
   ),
 }
-
-const Row = ({ element, index }) => (
-  <tr>
-    <th>{index + 1}</th>
-    <td>{element.name}</td>
-    <td>{element.matchWins}</td>
-    <td>{element.matchLosses}</td>
-    <td className="is-hidden-mobile">{element.gameWins}</td>
-    <td className="is-hidden-mobile">{element.gameLosses}</td>
-    <td className="is-hidden-mobile">{element.goalsFor}</td>
-    <td className="is-hidden-mobile">{element.goalsAgainst}</td>
-    <td className="is-hidden-mobile">{element.goalsFor - element.goalsAgainst}</td>
-  </tr>
-)
 
 export default Table

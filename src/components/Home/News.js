@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import Card from '../News/Card'
 
-const Title = () => (
+export const Title = () => (
   <div className="level is-mobile">
     <div className="level-left">
       <div className="level-item">
@@ -19,7 +19,7 @@ const Title = () => (
   </div>
 )
 
-const Section = ({ data }) => {
+export const PureSection = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
 
   return (
@@ -66,6 +66,8 @@ const query = graphql`
   }
 `
 
-export default props => (
-  <StaticQuery query={query} render={data => <Section data={data} {...props} />} />
+export const Section = props => (
+  <StaticQuery query={query} render={data => <PureSection data={data} {...props} />} />
 )
+
+export default Section
