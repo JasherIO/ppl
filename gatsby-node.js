@@ -32,39 +32,32 @@ exports.createPages = ({ actions, graphql }) => {
 
     const posts = result.data.allMarkdownRemark.edges
 
-    posts.forEach(edge => {
+    _.each(posts, edge => {
       if (edge.node.frontmatter.templateKey === "home-post") {
         return
       }
 
-
       const id = edge.node.id
       createPage({
         path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),
-        // additional data can be passed via context
         context: {
           id,
         },
       })
     })
 
-    // Tag pages:
     let tags = []
-    // Iterate through each post, putting all found tags into `tags`
-    posts.forEach(edge => {
+    _.each(posts, edge => {
       if (_.get(edge, `node.frontmatter.tags`)) {
         tags = tags.concat(edge.node.frontmatter.tags)
       }
     })
-    // Eliminate duplicate tags
     tags = _.uniq(tags)
 
-    // Make tag pages
-    tags.forEach(tag => {
+    _.each(tags, tag => {
       const tagPath = `/tags/${_.kebabCase(tag)}/`
 
       createPage({
@@ -80,6 +73,18 @@ exports.createPages = ({ actions, graphql }) => {
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
+  const { frontmatter } = node
+
+  // https://github.com/gatsbyjs/gatsby/issues/8195
+  if (frontmatter) {
+    const { cover } = frontmatter
+    if (cover && cover.indexOf('/img') === 0) {
+      frontmatter.cover = path.relative(
+        path.dirname(node.fileAbsolutePath),
+        path.join(__dirname, '/static/', cover)
+      )
+    }
+  }
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode, trailingSlash: false })

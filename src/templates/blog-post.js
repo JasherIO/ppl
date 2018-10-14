@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import { graphql, Link } from 'gatsby'
+import Img from 'gatsby-image'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
@@ -20,7 +21,8 @@ export const BlogPostTemplate = ({
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <figure className="image">
-              <img src={cover} style={{ boxShadow: '1px 1px 3px 0px rgba(0,0,0,0.75)'}} alt={title} />
+              {/* <img src={cover} style={{ boxShadow: '1px 1px 3px 0px rgba(0,0,0,0.75)'}} alt={title} /> */}
+              <Img fluid={cover.childImageSharp.fluid} alt={title} />
             </figure>
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
@@ -84,7 +86,13 @@ export const pageQuery = graphql`
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        cover
+        cover {
+          childImageSharp {
+            fluid(maxWidth: 1500) {
+              ...GatsbyImageSharpFluid_noBase64
+            }
+          }
+        }
         title
         tags
       }

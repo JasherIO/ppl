@@ -85,7 +85,13 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            cover
+            cover {
+              childImageSharp {
+                fluid(maxWidth: 700) {
+                  ...GatsbyImageSharpFluid_noBase64
+                }
+              }
+            }
             category
             description
             date(formatString: "MMMM DD, YYYY")

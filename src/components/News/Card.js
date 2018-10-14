@@ -1,13 +1,14 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 import moment from 'moment'
 
 const Card = ({ post }) => (
   <div className="card">
     <div className="card-image">
-      <figure className="image is-16by9">
+      <figure className="image">
         <Link to={post.fields.slug}>
-          <img src={post.frontmatter.cover} alt={post.frontmatter.title} />
+          <Img fluid={post.frontmatter.cover.childImageSharp.fluid} />
         </Link>
       </figure>
     </div>
