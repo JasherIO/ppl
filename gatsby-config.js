@@ -23,7 +23,7 @@ module.exports = {
       options: {
         logo: config.favicon,
         // WebApp Manifest Configuration
-        appName: config.title,
+        appName: config.alternate,
         appDescription: config.description,
         developerName: null,
         developerURL: null,

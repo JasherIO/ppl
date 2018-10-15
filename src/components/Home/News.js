@@ -23,7 +23,7 @@ export const PureSection = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
 
   return (
-    <section className="section is-medium background is-hexellence">
+    <section className="section background is-hexellence" style={{ paddingBottom: "5rem" }}>
       <div className="container">
         <Title />
 

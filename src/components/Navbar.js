@@ -8,15 +8,15 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const Social = ({ social, device }) => (
   <>
-    <OutboundLink href={social.discord} className={`navbar-item is-hidden-${device}`}  rel='external'>
+    <OutboundLink href={social.discord} aria-label="discord" className={`navbar-item is-hidden-${device}`}  rel='external'>
       <FontAwesomeIcon icon={['fab', 'discord']} />
     </OutboundLink>
 
-    <OutboundLink href={social.twitch} className={`navbar-item is-hidden-${device}`}  rel='external'>
+    <OutboundLink href={social.twitch} aria-label="twitch" className={`navbar-item is-hidden-${device}`}  rel='external'>
       <FontAwesomeIcon icon={['fab', 'twitch']} />
     </OutboundLink>
 
-    <OutboundLink href={social.twitter} className={`navbar-item is-hidden-${device}`}  rel='external'>
+    <OutboundLink href={social.twitter} aria-label="twitter" className={`navbar-item is-hidden-${device}`}  rel='external'>
       <FontAwesomeIcon icon={['fab', 'twitter']} />
     </OutboundLink>
   </>
@@ -51,7 +51,7 @@ export class PureNavbar extends React.Component {
 
             <Social social={this.state.site.social} device='desktop' />
 
-            <a role="button" href="#" className={this.state.isActive ? "navbar-burger burger is-active" : "navbar-burger burger"} onClick={this.onClick}>
+            <a role="button" aria-label="menu" href="#" className={this.state.isActive ? "navbar-burger burger is-active" : "navbar-burger burger"} onClick={this.onClick}>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>

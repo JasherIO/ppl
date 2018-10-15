@@ -48,7 +48,7 @@ export class PureSection extends React.Component {
 
   render() {
     return (
-      <section className="section is-medium">
+      <section className="section" style={{ padding: "6rem 1.5rem" }}>
         <div className="container">
           <Title />
           <Tabs tabs={this.state.tabs} active={this.state.active} onClick={this.onClick} />

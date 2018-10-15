@@ -14,14 +14,12 @@ export const Level = ({ sponsors }) => (
       {sponsors.map((sponsor) => (
           <div key={sponsor.name} className="level-item">
             <figure className="image is-96x96 is-hidden-touch">
-              <OutboundLink href={sponsor.link}>
-                {/* <img src={sponsor.img} alt={sponsor.name} /> */}
+              <OutboundLink href={sponsor.link} aria-label={sponsor.name}>
                 <Img fluid={sponsor.img.childImageSharp.fluid} />
               </OutboundLink>
             </figure>
             <figure className="image is-48x48 is-hidden-desktop">
-              <OutboundLink href={sponsor.link}>
-                {/* <img src={sponsor.img} alt={sponsor.name} /> */}
+              <OutboundLink href={sponsor.link} aria-label={sponsor.name}>
                 <Img fluid={sponsor.img.childImageSharp.fluid} />
               </OutboundLink>
             </figure>
