@@ -21,12 +21,14 @@ export const BlogPostTemplate = ({
   return (
     <section className="section">
       
+      {/* Card Validator: https://cards-dev.twitter.com/validator */}
       {/* https://github.com/gatsbyjs/gatsby/blob/445f5ff7508ab613967e18b32490e3feffd7730c/www/src/templates/template-blog-post.js */}
       <Helmet>
         <meta name="og:type" content="article" />
 
         <title>{title}</title>
         <meta name="og:title" content={title} />
+        <meta name="twitter:title" content={title} />
         
         <meta name="description" content={excerpt}/>
         <meta name="og:description" content={excerpt} />

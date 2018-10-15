@@ -14,7 +14,7 @@ const PremierStandingsPage = () => (
 
     <section className="section">
       <div className="container">
-        <p className="title is-3">Premier Standings</p>
+        <h1 className="title is-3">Premier Standings</h1>
 
         <p className="subtitle is-5">Blue Conference</p>
         <Table data={blue.data} />

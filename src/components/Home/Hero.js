@@ -12,12 +12,12 @@ export const PureSection = ({ data }) => {
     <section className="hero is-primary is-medium hero-background" style={{ backgroundImage: backgroundImage(hero.img) }}>
       <div className="hero-body">
         <div className="container">
-          <div className="title">
+          <h1 className="title">
             {hero.title}
-          </div>
-          <div className="subtitle">
+          </h1>
+          <h2 className="subtitle">
             {hero.subtitle}
-          </div>
+          </h2>
         </div>
       </div>
     </section>

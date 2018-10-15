@@ -13,14 +13,17 @@ library.add(fab)
 const PureLayout = ({ children, data }) => (
   <div>
     {/* https://github.com/gatsbyjs/gatsby/blob/445f5ff7508ab613967e18b32490e3feffd7730c/www/src/components/layout.js */}
-    <Helmet defaultTitle={`${data.site.siteMetadata.title}`} titleTemplate={`%s | PPL`}>
+    <Helmet defaultTitle={`${data.site.siteMetadata.title}`} titleTemplate={`%s | ${data.site.siteMetadata.alternate}`}>
       <html lang="en" />
       
       <meta name="og:type" content="website" />
-
-      <meta name="twitter:site" content="@pulsarpremier" />
+      
+      <meta name="og:title" content={data.site.siteMetadata.title} />
+      
       <meta name="og:site_name" content={data.site.siteMetadata.title} />
+      <meta name="twitter:site" content="@pulsarpremier" />
 
+      <meta name="og:description" content={data.site.siteMetadata.description} />
       <meta name="description" content={data.site.siteMetadata.description} />
       
       {/* TODO */}

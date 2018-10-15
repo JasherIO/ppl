@@ -9,7 +9,7 @@ const Title = () => (
   <div className="level is-mobile">
     <div className="level-left">
       <div className="level-item">
-        <p className="title is-3">Recent News</p>
+        <h1 className="title is-3">Recent News</h1>
       </div>
     </div>
     {/* <div className="level-right">
