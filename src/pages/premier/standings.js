@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import Layout from '../../components/Layout'
 import Table from '../../components/Standings/Table'
 
@@ -6,7 +7,11 @@ import blue from '../../../static/data/premier/standings/blue.json'
 import orange from '../../../static/data/premier/standings/orange.json'
 
 const PremierStandingsPage = () => (
-  <Layout helmet="Premier Standings">
+  <Layout>
+    <Helmet>
+      <title>Premier Standings</title>
+    </Helmet>
+
     <section className="section">
       <div className="container">
         <p className="title is-3">Premier Standings</p>

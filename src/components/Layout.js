@@ -1,6 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import { graphql, StaticQuery } from 'gatsby'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 
@@ -10,24 +10,47 @@ import './all.sass'
 
 library.add(fab)
 
-const TemplateWrapper = ({ children, helmet, title }) => (
+const PureLayout = ({ children, data }) => (
   <div>
-    { helmet && helmet.length > 0
-      ? <Helmet title={`${helmet} | PPL`} />
-      : <Helmet title="Pulsar Premier League" />
-    }
+    {/* https://github.com/gatsbyjs/gatsby/blob/445f5ff7508ab613967e18b32490e3feffd7730c/www/src/components/layout.js */}
+    <Helmet defaultTitle={`${data.site.siteMetadata.title}`} titleTemplate={`%s | PPL`}>
+      <html lang="en" />
+      
+      <meta name="og:type" content="website" />
+
+      <meta name="twitter:site" content="@pulsarpremier" />
+      <meta name="og:site_name" content={data.site.siteMetadata.title} />
+
+      <meta name="description" content={data.site.siteMetadata.description} />
+      
+      {/* TODO */}
+      {/* <link rel="canonical" href={`${data.site.siteMetadata.siteUrl}${location.pathname}` /> */}
+    </Helmet>
+
     <Navbar />
-    { title && title.length > 0 &&
-      <div className="title is-2" style={{marginBottom: "1rem"}}>{title}</div>
-    }
     {children}
     <Footer />
   </div>
 )
 
-TemplateWrapper.propTypes = {
-  helmet: PropTypes.string,
-  title: PropTypes.string
-}
+const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        siteUrl
+        title
+        alternate
+        description
+        social {
+          twitter
+        }
+      }
+    }
+  }
+`
 
-export default TemplateWrapper
+export const Layout = props => (
+  <StaticQuery query={query} render={data => <PureLayout data={data} {...props} />} />
+)
+
+export default Layout

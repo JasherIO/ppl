@@ -1,8 +1,12 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import Layout from '../../components/Layout'
 
 const PremierPage = () => (
-  <Layout helmet="Premier" title="Premier Division">
+  <Layout>
+    <Helmet>
+      <title>Premier</title>
+    </Helmet>
   </Layout>
 )
 

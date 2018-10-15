@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 import Card from '../../components/News/Card'
@@ -40,7 +41,10 @@ export default class NewsPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <Layout helmet="News">
+      <Layout>
+        <Helmet>
+          <title>News</title>
+        </Helmet>
         <div className="container">
           <section className="section">
 
