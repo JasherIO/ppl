@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 export const Level = ({ sponsors }) => (
@@ -14,12 +15,14 @@ export const Level = ({ sponsors }) => (
           <div key={sponsor.name} className="level-item">
             <figure className="image is-96x96 is-hidden-touch">
               <OutboundLink href={sponsor.link}>
-                <img src={sponsor.img} alt={sponsor.name} />
+                {/* <img src={sponsor.img} alt={sponsor.name} /> */}
+                <Img fluid={sponsor.img.childImageSharp.fluid} />
               </OutboundLink>
             </figure>
             <figure className="image is-48x48 is-hidden-desktop">
               <OutboundLink href={sponsor.link}>
-                <img src={sponsor.img} alt={sponsor.name} />
+                {/* <img src={sponsor.img} alt={sponsor.name} /> */}
+                <Img fluid={sponsor.img.childImageSharp.fluid} />
               </OutboundLink>
             </figure>
           </div>
@@ -47,7 +50,13 @@ const query = graphql`
       frontmatter {
         sponsors {
           name
-          img
+          img {
+            childImageSharp {
+              fluid(maxWidth: 96, maxHeight: 96) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
           link
         }
       }

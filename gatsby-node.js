@@ -86,10 +86,17 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     }
   }
 
-  // if (_.has(node, ['frontmatter', 'sponsors'])) {
-  //   const sponsors = _.get(node, ['frontmatter', 'sponsors'])
-  //   console.log({ node, sponsors })
-  // }
+  if (_.has(node, ['frontmatter', 'sponsors'])) {
+    _.each(node.frontmatter.sponsors, (sponsor) => {
+      const image = sponsor.img
+      if (image.indexOf('/img') === 0) {
+        sponsor.img = path.relative(
+          path.dirname(node.fileAbsolutePath),
+          path.join(__dirname, '/static/', image)
+        )
+      }
+    })
+  }
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode, trailingSlash: false })
