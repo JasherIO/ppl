@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { Link, graphql, StaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
@@ -27,7 +28,8 @@ export class PureNavbar extends React.Component {
     
     this.state = { 
       isActive: false,
-      site: props.data.site.siteMetadata
+      site: props.data.site.siteMetadata,
+      file: props.data.file
     }
     this.onClick = this.onClick.bind(this)
   }
@@ -43,7 +45,8 @@ export class PureNavbar extends React.Component {
           
           <div className="navbar-brand">
             <Link to='/' className='navbar-item'>
-              <img src={this.state.site.logo} alt="Logo"></img>
+              {/* <img src={this.state.site.logo} alt="Logo"></img> */}
+              <Img fixed={this.state.file.childImageSharp.fixed} alt="Logo" />
             </Link>
 
             <Social social={this.state.site.social} device='desktop' />
@@ -99,6 +102,13 @@ const query = graphql`
           discord
           twitch
           twitter
+        }
+      }
+    }
+    file(relativePath: { eq: "purple-transparent.png" } ) {
+      childImageSharp {
+        fixed(width: 32, height: 32) {
+          ...GatsbyImageSharpFixed_withWebp
         }
       }
     }
