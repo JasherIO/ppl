@@ -1,20 +1,53 @@
 ---
 templateKey: blog-post
-cover: '/img/XDevil.jpg'
-title: 'Week 1 Schedule Released'
+cover: /img/XDevil.jpg
+title: New Season!
 date: '2018-10-01T19:41:54.023Z'
-description: 'Exciting matches abound in Week 1 of Season 4. Click here for the full details!'
-category: 'News'
+category: News
 tags:
-  - season 4
+  - New Season
 ---
+# Brand New Season:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, nisl quis porta bibendum, nulla purus vestibulum sem, sit amet ultrices nisi elit ut odio. Sed rutrum eu velit at rhoncus. Donec malesuada felis sem, ac cursus erat molestie a. Phasellus at efficitur mauris. Proin tincidunt nec lacus a aliquet. Etiam et malesuada odio, quis porta orci. Sed ligula augue, hendrerit eget feugiat quis, rutrum sit amet ligula. Suspendisse potenti. Quisque vel enim nec lorem ultrices aliquam nec fermentum arcu.
+Pulsar Premier League is back and showing no signs of slowing down anytime soon. Along with the announcement of Pulsar Weeklies, PPL is back with a brand new season to continue where we left off late 2016.
 
-Vestibulum venenatis lacus quis nunc porttitor, in varius neque cursus. Suspendisse elementum ante vel quam pharetra, id viverra velit fermentum. Cras tincidunt interdum metus, eget dictum mi tempor sit amet. Fusce sollicitudin, urna eu consequat auctor, tellus odio iaculis magna, a vulputate sapien magna vitae eros. Morbi quis lorem eget erat commodo fringilla commodo nec lacus. Morbi nibh magna, consectetur ac lacinia non, euismod quis diam. Phasellus pulvinar neque et lorem volutpat, id tincidunt dolor elementum. Nulla augue dui, cursus aliquet magna eu, luctus mollis erat. Etiam convallis, mi in consectetur feugiat, erat lorem varius augue, a tempor arcu urna ac lacus. Vestibulum hendrerit dictum laoreet. Aenean sollicitudin sapien ac metus venenatis, id commodo nisl lobortis. Sed quis quam posuere enim sollicitudin sollicitudin. Fusce eget massa eget ipsum aliquam pulvinar. Maecenas iaculis malesuada leo, nec bibendum velit. Quisque facilisis tellus congue enim mattis egestas.
+## When?
 
-Fusce orci dui, finibus at molestie a, fringilla at tortor. Integer vitae nisl lorem. Nullam vel faucibus felis, quis mollis odio. Suspendisse hendrerit elit vel maximus faucibus. Duis ultricies, ante vehicula scelerisque rhoncus, risus purus ullamcorper erat, nec interdum diam enim vitae magna. Duis id nibh nec mi congue pellentesque. Cras sit amet quam metus. Ut sed nisi vel lorem vulputate tempor sit amet at magna. Suspendisse vel aliquet nibh. In pellentesque diam dui, eget scelerisque justo efficitur sit amet. Phasellus id tellus vel lacus ultricies fringilla quis vitae leo.
+Pulsar Premier League comeback season will begin qualifiers in the beginning of December, that's right, December 2018. The actual league will take place in the beginning of January!
 
-Morbi lobortis sollicitudin augue, sit amet porttitor urna ultrices quis. Nam risus sapien, congue ac congue in, hendrerit vitae augue. Suspendisse nibh lorem, vestibulum eget velit quis, pulvinar sodales erat. Quisque rutrum orci quis nisi viverra tristique. Phasellus mattis nulla quis tellus commodo, in sagittis neque aliquam. Cras sit amet rhoncus libero. Nunc sed ex fringilla, blandit ipsum id, fermentum sapien. Ut commodo laoreet nunc ut tempus. Morbi ac suscipit velit. Aenean in mattis odio, sit amet posuere lorem. Aliquam maximus nunc sit amet nulla vehicula, sit amet tempor nisl blandit. Quisque euismod vulputate nibh vel fringilla. Nullam vel aliquet lorem. Mauris rhoncus tincidunt pharetra. Suspendisse in augue at neque sagittis sollicitudin.
+## Qualifiers?
 
-Donec molestie risus ut nunc imperdiet, sed condimentum tellus dignissim. Mauris tincidunt sagittis pretium. Etiam quis nulla a elit aliquam viverra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent nulla metus, pellentesque quis augue quis, blandit interdum nisi. Ut at tincidunt mauris. Etiam laoreet elit in neque auctor, in feugiat erat dignissim. Integer vehicula lacus ipsum, non mollis leo aliquam non.
+Qualifiers will be during Pulsar Weeklies. In the month of December, we will be keeping track of how every team does for placements. You will receive "x" amount of points based off of your performance during the weeklies and in the end, your weekly points will be added up to give you your team's grand total and determine your spot in league play.
+
+## How many teams will qualify?
+
+Good question! As of right now we are going to shoot for
+
+* Premier League - 10 teams
+* Division 1 - 20 teams
+* Division 2 - 20 teams
+* Division 3 - 20 teams
+
+These are just goals and amount of teams may vary for divisions 1-3
+
+## How will league play work?
+
+After qualifiers teams will be given their schedule matches. Each team will play two separate days of the week for a month (4 weeks). 
+
+## Prize?
+
+Of course! We are still working out how much the prize will be and it will be announced as soon as we have a set in stone answer. We don't want to misinform anybody!
+
+## Rules:
+
+Rules will be generally the same as Pulsar Weeklies with a few minor adjustments here and there to suit league play. Refer to the Pulsar Weekly rules.
+
+## Stats?
+
+This is where we want to make a difference. After a match your team will save all replays and upload them to Pulsar Premier league discord under the appropriate section (Tutorial video in discord). Our bot will take all your individual statistics and upload them to pulsarpremierleague.com where they can be seen by everyone. How many shots, goals, assist, saves, points, wins, losses, will be taken by every player and put on a leader board to give recognition where it is due.  
+
+
+
+## Thanks!
+
+We just want to thank the Rocket League community, and on behalf of Pulsar Premier League, enjoy!
