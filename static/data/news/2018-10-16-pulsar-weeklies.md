@@ -2,7 +2,7 @@
 templateKey: blog-post
 cover: /img/announcement_weeklies.png
 title: Pulsar Weeklies!
-date: 2018-10-16T14:30:00.000Z
+date: 'October 16, 2018 2:22 PM -0500'
 category: News
 tags:
   - season 4
