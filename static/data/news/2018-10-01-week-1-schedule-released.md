@@ -2,7 +2,7 @@
 templateKey: blog-post
 cover: '/img/XDevil.jpg'
 title: 'Week 1 Schedule Released'
-date: '2018-10-01T09:30:00-05:00'
+date: '2018-10-01T19:41:54.023Z'
 description: 'Exciting matches abound in Week 1 of Season 4. Click here for the full details!'
 category: 'News'
 tags:
