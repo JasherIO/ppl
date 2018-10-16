@@ -93,15 +93,7 @@ const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-    <Layout helmet={post.frontmatter.title}>
-=======
     <>
->>>>>>> Stashed changes
-=======
-    <Layout>
->>>>>>> master
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
