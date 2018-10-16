@@ -19,7 +19,7 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Image", name: "cover", widget: "image"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "LLLL"}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "LLL ZZ"}
       # - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Category", name: "category", widget: "select", options: ["Event", "Interview", "News", "Players", "Review", "Teams", "Video"]}

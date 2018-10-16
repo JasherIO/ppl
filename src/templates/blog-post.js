@@ -37,6 +37,7 @@ export const BlogPostTemplate = ({
         {cover && !_.isString(cover) && <meta name="og:image" content={`https://pulsarpremierleague.com${cover.childImageSharp.fluid.src}`} />}
         {cover && !_.isString(cover) && <meta name="twitter:image" content={`https://pulsarpremierleague.com${cover.childImageSharp.fluid.src}`} />}
 
+        {/* TODO: authors */}
         {/* <link rel="author" href={`https://pulsarpremierleague.com${post.frontmatter.author.fields.slug}`} /> */}
         {/* <meta name="og:type" content="article" /> */}
         {/* <meta name="article:author" content={post.frontmatter.author.id} /> */}
