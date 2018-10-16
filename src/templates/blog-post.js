@@ -53,10 +53,10 @@ export const BlogPostTemplate = ({
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <figure className="image">
-              {cover && _.isString(cover) ? (
-                <img src={cover} alt={title} />
-              ) : (
+              {cover && !_.isString(cover) ? (
                 <Img fluid={cover.childImageSharp.fluid} alt={title} />
+              ) : (
+                <img src={cover} alt={title} />
               )}
               
             </figure>
