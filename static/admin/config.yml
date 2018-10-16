@@ -22,6 +22,7 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       # - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Category", name: "category", widget: "select", options: ["Event", "Interview", "News", "Players", "Review", "Teams", "Video"]}
       - {label: "Tags", name: "tags", widget: "list"}
 
   - name: "pages"
