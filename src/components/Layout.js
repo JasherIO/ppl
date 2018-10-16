@@ -1,11 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-<<<<<<< Updated upstream
-=======
 import { graphql, StaticQuery } from 'gatsby'
 import posed, { PoseGroup } from 'react-pose'
->>>>>>> Stashed changes
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 

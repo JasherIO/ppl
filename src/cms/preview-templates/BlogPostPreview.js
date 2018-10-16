@@ -7,7 +7,6 @@ const BlogPostPreview = ({ entry, widgetFor, widgetsFor }) => (
     content={widgetFor('body')}
     cover={entry.getIn(['data', 'cover'])}
     title={entry.getIn(['data', 'title'])}
-    // tags={entry.hasIn(['data', 'tags']) ? entry.getIn(['data', 'tags']).toArray() : []}
     tags={entry.getIn(['data', 'tags'])}
   />
 )

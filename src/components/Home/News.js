@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import Card from '../News/Card'
 
-const Title = () => (
+export const Title = () => (
   <div className="level is-mobile">
     <div className="level-left">
       <div className="level-item">
@@ -19,11 +19,11 @@ const Title = () => (
   </div>
 )
 
-const Section = ({ data }) => {
+export const PureSection = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
 
   return (
-    <section className="section is-medium background is-hexellence">
+    <section className="section background is-hexellence" style={{ paddingBottom: "5rem" }}>
       <div className="container">
         <Title />
 
@@ -56,7 +56,13 @@ const query = graphql`
           }
           frontmatter {
             title
-            cover
+            cover {
+              childImageSharp {
+                fluid(maxWidth: 700) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
             category
             date(formatString: "MMMM DD, YYYY")
           }
@@ -66,6 +72,8 @@ const query = graphql`
   }
 `
 
-export default props => (
-  <StaticQuery query={query} render={data => <Section data={data} {...props} />} />
+export const Section = props => (
+  <StaticQuery query={query} render={data => <PureSection data={data} {...props} />} />
 )
+
+export default Section

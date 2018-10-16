@@ -1,24 +1,9 @@
 /* eslint-disable */
 
 import React from 'react'
-import { Link } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 
-const data = [
-  {
-    'name': 'Players',
-    'content': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, nisl quis porta bibendum, nulla purus vestibulum sem, sit amet ultrices nisi elit ut odio. Sed rutrum eu velit at rhoncus.'
-  },
-  {
-    'name': 'Teams',
-    'content': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, nisl quis porta bibendum, nulla purus vestibulum sem, sit amet ultrices nisi elit ut odio. Sed rutrum eu velit at rhoncus.'
-  },
-  {
-    'name': 'Format',
-    'content': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, nisl quis porta bibendum, nulla purus vestibulum sem, sit amet ultrices nisi elit ut odio. Sed rutrum eu velit at rhoncus.'
-  }
-]
-
-const Title = () => (
+export const Title = () => (
   <div className="level is-mobile">
     <div className="level-left">
       <div className="level-item">
@@ -26,23 +11,16 @@ const Title = () => (
         <p className="title is-4 is-hidden-desktop">About PPL</p>
       </div>
     </div>
-    <div className="level-right">
-      <div className="level-item">
-        <Link to="/about" className="button is-primary is-outlined">
-          Read More
-        </Link>
-      </div>
-    </div>
   </div>
 )
 
-const Tab = ({ tab, active, onClick }) => (
+export const Tab = ({ tab, active, onClick }) => (
   <li className={tab.name === active.name ? "is-active" : "false"} onClick={() => onClick(tab)}>
     <a>{tab.name}</a>
   </li>
 )
 
-const Tabs = ({ tabs, active, onClick }) => (
+export const Tabs = ({ tabs, active, onClick }) => (
   <div className="tabs">
     <ul>
       {tabs.map(tab => <Tab key={tab.name} tab={tab} active={active} onClick={onClick} />)}
@@ -50,12 +28,15 @@ const Tabs = ({ tabs, active, onClick }) => (
   </div>
 )
 
-class Section extends React.Component {
+export class PureSection extends React.Component {
   constructor(props) {
     super(props)
 
+    const { tabs } = props.data.markdownRemark.frontmatter
+
     this.state = {
-      active: data[0]
+      active: tabs[0],
+      tabs: tabs
     }
 
     this.onClick = this.onClick.bind(this)
@@ -67,16 +48,33 @@ class Section extends React.Component {
 
   render() {
     return (
-      <section className="section is-medium">
+      <section className="section" style={{ padding: "6rem 1.5rem" }}>
         <div className="container">
           <Title />
-          <Tabs tabs={data} active={this.state.active} onClick={this.onClick} />
+          <Tabs tabs={this.state.tabs} active={this.state.active} onClick={this.onClick} />
 
-          <div>{this.state.active.content}</div>
+          <div>{this.state.active.description}</div>
         </div>
       </section>
     )
   }
 }
+
+const query = graphql`
+  query {
+    markdownRemark(frontmatter: { templateKey: { eq: "home-post" } }) {
+      frontmatter {
+        tabs {
+          name
+          description
+        }
+      }
+    }
+  }
+`
+
+export const Section =  props => (
+  <StaticQuery query={query} render={data => <PureSection data={data} {...props} />} />
+)
 
 export default Section

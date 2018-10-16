@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Card from '../../components/News/Card'
 
@@ -7,7 +8,7 @@ const Title = () => (
   <div className="level is-mobile">
     <div className="level-left">
       <div className="level-item">
-        <p className="title is-3">Recent News</p>
+        <h1 className="title is-3">Recent News</h1>
       </div>
     </div>
     {/* <div className="level-right">
@@ -87,7 +88,13 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            cover
+            cover {
+              childImageSharp {
+                fluid(maxWidth: 700) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
             category
             description
             date(formatString: "MMMM DD, YYYY")
