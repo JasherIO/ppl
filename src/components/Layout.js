@@ -115,4 +115,4 @@ export const Layout = props => (
   <StaticQuery query={query} render={({site}) => <PureLayout site={site} {...props} />} />
 )
 
-export default TemplateWrapper
+export default Layout
