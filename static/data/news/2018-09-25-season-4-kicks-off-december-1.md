@@ -2,7 +2,7 @@
 templateKey: blog-post
 cover: /img/GrandChampion.png
 title: Pulsar Weeklies!
-date: '2018-09-25T09:30:00-05:00'
+date: 2018-10-16T14:30:00.000Z
 tags:
   - season 4
 ---
