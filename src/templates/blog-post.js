@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import { kebabCase } from 'lodash'
 import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
+import _ from 'lodash'
 import Content, { HTMLContent } from '../components/Content'
 
 export const BlogPostTemplate = ({
@@ -33,12 +34,8 @@ export const BlogPostTemplate = ({
         <meta name="og:description" content={excerpt} />
         <meta name="twitter:description" content={excerpt} />
 
-        {cover && (
-          <meta name="og:image" content={`https://pulsarpremierleague.com${cover.childImageSharp.fluid.src}`} />
-        )}
-        {cover && (
-          <meta name="twitter:image" content={`https://pulsarpremierleague.com${cover.childImageSharp.fluid.src}`} />
-        )}
+        {cover && !_.isString(cover) && <meta name="og:image" content={`https://pulsarpremierleague.com${cover.childImageSharp.fluid.src}`} />}
+        {cover && !_.isString(cover) && <meta name="twitter:image" content={`https://pulsarpremierleague.com${cover.childImageSharp.fluid.src}`} />}
 
         {/* <link rel="author" href={`https://pulsarpremierleague.com${post.frontmatter.author.fields.slug}`} /> */}
         {/* <meta name="og:type" content="article" /> */}
@@ -56,7 +53,12 @@ export const BlogPostTemplate = ({
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <figure className="image">
-              <Img fluid={cover.childImageSharp.fluid} alt={title} />
+              {cover && _.isString(cover) ? (
+                <img src={cover} alt={title} />
+              ) : (
+                <Img fluid={cover.childImageSharp.fluid} alt={title} />
+              )}
+              
             </figure>
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
