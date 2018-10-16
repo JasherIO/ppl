@@ -1,9 +1,12 @@
 import React from 'react'
-import Layout from '../../components/Layout'
+import Helmet from 'react-helmet'
 
 const PremierStatsPage = () => (
-  <Layout helmet="Premier Stats" title="Premier Stats">
-  </Layout>
+  <>
+    <Helmet>
+      <title>Premier Stats</title>
+    </Helmet>
+  </>
 )
 
 export default PremierStatsPage

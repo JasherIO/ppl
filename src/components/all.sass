@@ -1,12 +1,5 @@
 @import "~bulma/sass/utilities/initial-variables"
 
-// Config vars
-// $kaldi-red: #FD461E
-// $kaldi-red-invert: #fff
-
-// $primary: $kaldi-red
-// $primary-invert: $kaldi-red-invert
-
 .content .taglist
   list-style: none
   margin-bottom: 0
@@ -22,23 +15,6 @@
     margin-bottom: 1.5rem
     margin-top: 0
 
-// Helper Classes
-.full-width-image-container
-  width: 100vw
-  height: 400px
-  position: relative
-  left: 50%
-  right: 50%
-  margin: 5em -50vw
-  background-size: cover
-  background-position: bottom
-  display: flex
-  justify-content: center
-  align-items: center
-
-.margin-top-0
-  margin-top: 0 !important
-
 // PPL
 // https://color.adobe.com/create/color-wheel/?base=2&rule=Monochromatic&selected=3&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.6470031194297449,0.2981840463458111,0.9901960784313726,0.5950883476081412,0.445941027926322,0.7418300653594772,0.45098039215686275,0.20784313725490197,0.6901960784313725,0.7943249750011753,0.5952428698752228,0.9901960784313726,0.3202985739751211,0.1476158645276292,0.4901960784313724&swatchOrder=0,1,2,3,4
 $purple: #7335b0
@@ -49,18 +25,14 @@ $black: #2b2c2d
 
 $primary: $purple
 
-$link: $purple
-$link-hover: $light-purple
+$body-background-color: $white-ter
+$roundedness: 10px
 
 $navbar-height: 2.5rem
 $navbar-item-img-max-height: 2.0rem
-// $navbar-item-color: $light-purple
-// $navbar-item-active-color: $light-purple
-// $navbar-item-hover-color: $light-purple
 
-$body-background-color: $white-ter
-// $section-padding: 3rem 1.5rem
-$roundedness: 10px
+$link: $purple
+$link-hover: $light-purple
 
 .hero-background
   background-size: cover
@@ -80,8 +52,24 @@ $roundedness: 10px
 
 @import "~bulma"
 
-.navbar
-  box-shadow: $shadow
+.initial
+  #content
+    visibility: hidden
+  
+  #nav 
+    opacity: 0
+    transform: translateY(10px)
+
+.loaded
+  #content
+    visibility: visible
+  
+  #nav
+    opacity: 1
+    transform: translateY(0px)
+
+// .navbar
+//   box-shadow: $shadow
 
 .navbar-burger
   height: 3rem

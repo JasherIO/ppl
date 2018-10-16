@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
+import Img from 'gatsby-image'
 import Content, { HTMLContent } from '../components/Content'
 
 export const BlogPostTemplate = ({
@@ -57,7 +57,11 @@ const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
+<<<<<<< Updated upstream
     <Layout helmet={post.frontmatter.title}>
+=======
+    <>
+>>>>>>> Stashed changes
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
@@ -65,7 +69,7 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
         tags={post.frontmatter.tags}
       />
-    </Layout>
+    </>
   )
 }
 

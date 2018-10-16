@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout from '../../components/Layout'
 import Card from '../../components/News/Card'
 
 const Title = () => (
@@ -40,7 +39,10 @@ export default class NewsPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <Layout helmet="News">
+      <>
+        <Helmet>
+          <title>News</title>
+        </Helmet>
         <div className="container">
           <section className="section">
 
@@ -57,7 +59,7 @@ export default class NewsPage extends React.Component {
             </div>
           </section>
         </div>
-      </Layout>
+      </>
     )
   }
 }

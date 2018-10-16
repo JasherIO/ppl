@@ -35,7 +35,7 @@ class Nav extends React.Component {
 
   render() {
     return (
-      <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
+      <nav className="navbar is-transparent" role="navigation" aria-label="main navigation" id="nav">
         <div className="container is-fluid">
           
           <div className="navbar-brand">
