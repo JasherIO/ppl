@@ -1,6 +1,8 @@
 const _ = require('lodash')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
+const slug = require('slug')
+const moment = require('moment')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -99,7 +101,18 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode, trailingSlash: false })
+    // const value = createFilePath({ node, getNode, trailingSlash: false })
+
+    // Temporary fix for https://github.com/netlify/netlify-cms/issues/1576
+    let value
+    if ( _.has(node, ['frontmatter', 'title']) && 
+         _.has(node, ['frontmatter', 'date']) ) {
+      const m = moment(node.frontmatter.date)
+      value = slug(`${m.format("YYYY MM DD")} ${node.frontmatter.title}`, { "lower": true })
+    } else {
+      value = createFilePath({ node, getNode, trailingSlash: false })
+    }
+
     createNodeField({
       name: `slug`,
       node,
