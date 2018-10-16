@@ -2,7 +2,7 @@
 templateKey: 'blog-post'
 cover: '/img/Batmobile.jpg'
 title: 'Season 4: Week 1 In Review'
-date: 'October 4, 2018 2:22 PM -0500'
+date: '2018-10-04T09:30:00-05:00'
 description: 'Season 4: Week 1 In Review'
 category: 'Review'
 tags:
