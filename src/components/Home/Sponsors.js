@@ -34,7 +34,7 @@ export const PureSection = ({ data }) => {
   const { sponsors } = data.markdownRemark.frontmatter
 
   return (
-    <section className="section is-small background is-hexellence">
+    <section className="section is-small">
       <div className="container">
         <Level sponsors={sponsors} />
       </div>
