@@ -80,6 +80,8 @@ class PureLayout extends React.Component {
           <meta name="description" content={site.siteMetadata.description} />
           
           {/* <link rel="canonical" href={`${data.site.siteMetadata.siteUrl}${location.pathname}` /> */}
+
+          <meta name="msvalidate.01" content="1F070B704B750BDCFF3AA23B0EF3D993" />
         </Helmet>
 
         <PoseGroup animateOnMount preEnterPose="initial">
