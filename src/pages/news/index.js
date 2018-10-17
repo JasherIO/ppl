@@ -97,7 +97,7 @@ export const pageQuery = graphql`
             }
             category
             description
-            date(formatString: "MMMM DD, YYYY")
+            date
           }
         }
       }

@@ -126,7 +126,7 @@ export const pageQuery = graphql`
       excerpt
       timeToRead
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date
         cover {
           childImageSharp {
             fluid(maxWidth: 1500) {

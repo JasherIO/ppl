@@ -64,7 +64,7 @@ const query = graphql`
               }
             }
             category
-            date(formatString: "MMMM DD, YYYY")
+            date
           }
         }
       }
