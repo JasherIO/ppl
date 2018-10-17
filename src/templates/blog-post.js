@@ -50,12 +50,12 @@ export const BlogPostTemplate = ({
         {/* TODO: canonical link */}
       </Helmet>
 
-      <div className="container content">
+      <div className="container content" id="post">
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <figure className="image">
               {cover && !_.isString(cover) ? (
-                <Img fluid={cover.childImageSharp.fluid} alt={title} />
+                <Img fluid={cover.childImageSharp.fluid} alt={title} style={{ overflow: "visible" }} />
               ) : (
                 <img src={cover} alt={title} />
               )}

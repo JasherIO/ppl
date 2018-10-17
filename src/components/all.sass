@@ -20,7 +20,6 @@
 $purple: #7335b0
 $light-purple: #CB98FC
 $dark-purple: #52267D
-$shadow: 0 4px 2px -2px rgba(0,0,0,0.3)
 $black: #2b2c2d
 
 $primary: $purple
@@ -34,21 +33,8 @@ $navbar-item-img-max-height: 2.0rem
 $link: $purple
 $link-hover: $light-purple
 
-.hero-background
-  background-size: cover
-  background-position: center center
-  background-repeat: no-repeat
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/Shiawese.jpg")
-
-.background
-  background-repeat: repeat
-
-.is-hexellence
-  background-image: url("/img/Textures/hexellence.png")
-
-.is-honeycomb
-  background-image: url("/img/Textures/honey-im-subtle.png")
-  background-color: $white
+$img-shadow: 0 2px 3px rgba(43, 44, 45, 0.1), 0 0 0 1px rgba(43, 44, 45, 0.1)
+$nav-shadow: 0 2px 3px rgba(43, 44, 45, 0.1)
 
 @import "~bulma"
 
@@ -68,11 +54,27 @@ $link-hover: $light-purple
     opacity: 1
     transform: translateY(0px)
 
-// .navbar
-//   box-shadow: $shadow
+.navbar
+  box-shadow: $nav-shadow
 
 .navbar-burger
   height: 3rem
+
+.hero-background
+  background-size: cover
+  background-position: center center
+  background-repeat: no-repeat
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/Shiawese.jpg")
+
+.background
+  background-repeat: repeat
+
+.is-hexellence
+  background-image: url("/img/Textures/hexellence.png")
+
+.is-honeycomb
+  background-image: url("/img/Textures/honey-im-subtle.png")
+  background-color: $white
 
 .card
   border-radius: $roundedness
@@ -82,6 +84,9 @@ $link-hover: $light-purple
 
 img
   border-radius: $roundedness
+
+#post img
+  box-shadow: $img-shadow
 
 .section
   &.is-small
