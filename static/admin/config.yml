@@ -50,7 +50,7 @@ collections:
           - {label: "Sponsors", name: "sponsors", widget: "list", 
               fields: [
                 {label: "Name", name: "name", widget: "string"},
-                {label: "Description", name: "description", widget: "text", required: false},
+                # {label: "Description", name: "description", widget: "text", required: false},
                 {label: "Link", name: "link", widget: "string"},
                 {label: "Image", name: "img", widget: "image"}
               ]
