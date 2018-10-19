@@ -7,7 +7,7 @@ import Img from 'gatsby-image'
 import _ from 'lodash'
 import Content, { HTMLContent } from '../components/Content'
 
-export const BlogPostTemplate = ({
+export const PostTemplate = ({
   content,
   contentComponent,
   excerpt,
@@ -22,7 +22,7 @@ export const BlogPostTemplate = ({
     <section className="section">
       
       {/* Card Validator: https://cards-dev.twitter.com/validator */}
-      {/* https://github.com/gatsbyjs/gatsby/blob/445f5ff7508ab613967e18b32490e3feffd7730c/www/src/templates/template-blog-post.js */}
+      {/* https://github.com/gatsbyjs/gatsby/blob/445f5ff7508ab613967e18b32490e3feffd7730c/www/src/templates/template-post.js */}
       <Helmet>
         <meta name="og:type" content="article" />
 
@@ -84,7 +84,7 @@ export const BlogPostTemplate = ({
   )
 }
 
-BlogPostTemplate.propTypes = {
+PostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   // cover: PropTypes.string,
@@ -92,12 +92,12 @@ BlogPostTemplate.propTypes = {
   tags: PropTypes.array,
 }
 
-const BlogPost = ({ data }) => {
+const Post = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <>
-      <BlogPostTemplate
+      <PostTemplate
         content={post.html}
         contentComponent={HTMLContent}
         excerpt={post.excerpt}
@@ -110,16 +110,16 @@ const BlogPost = ({ data }) => {
   )
 }
 
-BlogPost.propTypes = {
+Post.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default BlogPost
+export default Post
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
+  query PostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html

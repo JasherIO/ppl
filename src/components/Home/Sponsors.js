@@ -5,14 +5,12 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 export const Level = ({ sponsors }) => (
   <div className="level is-mobile">
-    <div className="level-left">
-      <div className="level-item">
-        <p className="title is-4">Sponsored By</p>
-      </div>
+    <div className="level-item">
+      <p className="title is-4">Sponsored By</p>
     </div>
-    <div className="level-right">
+    <div className="level-item">
       {sponsors.map((sponsor) => (
-          <div key={sponsor.name} className="level-item">
+          <div key={sponsor.name} style={{ padding: "0.5rem" }}>
             <figure className="image is-96x96 is-hidden-touch">
               <OutboundLink href={sponsor.link} aria-label={sponsor.name}>
                 <Img fluid={sponsor.img.childImageSharp.fluid} />
