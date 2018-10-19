@@ -4,6 +4,28 @@ const { createFilePath } = require('gatsby-source-filesystem')
 const slug = require('slug')
 const moment = require('moment')
 
+const toTemplate = (edge) => {
+  const id = edge.node.id
+  return {
+    path: edge.node.fields.slug,
+    component: path.resolve(`src/templates/${String(edge.node.frontmatter.templateKey)}.js`),
+    context: {
+      id,
+    },
+  }
+}
+
+const toTag = (tag) => {
+  const tagPath = `/tags/${_.kebabCase(tag)}/`
+  return {
+    path: tagPath,
+    component: path.resolve(`src/templates/tags.js`),
+    context: {
+      tag,
+    },
+  }
+}
+
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
@@ -19,8 +41,8 @@ exports.createPages = ({ actions, graphql }) => {
               slug
             }
             frontmatter {
-              tags
               templateKey
+              tags
             }
           }
         }
@@ -32,44 +54,14 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    const posts = result.data.allMarkdownRemark.edges
+    const edges = result.data.allMarkdownRemark.edges
 
-    _.each(posts, edge => {
-      if (edge.node.frontmatter.templateKey === "home-post") {
-        return
-      }
+    const posts = _.filter(edges, edge => _.includes(['post'], edge.node.frontmatter.templateKey))
+    _.each(posts, edge => createPage(toTemplate(edge)))
 
-      const id = edge.node.id
-      createPage({
-        path: edge.node.fields.slug,
-        component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-        ),
-        context: {
-          id,
-        },
-      })
-    })
+    const tags = _.uniq(_.compact(_.flatMap(posts, edge => edge.node.frontmatter.tags)))
+    _.each(tags, tag => createPage(toTag(tag)))
 
-    let tags = []
-    _.each(posts, edge => {
-      if (_.get(edge, `node.frontmatter.tags`)) {
-        tags = tags.concat(edge.node.frontmatter.tags)
-      }
-    })
-    tags = _.uniq(tags)
-
-    _.each(tags, tag => {
-      const tagPath = `/tags/${_.kebabCase(tag)}/`
-
-      createPage({
-        path: tagPath,
-        component: path.resolve(`src/templates/tags.js`),
-        context: {
-          tag,
-        },
-      })
-    })
   })
 }
 
