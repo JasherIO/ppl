@@ -5,6 +5,7 @@ import { Link, graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import _ from 'lodash'
 
 const Social = ({ social, device }) => (
   <>
@@ -61,23 +62,9 @@ export class PureNavbar extends React.Component {
           <div className="navbar-menu" className={this.state.isActive ? "navbar-menu is-active" : "navbar-menu"} onClick={this.onClick}>
 
             <div className="navbar-start">
-              <Link to="/news" className='navbar-item' activeClassName="is-active">
-                News
-              </Link>
-
-              {/* <div className="navbar-item has-dropdown is-hoverable">
-                <Link to="/premier" className='navbar-link' activeClassName="is-active">
-                  Premier
-                </Link>
-                <div className="navbar-dropdown is-boxed">
-                  <Link to="/premier/standings" className='navbar-item' activeClassName="is-active">
-                    Standings
-                  </Link>
-                  <Link to="/premier/stats" className='navbar-item' activeClassName="is-active">
-                    Stats
-                  </Link>
-                </div>
-              </div> */}
+              {this.state.site.navbar && !_.isEmpty(this.state.site.navbar) && 
+                _.map(this.state.site.navbar, (item) => <Link key={item.label} to={item.link} className='navbar-item' activeClassName="is-active">{item.label}</Link>)}
+              
             </div>
 
             <div className="navbar-end">
@@ -98,6 +85,10 @@ const query = graphql`
       siteMetadata {
         title
         logo
+        navbar {
+          label
+          link
+        }
         social {
           discord
           twitch

@@ -27,6 +27,7 @@ collections:
 
   - name: "pages"
     label: "Pages"
+    label_singular: "Page"
     files:
       
       - file: "static/data/home/index.md"
@@ -71,6 +72,12 @@ collections:
           - {label: Copyright, name: copyright, widget: hidden}
           # - {label: Logo, name: logo, widget: image}
           - {label: Favicon, name: favicon, widget: hidden, required: false}
+          - {label: Navbar, name: navbar, widget: list, 
+              fields: [
+                {label: "Label", name: "label", widget: "string"},
+                {label: "Link", name: "link", widget: "string"},
+              ]
+            }
           - {label: Social, name: social, widget: object, 
               fields: [
                 {label: Discord, name: discord, widget: string, required: false},

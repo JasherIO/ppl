@@ -8,6 +8,7 @@ module.exports = {
     description: config.description || "",
     logo: config.logo || "",
     favicon: config.favicon || "",
+    navbar: config.navbar || [],
     social: {
       discord: config.social.discord || "",
       github: config.social.github || "",
