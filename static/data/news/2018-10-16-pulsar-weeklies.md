@@ -1,11 +1,12 @@
 ---
-templateKey: blog-post
+templateKey: post
 cover: /img/announcement_weeklies.png
 title: Pulsar Weeklies!
 date: '2018-10-16T14:30:00.000Z'
 category: News
 tags:
   - season 4
+  - another
 ---
 # Welcome to Pulsar Weeklies!
 

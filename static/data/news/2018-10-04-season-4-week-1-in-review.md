@@ -1,5 +1,5 @@
 ---
-templateKey: 'blog-post'
+templateKey: 'post'
 cover: '/img/Batmobile.jpg'
 title: 'Season 4: Week 1 In Review'
 date: '2018-10-04T19:41:54.023Z'
