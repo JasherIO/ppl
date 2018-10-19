@@ -1,10 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { kebabCase } from 'lodash'
-import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
-import _ from 'lodash'
+import { graphql } from 'gatsby'
 import { HTMLContent } from '../components/Content'
 
 export const PageTemplate = ({
@@ -23,16 +20,17 @@ export const PageTemplate = ({
       <meta name="description" content={excerpt}/>
       <meta name="og:description" content={excerpt} />
       <meta name="twitter:description" content={excerpt} />
-
-      {cover && !_.isString(cover) && <meta name="og:image" content={`https://pulsarpremierleague.com${cover.childImageSharp.fluid.src}`} />}
-      {cover && !_.isString(cover) && <meta name="twitter:image" content={`https://pulsarpremierleague.com${cover.childImageSharp.fluid.src}`} />}
     </Helmet>
 
     <div className="container content">
-      <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-        {title}
-      </h1>
-      <HTMLContent content={content} />
+      <div className="columns">
+        <div className="column is-10 is-offset-1">
+          <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+            {title}
+          </h1>
+          <HTMLContent content={content} />
+        </div>
+      </div>
     </div>
   </section>
 )

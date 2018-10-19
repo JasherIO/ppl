@@ -15,7 +15,7 @@ const toTemplate = (edge) => {
   }
 }
 
-const toTag = (tag) => {
+const toTagTemplate = (tag) => {
   const tagPath = `/tags/${_.kebabCase(tag)}/`
   return {
     path: tagPath,
@@ -56,11 +56,11 @@ exports.createPages = ({ actions, graphql }) => {
 
     const edges = result.data.allMarkdownRemark.edges
 
-    const posts = _.filter(edges, edge => _.includes(['post'], edge.node.frontmatter.templateKey))
+    const posts = _.filter(edges, edge => _.includes(['page', 'post'], edge.node.frontmatter.templateKey))
     _.each(posts, edge => createPage(toTemplate(edge)))
 
     const tags = _.uniq(_.compact(_.flatMap(posts, edge => edge.node.frontmatter.tags)))
-    _.each(tags, tag => createPage(toTag(tag)))
+    _.each(tags, tag => createPage(toTagTemplate(tag)))
 
   })
 }
