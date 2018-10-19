@@ -9,17 +9,13 @@ import _ from 'lodash'
 
 const Social = ({ social, device }) => (
   <>
-    <OutboundLink href={social.discord} aria-label="discord" className={`navbar-item is-hidden-${device}`}  rel='external'>
-      <FontAwesomeIcon icon={['fab', 'discord']} />
-    </OutboundLink>
-
-    <OutboundLink href={social.twitch} aria-label="twitch" className={`navbar-item is-hidden-${device}`}  rel='external'>
-      <FontAwesomeIcon icon={['fab', 'twitch']} />
-    </OutboundLink>
-
-    <OutboundLink href={social.twitter} aria-label="twitter" className={`navbar-item is-hidden-${device}`}  rel='external'>
-      <FontAwesomeIcon icon={['fab', 'twitter']} />
-    </OutboundLink>
+    {_.map(social, item => {
+      return (
+        <OutboundLink href={item.link} key={`${item.platform}-${device}`} aria-label={item.platform} className={`navbar-item is-hidden-${device}`}  rel='external'>
+          <FontAwesomeIcon icon={['fab', _.lowerCase(item.platform)]} />
+        </OutboundLink>
+      )
+    })}
   </>
 )
 
@@ -64,7 +60,6 @@ export class PureNavbar extends React.Component {
             <div className="navbar-start">
               {this.state.site.navbar && !_.isEmpty(this.state.site.navbar) && 
                 _.map(this.state.site.navbar, (item) => <Link key={item.label} to={item.link} className='navbar-item' activeClassName="is-active">{item.label}</Link>)}
-              
             </div>
 
             <div className="navbar-end">
@@ -90,9 +85,8 @@ const query = graphql`
           link
         }
         social {
-          discord
-          twitch
-          twitter
+          platform
+          link
         }
       }
     }

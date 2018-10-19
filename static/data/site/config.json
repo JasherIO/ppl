@@ -16,13 +16,20 @@
       "link": "/rules"
     }
   ],
-  "social": {
-    "discord": "https://discord.gg/JT3wRE6",
-    "github": "https://github.com/jasherio/ppl",
-    "twitch": "https://twitch.tv/PulsarPremierLeague",
-    "twitter": "https://twitter.com/PulsarPremier",
-    "youtube": ""
-  },
+  "social": [
+    {
+      "platform": "Discord",
+      "link": "https://discord.gg/JT3wRE6"
+    },
+    {
+      "platform": "Twitch",
+      "link": "https://twitch.tv/PulsarPremierLeague"
+    },
+    {
+      "platform": "Twitter",
+      "link": "https://twitter.com/PulsarPremier"
+    }
+  ],
   "googleAnalyticsId": "UA-107122749-3",
   "pathPrefix": "",
   "rss": "/rss.xml"

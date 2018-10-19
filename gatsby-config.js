@@ -9,13 +9,7 @@ module.exports = {
     logo: config.logo || "",
     favicon: config.favicon || "",
     navbar: config.navbar || [],
-    social: {
-      discord: config.social.discord || "",
-      github: config.social.github || "",
-      twitch: config.social.twitch || "",
-      twitter: config.social.twitter || "",
-      youtube: config.social.youtube || ""
-    },
+    social: config.social || []
   },
   plugins: [
     'gatsby-plugin-catch-links',

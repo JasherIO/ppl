@@ -74,12 +74,13 @@ class PureLayout extends React.Component {
           <meta name="og:title" content={site.siteMetadata.title} />
           
           <meta name="og:site_name" content={site.siteMetadata.title} />
+          {/* TODO: Pull twitter link from site metadata */}
           <meta name="twitter:site" content="@pulsarpremier" />
 
           <meta name="og:description" content={site.siteMetadata.description} />
           <meta name="description" content={site.siteMetadata.description} />
           
-          {/* <link rel="canonical" href={`${data.site.siteMetadata.siteUrl}${location.pathname}` /> */}
+          {/* TODO: Canonical links */}
 
           <meta name="msvalidate.01" content="1F070B704B750BDCFF3AA23B0EF3D993" />
         </Helmet>
@@ -105,9 +106,6 @@ const query = graphql`
         title
         alternate
         description
-        social {
-          twitter
-        }
       }
     }
   }
