@@ -25,9 +25,9 @@ collections:
       - {label: "Category", name: "category", widget: "select", options: ["Event", "Interview", "News", "Players", "Review", "Teams", "Video"]}
       - {label: "Tags", name: "tags", widget: "list"}
 
-  - name: "blahs"
-    label: "Blahs"
-    label_singular: "Blah"
+  - name: "pages"
+    label: "Pages"
+    label_singular: "Page"
     folder: "static/data"
     create: true
     slug: "{{slug}}"
@@ -35,38 +35,6 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-
-  - name: "pages"
-    label: "Pages"
-    label_singular: "Page"
-    files:
-      
-      - file: "static/data/home/index.md"
-        label: "Home"
-        name: "home"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-post"}
-          - {label: "Hero", name: "hero", widget: "object",
-              fields: [
-                {label: "Title", name: "title", widget: "string"}, 
-                {label: "Subtitle", name: "subtitle", widget: "string"},
-                {label: "Image", name: "img", widget: "image"}
-              ]
-            }
-          - {label: "About", name: "tabs", widget: "list", 
-              fields: [
-                {label: "Name", name: "name", widget: "string"},
-                {label: "Description", name: "description", widget: "markdown"}
-              ]
-            }
-          - {label: "Sponsors", name: "sponsors", widget: "list", 
-              fields: [
-                {label: "Name", name: "name", widget: "string"},
-                # {label: "Description", name: "description", widget: "text", required: false},
-                {label: "Link", name: "link", widget: "string"},
-                {label: "Image", name: "img", widget: "image"}
-              ]
-            }
 
   - name: Site
     label: Site
@@ -96,6 +64,33 @@ collections:
               fields: [
                 {label: "Platform", name: "platform", widget: "string"},
                 {label: "Link", name: "link", widget: "string"},
+              ]
+            }
+
+      - file: "static/data/home/index.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-post"}
+          - {label: "Hero", name: "hero", widget: "object",
+              fields: [
+                {label: "Title", name: "title", widget: "string"}, 
+                {label: "Subtitle", name: "subtitle", widget: "string"},
+                {label: "Image", name: "img", widget: "image"}
+              ]
+            }
+          - {label: "About", name: "tabs", widget: "list", 
+              fields: [
+                {label: "Name", name: "name", widget: "string"},
+                {label: "Description", name: "description", widget: "markdown"}
+              ]
+            }
+          - {label: "Sponsors", name: "sponsors", widget: "list", 
+              fields: [
+                {label: "Name", name: "name", widget: "string"},
+                # {label: "Description", name: "description", widget: "text", required: false},
+                {label: "Link", name: "link", widget: "string"},
+                {label: "Image", name: "img", widget: "image"}
               ]
             }
           
