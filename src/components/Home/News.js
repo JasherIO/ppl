@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import Card from '../News/Card'
+import List from '../News/List'
 
 export const Title = () => (
   <div className="level is-mobile">
@@ -27,15 +27,7 @@ export const PureSection = ({ data }) => {
       <div className="container">
         <Title />
 
-        <div className="columns">
-          {posts.map(({ node: post }) => { 
-            return (
-              <div className="column is-one-third" key={post.id}>
-                <Card post={post} />
-              </div>
-            )
-          })}
-        </div>
+        <List posts={posts} />
       </div>
     </section>
   )
