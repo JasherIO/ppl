@@ -25,6 +25,17 @@ collections:
       - {label: "Category", name: "category", widget: "select", options: ["Event", "Interview", "News", "Players", "Review", "Teams", "Video"]}
       - {label: "Tags", name: "tags", widget: "list"}
 
+  - name: "blahs"
+    label: "Blahs"
+    label_singular: "Blah"
+    folder: "static/data"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
   - name: "pages"
     label: "Pages"
     label_singular: "Page"

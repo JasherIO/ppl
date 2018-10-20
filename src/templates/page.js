@@ -2,41 +2,47 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
-import { HTMLContent } from '../components/Content'
+import Content, { HTMLContent } from '../components/Content'
 
 export const PageTemplate = ({
   content,
+  contentComponent,
   excerpt,
   title,
-}) => (
-  <section className="section">
-    <Helmet>
-      <meta name="og:type" content="website" />
+}) => {
+  const PageContent = contentComponent || Content
+  
+  return (
+    <section className="section">
+      <Helmet>
+        <meta name="og:type" content="website" />
 
-      <title>{title}</title>
-      <meta name="og:title" content={title} />
-      <meta name="twitter:title" content={title} />
-      
-      <meta name="description" content={excerpt}/>
-      <meta name="og:description" content={excerpt} />
-      <meta name="twitter:description" content={excerpt} />
-    </Helmet>
+        <title>{title}</title>
+        <meta name="og:title" content={title} />
+        <meta name="twitter:title" content={title} />
+        
+        <meta name="description" content={excerpt}/>
+        <meta name="og:description" content={excerpt} />
+        <meta name="twitter:description" content={excerpt} />
+      </Helmet>
 
-    <div className="container content">
-      <div className="columns">
-        <div className="column is-10 is-offset-1">
-          <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-            {title}
-          </h1>
-          <HTMLContent content={content} />
+      <div className="container content">
+        <div className="columns">
+          <div className="column is-10 is-offset-1">
+            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+              {title}
+            </h1>
+            <PageContent content={content} />
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-)
+    </section>
+  )
+}
 
 PageTemplate.propTypes = {
   content: PropTypes.node.isRequired,
+  contentComponent: PropTypes.func,
   title: PropTypes.string,
 }
 
@@ -47,6 +53,7 @@ const Page = ({ data }) => {
     <>
       <PageTemplate
         content={page.html}
+        contentComponent={HTMLContent}
         excerpt={page.excerpt}
         title={page.frontmatter.title}
       />
