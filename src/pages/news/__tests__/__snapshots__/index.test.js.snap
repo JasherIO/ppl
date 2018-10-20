@@ -1,0 +1,549 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsPage renders correctly 1`] = `
+<div
+  className="container"
+>
+  <section
+    className="section"
+  >
+    <div
+      className="level is-mobile"
+    >
+      <div
+        className="level-left"
+      >
+        <div
+          className="level-item"
+        >
+          <h1
+            className="title is-3"
+          >
+            Recent News
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div
+      className="columns is-multiline"
+    >
+      <div
+        className="column is-one-third"
+      >
+        <div
+          className="card"
+        >
+          <div
+            className="card-image"
+          >
+            <figure
+              className="image"
+            >
+              <a
+                href="/2018-10-16-pulsar-weeklies"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+              >
+                <div
+                  className=" gatsby-image-wrapper"
+                  style={
+                    Object {
+                      "overflow": "hidden",
+                      "position": "relative",
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "paddingBottom": "56.25%",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                  <img
+                    alt=""
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAACgUlEQVQozzWSy3PSYBTF+c99bDrjpss6Lmyd0XahdTrWVq2ljFAhQMKrECAhgbwDCQl5kACb483XcXFX997fd865XymKYsxVHY7pI80SCBUZn4/ruHrL4e/PAc5eVHD68gFnr8v48KqC27MWLt484vyohm51xnbSOMfhcMB+f0BptztgtfQx6I0gywp03YJpmxCHU7QbfTQfO+AeBXA1AXyzD74xwHgkQ9dM2JaLtR8gSVLk+e4ZmKYZwjDCdCzToATDsDCfa5BkGaI4hiB0UXmoodlsodcbYDgSMVMUaLoO23HgeWuEQYTA3yCOU5S2WY44SeDTS469gut4UJQ5gzWbPL5d/sLHkytcvLvGj+syeL4DcTyhGZXcmEyhqTuYSSrW6wCljIBJmiIIQ7juErphMusP9zWU7yu4vrzD6dEtPh3f4fvX36hWa2i3BCjqnFQacGjH83z4BNtuMwLmObJtjnAdk8IlTNOCSsNjUsFxbTQaTXx5f4fzkxvwgkCq2xgVtmcKA9qOy2xHUULCts8KvVVA0kN4vg/bdrBYaJBnM0ymBG20Ua9zDNZq8SzDyVSiHFXmprAZhhtsNhFFRxmGwQaaamHlBCw/yyyAOmRJYSq73T66nT6enoZUIwyHIsbilBSqbK7YKY4REnBDKkvbZIcoSOHaa1j6EgvFhCJrGA0kdnWBG6Jd74OrdsFzA/Q6BO1PqS9Dni6gSAbt2FgHIQHj4h/usdvvkWUZojimBildrmC7DqTxHOVLslodon7fx5+bLibiDJphwKCsi/yWK4+iCuioESuWYXGdnMBFBsVLK89j1zMtmwW/0HS6qspsFrkVVfT+A92lR3sbZvkf44MTyIUwRjoAAAAASUVORK5CYII="
+                    style={
+                      Object {
+                        "height": "100%",
+                        "left": 0,
+                        "objectFit": "cover",
+                        "objectPosition": "center",
+                        "opacity": 0,
+                        "position": "absolute",
+                        "top": 0,
+                        "transition": "opacity 0.5s",
+                        "transitionDelay": "0.5s",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                  <picture>
+                    <source
+                      sizes="(max-width: 700px) 100vw, 700px"
+                      srcSet="/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-d9100.webp 175w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-f8a7d.webp 350w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-5eb42.webp 700w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-c3715.webp 1050w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-489a2.webp 1400w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-58717.webp 2100w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-204e5.webp 3840w"
+                      type="image/webp"
+                    />
+                    <source
+                      sizes="(max-width: 700px) 100vw, 700px"
+                      srcSet="/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-2fdce.png 175w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-0cc93.png 350w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-43ccb.png 700w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-795a7.png 1050w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-cd01c.png 1400w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-5a90c.png 2100w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-dd4f7.png 3840w"
+                    />
+                    <img
+                      alt=""
+                      onLoad={[Function]}
+                      src="/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-43ccb.png"
+                      style={
+                        Object {
+                          "height": "100%",
+                          "left": 0,
+                          "objectFit": "cover",
+                          "objectPosition": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transition": "opacity 0.5s",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </picture>
+                  <noscript
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "<picture><source type='image/webp' srcSet=\\"/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-d9100.webp 175w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-f8a7d.webp 350w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-5eb42.webp 700w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-c3715.webp 1050w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-489a2.webp 1400w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-58717.webp 2100w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-204e5.webp 3840w\\" sizes=\\"(max-width: 700px) 100vw, 700px\\" /><source srcSet=\\"/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-2fdce.png 175w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-0cc93.png 350w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-43ccb.png 700w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-795a7.png 1050w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-cd01c.png 1400w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-5a90c.png 2100w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-dd4f7.png 3840w\\" sizes=\\"(max-width: 700px) 100vw, 700px\\" /><img src=\\"/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-43ccb.png\\" alt=\\"\\" style=\\"position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                      }
+                    }
+                  />
+                </div>
+              </a>
+            </figure>
+          </div>
+          <div
+            className="card-content"
+          >
+            <div
+              className="content"
+            >
+              <div
+                className="title is-4"
+              >
+                <a
+                  href="/2018-10-16-pulsar-weeklies"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                >
+                  Pulsar Weeklies!
+                </a>
+              </div>
+              <div
+                className="subtitle is-6"
+              >
+                <div
+                  className="level is-mobile"
+                >
+                  <div
+                    className="level-left"
+                  >
+                    <div
+                      className="level-item"
+                    >
+                      <span
+                        className="has-text-dark is-uppercase has-text-weight-bold"
+                      >
+                        News
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="level-right"
+                  >
+                    <div
+                      className="level-item"
+                    >
+                      <time
+                        className="has-text-weight-light"
+                        dateTime="2018-10-16T14:30:00.000Z"
+                      >
+                        4 days ago
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column is-one-third"
+      >
+        <div
+          className="card"
+        >
+          <div
+            className="card-image"
+          >
+            <figure
+              className="image"
+            >
+              <a
+                href="/2018-10-04-season-4-week-1-in-review"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+              >
+                <div
+                  className=" gatsby-image-wrapper"
+                  style={
+                    Object {
+                      "overflow": "hidden",
+                      "position": "relative",
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "paddingBottom": "56.25%",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                  <img
+                    alt=""
+                    src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgX/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAgP/2gAMAwEAAhADEAAAAce8MvFQ0P/EABcQAAMBAAAAAAAAAAAAAAAAAAEgMUL/2gAIAQEAAQUCTIn/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAIAQMBAT8Bta//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAgEBPwFH/8QAFhAAAwAAAAAAAAAAAAAAAAAAACAh/9oACAEBAAY/AiL/AP/EABwQAAICAgMAAAAAAAAAAAAAAAABESExUWGBkf/aAAgBAQABPyFKMropQ0JevCbN+RU7I//aAAwDAQACAAMAAAAQnP8A/8QAFhEBAQEAAAAAAAAAAAAAAAAAAFER/9oACAEDAQE/EKMx/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQIBAT8QAj//xAAbEAEBAQEAAwEAAAAAAAAAAAABEQAhMUFhUf/aAAgBAQABPxDqfR39amgJxpWZR6n6oaiBhgoXni6oBfu//9k="
+                    style={
+                      Object {
+                        "height": "100%",
+                        "left": 0,
+                        "objectFit": "cover",
+                        "objectPosition": "center",
+                        "opacity": 0,
+                        "position": "absolute",
+                        "top": 0,
+                        "transition": "opacity 0.5s",
+                        "transitionDelay": "0.5s",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                  <picture>
+                    <source
+                      sizes="(max-width: 700px) 100vw, 700px"
+                      srcSet="/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-eb672.webp 175w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-3b9c6.webp 350w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-d026e.webp 700w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-04345.webp 1050w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-a9e5e.webp 1400w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-60d41.webp 2100w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-19e8b.webp 3840w"
+                      type="image/webp"
+                    />
+                    <source
+                      sizes="(max-width: 700px) 100vw, 700px"
+                      srcSet="/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-52923.jpg 175w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-82f41.jpg 350w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-b6f9f.jpg 700w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-381a7.jpg 1050w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-6d028.jpg 1400w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-e3dbe.jpg 2100w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-04391.jpg 3840w"
+                    />
+                    <img
+                      alt=""
+                      onLoad={[Function]}
+                      src="/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-b6f9f.jpg"
+                      style={
+                        Object {
+                          "height": "100%",
+                          "left": 0,
+                          "objectFit": "cover",
+                          "objectPosition": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transition": "opacity 0.5s",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </picture>
+                  <noscript
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "<picture><source type='image/webp' srcSet=\\"/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-eb672.webp 175w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-3b9c6.webp 350w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-d026e.webp 700w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-04345.webp 1050w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-a9e5e.webp 1400w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-60d41.webp 2100w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-19e8b.webp 3840w\\" sizes=\\"(max-width: 700px) 100vw, 700px\\" /><source srcSet=\\"/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-52923.jpg 175w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-82f41.jpg 350w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-b6f9f.jpg 700w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-381a7.jpg 1050w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-6d028.jpg 1400w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-e3dbe.jpg 2100w,
+/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-04391.jpg 3840w\\" sizes=\\"(max-width: 700px) 100vw, 700px\\" /><img src=\\"/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-b6f9f.jpg\\" alt=\\"\\" style=\\"position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                      }
+                    }
+                  />
+                </div>
+              </a>
+            </figure>
+          </div>
+          <div
+            className="card-content"
+          >
+            <div
+              className="content"
+            >
+              <div
+                className="title is-4"
+              >
+                <a
+                  href="/2018-10-04-season-4-week-1-in-review"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                >
+                  Season 4: Week 1 In Review
+                </a>
+              </div>
+              <div
+                className="subtitle is-6"
+              >
+                <div
+                  className="level is-mobile"
+                >
+                  <div
+                    className="level-left"
+                  >
+                    <div
+                      className="level-item"
+                    >
+                      <span
+                        className="has-text-dark is-uppercase has-text-weight-bold"
+                      >
+                        Review
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="level-right"
+                  >
+                    <div
+                      className="level-item"
+                    >
+                      <time
+                        className="has-text-weight-light"
+                        dateTime="2018-10-04T19:41:54.023Z"
+                      >
+                        16 days ago
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column is-one-third"
+      >
+        <div
+          className="card"
+        >
+          <div
+            className="card-image"
+          >
+            <figure
+              className="image"
+            >
+              <a
+                href="/2018-10-01-new-season"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+              >
+                <div
+                  className=" gatsby-image-wrapper"
+                  style={
+                    Object {
+                      "overflow": "hidden",
+                      "position": "relative",
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "paddingBottom": "56.25%",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                  <img
+                    alt=""
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAACkUlEQVQozy2Sy4/aVhjF+a+76LZSpapSumhVVepjUXUaKU3UJs20mdBEYhiGKY8w4Dd+gDH4gbExGJhh8+tnp4tvc3Xvuef7ndMoih2e6xMGKYeHkvYrne8/ec/bp0OuL8f88Ok7nn99w69fXPP0yzbPvupw8VmHm0uV1guVw6mk3J04n888Pp5pPDycSeKU+w8KtuMw1edo9zaDW5VhV6H114DWmz7t5pCb5gd67QnDjoalebjmgizL2e9LTqeHj4JleSTPC0x9iq5YLJcr/IWP4zmYU5OJOqHdvqE/HKBoCrqh487c+k4UR6zXKXlWkKVbdruSxuF4Yrffk6YZYZgQyTi2h6rqdG97/PHsb37+5ncuvnvJ5csmvd4ATTNwHBH1AzbyLvBDbMtls8loHEVwX5ZkeU4UxfJzwHTq8K55zT/N97x6fsVPn1/yy5Mr/nzxllbrmt6/AxzXY+4vCOVN5TIVscPhKIKnE8fDiXyzI1zFBMslrlzWdYNut8ft7R2//XjFxbev6Q8G3N31xL2GbTu14Cqs1t5QFHsxdvgouI4z0iQjSdY1Q282w5oKU8Oo1+50uv+L9VEUVc7NWrBauUKV5Vu220LQCcM82+J7K7JNwUYSi5OYhaxduTQti9FoXI+iqmgSiGGaWLbNbD5nEQS1u/JwqAW3UsHGsXxkk+wIvIRgFuHZAc50jqHaTEYG43uN0VCh3x0z7E0YDVQ5N1HHU1xb2mD5WIrPKkgoJNxG1Z0qmHWci6Aw9CMW/oqZt8AyXEzDxpBKqRMTZWyiq1OpmIule/jzpYzUbBYKroxcXNYpV9V5lKZX1vPtlnWaSsdiAR7KWssavuN5NdsqtIXMKorqhBO5W03NUYL5Dz94FAaDXqqgAAAAAElFTkSuQmCC"
+                    style={
+                      Object {
+                        "height": "100%",
+                        "left": 0,
+                        "objectFit": "cover",
+                        "objectPosition": "center",
+                        "opacity": 0,
+                        "position": "absolute",
+                        "top": 0,
+                        "transition": "opacity 0.5s",
+                        "transitionDelay": "0.5s",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                  <picture>
+                    <source
+                      sizes="(max-width: 700px) 100vw, 700px"
+                      srcSet="/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-d9100.webp 175w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-f8a7d.webp 350w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-5eb42.webp 700w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-c3715.webp 1050w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-489a2.webp 1400w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-58717.webp 2100w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-204e5.webp 3840w"
+                      type="image/webp"
+                    />
+                    <source
+                      sizes="(max-width: 700px) 100vw, 700px"
+                      srcSet="/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-2fdce.png 175w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-0cc93.png 350w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-43ccb.png 700w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-795a7.png 1050w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-cd01c.png 1400w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-5a90c.png 2100w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-dd4f7.png 3840w"
+                    />
+                    <img
+                      alt=""
+                      onLoad={[Function]}
+                      src="/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-43ccb.png"
+                      style={
+                        Object {
+                          "height": "100%",
+                          "left": 0,
+                          "objectFit": "cover",
+                          "objectPosition": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transition": "opacity 0.5s",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </picture>
+                  <noscript
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "<picture><source type='image/webp' srcSet=\\"/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-d9100.webp 175w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-f8a7d.webp 350w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-5eb42.webp 700w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-c3715.webp 1050w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-489a2.webp 1400w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-58717.webp 2100w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-204e5.webp 3840w\\" sizes=\\"(max-width: 700px) 100vw, 700px\\" /><source srcSet=\\"/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-2fdce.png 175w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-0cc93.png 350w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-43ccb.png 700w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-795a7.png 1050w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-cd01c.png 1400w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-5a90c.png 2100w,
+/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-dd4f7.png 3840w\\" sizes=\\"(max-width: 700px) 100vw, 700px\\" /><img src=\\"/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-43ccb.png\\" alt=\\"\\" style=\\"position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                      }
+                    }
+                  />
+                </div>
+              </a>
+            </figure>
+          </div>
+          <div
+            className="card-content"
+          >
+            <div
+              className="content"
+            >
+              <div
+                className="title is-4"
+              >
+                <a
+                  href="/2018-10-01-new-season"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                >
+                  New Season!
+                </a>
+              </div>
+              <div
+                className="subtitle is-6"
+              >
+                <div
+                  className="level is-mobile"
+                >
+                  <div
+                    className="level-left"
+                  >
+                    <div
+                      className="level-item"
+                    >
+                      <span
+                        className="has-text-dark is-uppercase has-text-weight-bold"
+                      >
+                        News
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="level-right"
+                  >
+                    <div
+                      className="level-item"
+                    >
+                      <time
+                        className="has-text-weight-light"
+                        dateTime="2018-10-01T19:41:54.023Z"
+                      >
+                        19 days ago
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

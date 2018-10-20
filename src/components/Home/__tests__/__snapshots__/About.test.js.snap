@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title renders correctly 1`] = `
+<div
+  className="level is-mobile"
+>
+  <div
+    className="level-left"
+  >
+    <div
+      className="level-item"
+    >
+      <p
+        className="title is-4 is-hidden-touch"
+      >
+        About Pulsar Premier League
+      </p>
+      <p
+        className="title is-4 is-hidden-desktop"
+      >
+        About PPL
+      </p>
+    </div>
+  </div>
+</div>
+`;

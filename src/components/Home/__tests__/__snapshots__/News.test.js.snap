@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title renders correctly 1`] = `
+<div
+  className="level is-mobile"
+>
+  <div
+    className="level-left"
+  >
+    <div
+      className="level-item"
+    >
+      <p
+        className="title is-4"
+      >
+        Recent News
+      </p>
+    </div>
+  </div>
+  <div
+    className="level-right"
+  >
+    <div
+      className="level-item"
+    >
+      <a
+        className="button is-primary is-outlined"
+        href="/news"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        View All News
+      </a>
+    </div>
+  </div>
+</div>
+`;
