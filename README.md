@@ -1,8 +1,6 @@
 # Pulsar Premier League
 
-[https://pulsarpremierleague.com](https://pulsarpremierleague.com)
-
-This [site](https://pulsarpremierleague.com) is built with [Gatsby v2](https://www.gatsbyjs.org/) and [Netlify CMS](https://www.netlifycms.org): **[Demo Link](https://gatsby-netlify-cms.netlify.com/)**.
+This [site](https://pulsarpremierleague.com) is built with [Gatsby v2](https://www.gatsbyjs.org/) and [Netlify CMS](https://www.netlifycms.org). The starter template can be found [here](https://github.com/netlify-templates/gatsby-starter-netlify-cms).
 
 It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
 
