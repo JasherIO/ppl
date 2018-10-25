@@ -58,7 +58,6 @@ export const pageQuery = graphql`
               }
             }
             category
-            description
             date
           }
         }
