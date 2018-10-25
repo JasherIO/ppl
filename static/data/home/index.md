@@ -1,25 +1,19 @@
 ---
 templateKey: home-post
 hero:
+  img: /img/Shiawese.jpg
   subtitle: 'Notice: The site is unfinished and information posted is for demo purposes. '
-  title: Welcome to Pulsar Premier League!
-  img: '/img/Shiawese.jpg'
+  title: Welcome to the official site for Pulsar Premier League!
 tabs:
-  - description: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-      facilisis, nisl quis porta bibendum, nulla purus vestibulum sem, sit amet
-      ultrices nisi elit ut odio. Sed rutrum eu velit at rhoncus.
+  - description: This is where we will post players who are qualified for the league event.
     name: Players
-  - description: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-      facilisis, nisl quis porta bibendum, nulla purus vestibulum sem, sit amet
-      ultrices nisi elit ut odio. Sed rutrum eu velit at rhoncus.
+  - description: Team names for Pulsar Premier League will be placed here.
     name: Teams
   - description: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-      facilisis, nisl quis porta bibendum, nulla purus vestibulum sem, sit amet
-      ultrices nisi elit ut odio. Sed rutrum eu velit at rhoncus.
-    name: Format
+      Here at Pulsar Premier League, we strive to become the best and won't stop
+      until we achieve our goal. We respect the community and want to give
+      everyone who deserves a shot, a chance.
+    name: About
 sponsors:
   - img: /img/AllYours.png
     link: 'https://google.com'
