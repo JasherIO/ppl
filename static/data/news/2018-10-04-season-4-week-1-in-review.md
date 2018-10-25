@@ -15,17 +15,17 @@ What better way to start off how the weekly went then to announce the winner. Lo
 
 Now lets get to some of their stats. 
 
-\-Five series player
+\-5 series played
 
-\-Five series won
+\-5 series won
 
-\-Thirteen games played
+\-13 games played
 
 \-13 games won
 
 \-56 goals scored
 
-\-25 goals let in
+\-25 goals against
 
 \-Average 4.31 goals a game
 
