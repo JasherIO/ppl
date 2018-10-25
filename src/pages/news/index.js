@@ -2,8 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
-import Level from '../../components/News/Level'
-import List from '../../components/News/List'
+import Cards from '../../components/News-Cards'
+
+const Title = () => (
+  <div className="level is-mobile">
+    <div className="level-left">
+      <div className="level-item">
+        <h1 className="title is-3">Recent News</h1>
+      </div>
+    </div>
+  </div>
+)
 
 export default class NewsPage extends React.Component {
   render() {
@@ -17,9 +26,9 @@ export default class NewsPage extends React.Component {
         </Helmet>
         <div className="container">
           <section className="section">
-            <Level />
+            <Title />
 
-            <List posts={posts} />
+            <Cards posts={posts} />
           </section>
         </div>
       </>

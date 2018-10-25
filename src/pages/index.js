@@ -1,9 +1,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Hero from '../components/Home/Hero'
-import News from '../components/Home/News'
-import About from '../components/Home/About'
-import Sponsors from '../components/Home/Sponsors'
+import Hero from '../components/Hero'
+import News from '../components/News'
+import About from '../components/About'
+import Sponsors from '../components/Sponsors'
 
 export default class IndexPage extends React.Component {
   render() {

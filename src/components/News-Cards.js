@@ -1,6 +1,6 @@
 import React from 'react'
 import _ from 'lodash'
-import Card from './Card'
+import Card from './News-Card'
 
 const List = ({ posts }) => (
   <div className="columns is-multiline">

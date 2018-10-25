@@ -1,0 +1,26 @@
+{
+  "excerpt": "Welcome to Pulsar Weeklies! All the information you need to know When: On  October 23rd, 2018 , we will re-launch our weekly tournaments for the Rocket League community. Top players from all around North America can compete for their chance to show off their skills and take home the prize.  What we do: Focusing on statistics is one of our key goals, keeping track of what how your team does and how…",
+  "id": "1c446608-0872-543e-877a-d19eb56314e1",
+  "fields": {
+    "slug": "2018-10-16-pulsar-weeklies"
+  },
+  "frontmatter": {
+    "title": "Pulsar Weeklies!",
+    "cover": {
+      "childImageSharp": {
+        "fluid": {
+          "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAACgUlEQVQozzWSy3PSYBTF+c99bDrjpss6Lmyd0XahdTrWVq2ljFAhQMKrECAhgbwDCQl5kACb483XcXFX997fd865XymKYsxVHY7pI80SCBUZn4/ruHrL4e/PAc5eVHD68gFnr8v48KqC27MWLt484vyohm51xnbSOMfhcMB+f0BptztgtfQx6I0gywp03YJpmxCHU7QbfTQfO+AeBXA1AXyzD74xwHgkQ9dM2JaLtR8gSVLk+e4ZmKYZwjDCdCzToATDsDCfa5BkGaI4hiB0UXmoodlsodcbYDgSMVMUaLoO23HgeWuEQYTA3yCOU5S2WY44SeDTS469gut4UJQ5gzWbPL5d/sLHkytcvLvGj+syeL4DcTyhGZXcmEyhqTuYSSrW6wCljIBJmiIIQ7juErphMusP9zWU7yu4vrzD6dEtPh3f4fvX36hWa2i3BCjqnFQacGjH83z4BNtuMwLmObJtjnAdk8IlTNOCSsNjUsFxbTQaTXx5f4fzkxvwgkCq2xgVtmcKA9qOy2xHUULCts8KvVVA0kN4vg/bdrBYaJBnM0ymBG20Ua9zDNZq8SzDyVSiHFXmprAZhhtsNhFFRxmGwQaaamHlBCw/yyyAOmRJYSq73T66nT6enoZUIwyHIsbilBSqbK7YKY4REnBDKkvbZIcoSOHaa1j6EgvFhCJrGA0kdnWBG6Jd74OrdsFzA/Q6BO1PqS9Dni6gSAbt2FgHIQHj4h/usdvvkWUZojimBildrmC7DqTxHOVLslodon7fx5+bLibiDJphwKCsi/yWK4+iCuioESuWYXGdnMBFBsVLK89j1zMtmwW/0HS6qspsFrkVVfT+A92lR3sbZvkf44MTyIUwRjoAAAAASUVORK5CYII=",
+          "aspectRatio": 1.7777777777777777,
+          "src": "/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-43ccb.png",
+          "srcSet": "/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-2fdce.png 175w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-0cc93.png 350w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-43ccb.png 700w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-795a7.png 1050w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-cd01c.png 1400w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-5a90c.png 2100w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-dd4f7.png 3840w",
+          "srcWebp": "/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-5eb42.webp",
+          "srcSetWebp": "/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-d9100.webp 175w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-f8a7d.webp 350w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-5eb42.webp 700w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-c3715.webp 1050w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-489a2.webp 1400w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-58717.webp 2100w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-204e5.webp 3840w",
+          "sizes": "(max-width: 700px) 100vw, 700px"
+        }
+      }
+    },
+    "category": "News",
+    "description": null,
+    "date": "2018-10-16T14:30:00.000Z"
+  }
+}

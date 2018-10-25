@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import List from '../News/List'
+import Cards from './News-Cards'
 
 export const Title = () => (
   <div className="level is-mobile">
@@ -27,7 +27,7 @@ export const PureSection = ({ data }) => {
       <div className="container">
         <Title />
 
-        <List posts={posts} />
+        <Cards posts={posts} />
       </div>
     </section>
   )

@@ -1,0 +1,90 @@
+{
+  "allMarkdownRemark": {
+    "edges": [
+      {
+        "node": {
+          "excerpt": "Welcome to Pulsar Weeklies! All the information you need to know When: On  October 23rd, 2018 , we will re-launch our weekly tournaments for the Rocket League community. Top players from all around North America can compete for their chance to show off their skills and take home the prize.  What we do: Focusing on statistics is one of our key goals, keeping track of what how your team does and how…",
+          "id": "1c446608-0872-543e-877a-d19eb56314e1",
+          "fields": {
+            "slug": "2018-10-16-pulsar-weeklies"
+          },
+          "frontmatter": {
+            "title": "Pulsar Weeklies!",
+            "cover": {
+              "childImageSharp": {
+                "fluid": {
+                  "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAACgUlEQVQozzWSy3PSYBTF+c99bDrjpss6Lmyd0XahdTrWVq2ljFAhQMKrECAhgbwDCQl5kACb483XcXFX997fd865XymKYsxVHY7pI80SCBUZn4/ruHrL4e/PAc5eVHD68gFnr8v48KqC27MWLt484vyohm51xnbSOMfhcMB+f0BptztgtfQx6I0gywp03YJpmxCHU7QbfTQfO+AeBXA1AXyzD74xwHgkQ9dM2JaLtR8gSVLk+e4ZmKYZwjDCdCzToATDsDCfa5BkGaI4hiB0UXmoodlsodcbYDgSMVMUaLoO23HgeWuEQYTA3yCOU5S2WY44SeDTS469gut4UJQ5gzWbPL5d/sLHkytcvLvGj+syeL4DcTyhGZXcmEyhqTuYSSrW6wCljIBJmiIIQ7juErphMusP9zWU7yu4vrzD6dEtPh3f4fvX36hWa2i3BCjqnFQacGjH83z4BNtuMwLmObJtjnAdk8IlTNOCSsNjUsFxbTQaTXx5f4fzkxvwgkCq2xgVtmcKA9qOy2xHUULCts8KvVVA0kN4vg/bdrBYaJBnM0ymBG20Ua9zDNZq8SzDyVSiHFXmprAZhhtsNhFFRxmGwQaaamHlBCw/yyyAOmRJYSq73T66nT6enoZUIwyHIsbilBSqbK7YKY4REnBDKkvbZIcoSOHaa1j6EgvFhCJrGA0kdnWBG6Jd74OrdsFzA/Q6BO1PqS9Dni6gSAbt2FgHIQHj4h/usdvvkWUZojimBildrmC7DqTxHOVLslodon7fx5+bLibiDJphwKCsi/yWK4+iCuioESuWYXGdnMBFBsVLK89j1zMtmwW/0HS6qspsFrkVVfT+A92lR3sbZvkf44MTyIUwRjoAAAAASUVORK5CYII=",
+                  "aspectRatio": 1.7777777777777777,
+                  "src": "/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-43ccb.png",
+                  "srcSet": "/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-2fdce.png 175w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-0cc93.png 350w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-43ccb.png 700w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-795a7.png 1050w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-cd01c.png 1400w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-5a90c.png 2100w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-dd4f7.png 3840w",
+                  "srcWebp": "/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-5eb42.webp",
+                  "srcSetWebp": "/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-d9100.webp 175w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-f8a7d.webp 350w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-5eb42.webp 700w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-c3715.webp 1050w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-489a2.webp 1400w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-58717.webp 2100w,\n/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-204e5.webp 3840w",
+                  "sizes": "(max-width: 700px) 100vw, 700px"
+                }
+              }
+            },
+            "category": "News",
+            "description": null,
+            "date": "2018-10-16T14:30:00.000Z"
+          }
+        }
+      },
+      {
+        "node": {
+          "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, nisl quis porta bibendum, nulla purus vestibulum sem, sit amet ultrices nisi elit ut odio. Sed rutrum eu velit at rhoncus. Donec malesuada felis sem, ac cursus erat molestie a. Phasellus at efficitur mauris. Proin tincidunt nec lacus a aliquet. Etiam et malesuada odio, quis porta orci. Sed ligula augue, hendrerit eget…",
+          "id": "889177e1-de2e-57b0-ae81-dfda04c1ab86",
+          "fields": {
+            "slug": "2018-10-04-season-4-week-1-in-review"
+          },
+          "frontmatter": {
+            "title": "Season 4: Week 1 In Review",
+            "cover": {
+              "childImageSharp": {
+                "fluid": {
+                  "base64": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgX/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAgP/2gAMAwEAAhADEAAAAce8MvFQ0P/EABcQAAMBAAAAAAAAAAAAAAAAAAEgMUL/2gAIAQEAAQUCTIn/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAIAQMBAT8Bta//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAgEBPwFH/8QAFhAAAwAAAAAAAAAAAAAAAAAAACAh/9oACAEBAAY/AiL/AP/EABwQAAICAgMAAAAAAAAAAAAAAAABESExUWGBkf/aAAgBAQABPyFKMropQ0JevCbN+RU7I//aAAwDAQACAAMAAAAQnP8A/8QAFhEBAQEAAAAAAAAAAAAAAAAAAFER/9oACAEDAQE/EKMx/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQIBAT8QAj//xAAbEAEBAQEAAwEAAAAAAAAAAAABEQAhMUFhUf/aAAgBAQABPxDqfR39amgJxpWZR6n6oaiBhgoXni6oBfu//9k=",
+                  "aspectRatio": 1.7777777777777777,
+                  "src": "/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-b6f9f.jpg",
+                  "srcSet": "/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-52923.jpg 175w,\n/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-82f41.jpg 350w,\n/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-b6f9f.jpg 700w,\n/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-381a7.jpg 1050w,\n/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-6d028.jpg 1400w,\n/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-e3dbe.jpg 2100w,\n/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-04391.jpg 3840w",
+                  "srcWebp": "/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-d026e.webp",
+                  "srcSetWebp": "/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-eb672.webp 175w,\n/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-3b9c6.webp 350w,\n/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-d026e.webp 700w,\n/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-04345.webp 1050w,\n/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-a9e5e.webp 1400w,\n/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-60d41.webp 2100w,\n/static/Batmobile-92e223230513c018d9ed7a72bda98cd3-19e8b.webp 3840w",
+                  "sizes": "(max-width: 700px) 100vw, 700px"
+                }
+              }
+            },
+            "category": "Review",
+            "description": "Season 4: Week 1 In Review",
+            "date": "2018-10-04T19:41:54.023Z"
+          }
+        }
+      },
+      {
+        "node": {
+          "excerpt": "Brand New Season: Pulsar Premier League is back and showing no signs of slowing down anytime soon. Along with the announcement of Pulsar Weeklies, PPL is back with a brand new season to continue where we left off late 2016. When? Pulsar Premier League comeback season will begin qualifiers in the beginning of December, that's right, December 2018. The actual league will take place in the beginning…",
+          "id": "641e5907-92f9-5cb6-b803-711001e82e9e",
+          "fields": {
+            "slug": "2018-10-01-new-season"
+          },
+          "frontmatter": {
+            "title": "New Season!",
+            "cover": {
+              "childImageSharp": {
+                "fluid": {
+                  "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAACkUlEQVQozy2Sy4/aVhjF+a+76LZSpapSumhVVepjUXUaKU3UJs20mdBEYhiGKY8w4Dd+gDH4gbExGJhh8+tnp4tvc3Xvuef7ndMoih2e6xMGKYeHkvYrne8/ec/bp0OuL8f88Ok7nn99w69fXPP0yzbPvupw8VmHm0uV1guVw6mk3J04n888Pp5pPDycSeKU+w8KtuMw1edo9zaDW5VhV6H114DWmz7t5pCb5gd67QnDjoalebjmgizL2e9LTqeHj4JleSTPC0x9iq5YLJcr/IWP4zmYU5OJOqHdvqE/HKBoCrqh487c+k4UR6zXKXlWkKVbdruSxuF4Yrffk6YZYZgQyTi2h6rqdG97/PHsb37+5ncuvnvJ5csmvd4ATTNwHBH1AzbyLvBDbMtls8loHEVwX5ZkeU4UxfJzwHTq8K55zT/N97x6fsVPn1/yy5Mr/nzxllbrmt6/AxzXY+4vCOVN5TIVscPhKIKnE8fDiXyzI1zFBMslrlzWdYNut8ft7R2//XjFxbev6Q8G3N31xL2GbTu14Cqs1t5QFHsxdvgouI4z0iQjSdY1Q282w5oKU8Oo1+50uv+L9VEUVc7NWrBauUKV5Vu220LQCcM82+J7K7JNwUYSi5OYhaxduTQti9FoXI+iqmgSiGGaWLbNbD5nEQS1u/JwqAW3UsHGsXxkk+wIvIRgFuHZAc50jqHaTEYG43uN0VCh3x0z7E0YDVQ5N1HHU1xb2mD5WIrPKkgoJNxG1Z0qmHWci6Aw9CMW/oqZt8AyXEzDxpBKqRMTZWyiq1OpmIule/jzpYzUbBYKroxcXNYpV9V5lKZX1vPtlnWaSsdiAR7KWssavuN5NdsqtIXMKorqhBO5W03NUYL5Dz94FAaDXqqgAAAAAElFTkSuQmCC",
+                  "aspectRatio": 1.7777777777777777,
+                  "src": "/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-43ccb.png",
+                  "srcSet": "/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-2fdce.png 175w,\n/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-0cc93.png 350w,\n/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-43ccb.png 700w,\n/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-795a7.png 1050w,\n/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-cd01c.png 1400w,\n/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-5a90c.png 2100w,\n/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-dd4f7.png 3840w",
+                  "srcWebp": "/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-5eb42.webp",
+                  "srcSetWebp": "/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-d9100.webp 175w,\n/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-f8a7d.webp 350w,\n/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-5eb42.webp 700w,\n/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-c3715.webp 1050w,\n/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-489a2.webp 1400w,\n/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-58717.webp 2100w,\n/static/announcement_ppl_s4-aac6a4ab170c45d779d547b2e666772a-204e5.webp 3840w",
+                  "sizes": "(max-width: 700px) 100vw, 700px"
+                }
+              }
+            },
+            "category": "News",
+            "description": null,
+            "date": "2018-10-01T19:41:54.023Z"
+          }
+        }
+      }
+    ]
+  }
+}

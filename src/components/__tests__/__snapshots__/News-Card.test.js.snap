@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`News Card renders correctly 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-image"
+  >
+    <figure
+      className="image"
+    >
+      <a
+        href="/2018-10-16-pulsar-weeklies"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        <div
+          className=" gatsby-image-wrapper"
+          style={
+            Object {
+              "overflow": "hidden",
+              "position": "relative",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "paddingBottom": "56.25%",
+                "width": "100%",
+              }
+            }
+          />
+          <img
+            alt=""
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAACgUlEQVQozzWSy3PSYBTF+c99bDrjpss6Lmyd0XahdTrWVq2ljFAhQMKrECAhgbwDCQl5kACb483XcXFX997fd865XymKYsxVHY7pI80SCBUZn4/ruHrL4e/PAc5eVHD68gFnr8v48KqC27MWLt484vyohm51xnbSOMfhcMB+f0BptztgtfQx6I0gywp03YJpmxCHU7QbfTQfO+AeBXA1AXyzD74xwHgkQ9dM2JaLtR8gSVLk+e4ZmKYZwjDCdCzToATDsDCfa5BkGaI4hiB0UXmoodlsodcbYDgSMVMUaLoO23HgeWuEQYTA3yCOU5S2WY44SeDTS469gut4UJQ5gzWbPL5d/sLHkytcvLvGj+syeL4DcTyhGZXcmEyhqTuYSSrW6wCljIBJmiIIQ7juErphMusP9zWU7yu4vrzD6dEtPh3f4fvX36hWa2i3BCjqnFQacGjH83z4BNtuMwLmObJtjnAdk8IlTNOCSsNjUsFxbTQaTXx5f4fzkxvwgkCq2xgVtmcKA9qOy2xHUULCts8KvVVA0kN4vg/bdrBYaJBnM0ymBG20Ua9zDNZq8SzDyVSiHFXmprAZhhtsNhFFRxmGwQaaamHlBCw/yyyAOmRJYSq73T66nT6enoZUIwyHIsbilBSqbK7YKY4REnBDKkvbZIcoSOHaa1j6EgvFhCJrGA0kdnWBG6Jd74OrdsFzA/Q6BO1PqS9Dni6gSAbt2FgHIQHj4h/usdvvkWUZojimBildrmC7DqTxHOVLslodon7fx5+bLibiDJphwKCsi/yWK4+iCuioESuWYXGdnMBFBsVLK89j1zMtmwW/0HS6qspsFrkVVfT+A92lR3sbZvkf44MTyIUwRjoAAAAASUVORK5CYII="
+            style={
+              Object {
+                "height": "100%",
+                "left": 0,
+                "objectFit": "cover",
+                "objectPosition": "center",
+                "opacity": 0,
+                "position": "absolute",
+                "top": 0,
+                "transition": "opacity 0.5s",
+                "transitionDelay": "0.5s",
+                "width": "100%",
+              }
+            }
+          />
+          <picture>
+            <source
+              sizes="(max-width: 700px) 100vw, 700px"
+              srcSet="/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-d9100.webp 175w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-f8a7d.webp 350w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-5eb42.webp 700w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-c3715.webp 1050w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-489a2.webp 1400w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-58717.webp 2100w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-204e5.webp 3840w"
+              type="image/webp"
+            />
+            <source
+              sizes="(max-width: 700px) 100vw, 700px"
+              srcSet="/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-2fdce.png 175w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-0cc93.png 350w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-43ccb.png 700w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-795a7.png 1050w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-cd01c.png 1400w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-5a90c.png 2100w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-dd4f7.png 3840w"
+            />
+            <img
+              alt=""
+              onLoad={[Function]}
+              src="/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-43ccb.png"
+              style={
+                Object {
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": "cover",
+                  "objectPosition": "center",
+                  "opacity": 1,
+                  "position": "absolute",
+                  "top": 0,
+                  "transition": "opacity 0.5s",
+                  "width": "100%",
+                }
+              }
+            />
+          </picture>
+          <noscript
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<picture><source type='image/webp' srcSet=\\"/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-d9100.webp 175w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-f8a7d.webp 350w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-5eb42.webp 700w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-c3715.webp 1050w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-489a2.webp 1400w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-58717.webp 2100w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-204e5.webp 3840w\\" sizes=\\"(max-width: 700px) 100vw, 700px\\" /><source srcSet=\\"/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-2fdce.png 175w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-0cc93.png 350w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-43ccb.png 700w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-795a7.png 1050w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-cd01c.png 1400w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-5a90c.png 2100w,
+/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-dd4f7.png 3840w\\" sizes=\\"(max-width: 700px) 100vw, 700px\\" /><img src=\\"/static/announcement_weeklies-5c627cab06c44537b833f44798db74f7-43ccb.png\\" alt=\\"\\" style=\\"position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+              }
+            }
+          />
+        </div>
+      </a>
+    </figure>
+  </div>
+  <div
+    className="card-content"
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="title is-4"
+      >
+        <a
+          href="/2018-10-16-pulsar-weeklies"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          Pulsar Weeklies!
+        </a>
+      </div>
+      <div
+        className="subtitle is-6"
+      >
+        <div
+          className="level is-mobile"
+        >
+          <div
+            className="level-left"
+          >
+            <div
+              className="level-item"
+            >
+              <span
+                className="has-text-dark is-uppercase has-text-weight-bold"
+              >
+                News
+              </span>
+            </div>
+          </div>
+          <div
+            className="level-right"
+          >
+            <div
+              className="level-item"
+            >
+              <time
+                className="has-text-weight-light"
+                dateTime="2018-10-16T14:30:00.000Z"
+              >
+                4 days ago
+              </time>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
