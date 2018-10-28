@@ -1,7 +1,7 @@
 ---
 templateKey: home-post
 hero:
-  img: /img/Shiawese.jpg
+  img: /img/website-banner.png
   subtitle: 'Notice: The site is unfinished and information posted is for demo purposes. '
   title: Welcome to the official site for Pulsar Premier League!
 tabs:
