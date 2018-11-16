@@ -1,6 +1,6 @@
 ---
 templateKey: post
-cover: /img/announcement_weeklies.png
+cover: /img/smashgg_weeklies_8.png
 title: Pulsar Weeklies!
 date: '2018-10-16T14:30:00.000Z'
 category: News
