@@ -1,18 +1,20 @@
 import React from "react"
 import renderer from "react-test-renderer"
 
-import { PureSection, Title } from "../News"
-import data from './posts.json'
+import { PureSection, Level } from "../News"
+import data from './__data__/posts.json'
 
-describe("Title", () =>
+describe("Level", () =>
   it("renders correctly", () => {
-    const tree = renderer.create(<Title />).toJSON()
+    const tree = renderer.create(<Level />).toJSON()
     expect(tree).toMatchSnapshot()
   }))
 
 jest.mock('../../components/News-Cards', () => () => (<></>))
 
 describe("News Section", () =>
+  // Mock level
+
   it("renders correctly", () => {
     const tree = renderer
       .create(<PureSection data={data} />)
