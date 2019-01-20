@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import Cards from './News-Cards'
 
-export const Title = () => (
+export const Level = () => (
   <div className="level is-mobile">
     <div className="level-left">
       <div className="level-item">
@@ -25,7 +25,7 @@ export const PureSection = ({ data }) => {
   return (
     <section className="section background is-hexellence" style={{ paddingBottom: "5rem" }}>
       <div className="container">
-        <Title />
+        <Level />
 
         <Cards posts={posts} />
       </div>
