@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import _ from 'lodash'
 
-const Social = ({ social, device }) => (
+export const Social = ({ social, device }) => (
   <>
     {_.map(social, item => {
       return (
