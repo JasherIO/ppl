@@ -1,6 +1,6 @@
 import React from "react"
 import renderer from "react-test-renderer"
-import data from './post.json'
+import data from './__data__/post.json'
 import Card from "../News-Card"
 
 jest.unmock('moment')

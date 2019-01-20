@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero Section renders correctly 1`] = `
+<section
+  className="hero is-primary is-medium hero-background"
+  style={
+    Object {
+      "backgroundImage": "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/Shiawese.jpg)",
+    }
+  }
+>
+  <div
+    className="hero-body"
+  >
+    <div
+      className="container"
+    >
+      <h1
+        className="title"
+      >
+        Welcome to the official site for Pulsar Premier League!
+      </h1>
+      <h2
+        className="subtitle"
+      >
+        Notice: The site is unfinished and information posted is for demo purposes. 
+      </h2>
+    </div>
+  </div>
+</section>
+`;

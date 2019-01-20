@@ -1,0 +1,78 @@
+{
+  "markdownRemark": {
+    "frontmatter": {
+      "hero": {
+        "title": "Welcome to the official site for Pulsar Premier League!",
+        "subtitle": "Notice: The site is unfinished and information posted is for demo purposes. ",
+        "img": "/img/Shiawese.jpg"
+      },
+      "tabs": [
+        {
+          "name": "Players",
+          "description": "This is where we will post players who are qualified for the league event."
+        },
+        {
+          "name": "Teams",
+          "description": "Team names for Pulsar Premier League will be placed here."
+        },
+        {
+          "name": "About",
+          "description": "Here at Pulsar Premier League, we strive to become the best and won't stop until we achieve our goal. We respect the community and want to give everyone who deserves a shot, a chance."
+        }
+      ],
+      "sponsors": [
+        {
+          "name": "All Yours Buffet",
+          "link": "https://google.com",
+          "img": {
+            "childImageSharp": {
+              "fluid": {
+                "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABdElEQVQ4y+1Uu0oDURDdL7Gxl/gP+gsWFjY2gmCpjY0glnYWokQ0JCqiJKJoY6GNBA0GFUMem6iIhnUT3OhmH7n3HicbEzZvDZY5cBju3DuHMzPsSvhnSH3BGoQQtVghr8v15LBVYSex3zm0v8A+ZGIKolT8u8OaEKcWKXIjByt9AjMVAtPfwSnJOWvbvtS1VfsTUMKAFqNDqWv7Uv0CyBWnIsGQUxVk315hGTqeM0nEY3eIPdwjehNBJp1y3jmkGreG1NTqz3lrJ4iFpWVEbhM4uwhjbn4RE5PTmJqZxao30NapVHVWBtcysBJ7KMkhKNcbeDxfobgJUz5CNuLHy+U6lCsv8lEfbJqpFd8FLzzBrVERpCGXYSX2oXkHofmGoAeGYWx7UDwYgX48But0HGZwFLqf7vweFHweaGsDsOVDuDXqZ8hMZ6vCyIMXc2BE7lB1Nswo8mqu/MZQnZqOM+wFLWbo/sx4A0UDm+9bOuz/vnrGN3QCEqFdInL+AAAAAElFTkSuQmCC",
+                "aspectRatio": 1,
+                "src": "/static/AllYours-3687195526522c748ae7c4e228c3cefb-6c215.png",
+                "srcSet": "/static/AllYours-3687195526522c748ae7c4e228c3cefb-2a2e7.png 200w,\n/static/AllYours-3687195526522c748ae7c4e228c3cefb-ce27d.png 400w,\n/static/AllYours-3687195526522c748ae7c4e228c3cefb-6c215.png 500w",
+                "srcWebp": "/static/AllYours-3687195526522c748ae7c4e228c3cefb-ff64f.webp",
+                "srcSetWebp": "/static/AllYours-3687195526522c748ae7c4e228c3cefb-4c0d3.webp 200w,\n/static/AllYours-3687195526522c748ae7c4e228c3cefb-98cef.webp 400w,\n/static/AllYours-3687195526522c748ae7c4e228c3cefb-ff64f.webp 500w",
+                "sizes": "(max-width: 500px) 100vw, 500px"
+              }
+            }
+          }
+        },
+        {
+          "name": "What a Save Esports",
+          "link": "https://google.com",
+          "img": {
+            "childImageSharp": {
+              "fluid": {
+                "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABeUlEQVQ4y9VVPavCQBCMHyCkUbGxEUUlRAlCIKUgqJWFBGKlAYOKprYQrFIKAbGw8tfOY+4R9cAXTrF5xZDjsjs3uzfZaJqm4cv4XVSrVbTbbTSbzbfAHOZKhNy4Xq9Yr9cIwxC73U4Zm80Gl8sF9Xr9QchTSPZpmYvFAt1u90FI6VTGdT6fRzabVQJjmRMEAUzTlAkpn2sGqirLZDLiuVwu0el0/ish+8LAJPhjwuRS3sGfhK1WS9gml8uh3+8LTzmOc0+sVCrvE9KgXN9uN+z3e5zPZxyPR5xOJ+Ez13Uxm82kPqeWvN1uxcZwOEStVoNlWRgMBphMJhiNRuj1erBtWyJKVUhzlstlRFGEw+GA1WoFz/MwnU6fg6XLUlJIdePxWCgiDMMQB72ylJJtisWieBYKBSmZZImdEvASX356z8OhVCoJMl3Xle3j+748HDi+OILm87l4mYClpIHKGBfHMRqNhjxg6T2ewl6ogmUyh2RP/f3uL+AHEFMNtc19XcgAAAAASUVORK5CYII=",
+                "aspectRatio": 1,
+                "src": "/static/WhatASave-8bdaedcd8c12348e6af09a181e667097-6c215.png",
+                "srcSet": "/static/WhatASave-8bdaedcd8c12348e6af09a181e667097-2a2e7.png 200w,\n/static/WhatASave-8bdaedcd8c12348e6af09a181e667097-ce27d.png 400w,\n/static/WhatASave-8bdaedcd8c12348e6af09a181e667097-6c215.png 500w",
+                "srcWebp": "/static/WhatASave-8bdaedcd8c12348e6af09a181e667097-ff64f.webp",
+                "srcSetWebp": "/static/WhatASave-8bdaedcd8c12348e6af09a181e667097-4c0d3.webp 200w,\n/static/WhatASave-8bdaedcd8c12348e6af09a181e667097-98cef.webp 400w,\n/static/WhatASave-8bdaedcd8c12348e6af09a181e667097-ff64f.webp 500w",
+                "sizes": "(max-width: 500px) 100vw, 500px"
+              }
+            }
+          }
+        },
+        {
+          "name": "Egging Grocers",
+          "link": "https://google.com",
+          "img": {
+            "childImageSharp": {
+              "fluid": {
+                "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAB5klEQVQ4y6VU207bQBD1V1c88s4DL7QPUNEiQYFSVQW1EFRuUriVpqQCqkoV5RIpgmB8S3DAsb2nM0PXwpdAIkZazXq9e+bMzNk1kDGlVOKL5k+ZUbT48LBScQKo59k9jwLqjWEcIFQBngrYM2ArtHDQ/AqrU4fbadC4hNO5wF3s98eQLabU2E7bVaxej6HiLuC7+wkb1luc+PupPT0x1NGZDYNU3Hnse18I/LUw7buG6n90m9LdsCYo9RVJv+otEbOoN8CH3YtUKHMvNLFlT8vYdT5gk3wQt/PygipmWBSVAfzIkyDsdf10FlmN5hj6kSvN0Ie1NYltL/Ix9A/dtcPmKhYaQ6i1D6kRi/hzsysN4frtUaf/+hX8aq3j2N9LMdTgRlYqDFAyXwrIZP2FzN/VB7BsvpIucx3fXwxi7Xo8d5NSDHVNardHormr4Azb9izp7ge+OR9J6LbUkQNXifnvVrl7DfVCQLpbt94knf3pLaNsT1GAeRE3p71lz0gALgf7LKiRXWC9rZij2HHmcHl3LDeFmXKAsjWFz41hHDXXpHGlq5GcLo2ijulNsp54lfqXfd4KU869gXJdHKjaOWCSbCw7BZ492/WmJIO/Y+piFN37OE7/V3lg47HXt9t97es9fK79A/OzCt9RgmwIAAAAAElFTkSuQmCC",
+                "aspectRatio": 1,
+                "src": "/static/EggingGrocers-fb9f3fc2943062dde49cf696d033ad09-6c215.png",
+                "srcSet": "/static/EggingGrocers-fb9f3fc2943062dde49cf696d033ad09-2a2e7.png 200w,\n/static/EggingGrocers-fb9f3fc2943062dde49cf696d033ad09-ce27d.png 400w,\n/static/EggingGrocers-fb9f3fc2943062dde49cf696d033ad09-6c215.png 500w",
+                "srcWebp": "/static/EggingGrocers-fb9f3fc2943062dde49cf696d033ad09-ff64f.webp",
+                "srcSetWebp": "/static/EggingGrocers-fb9f3fc2943062dde49cf696d033ad09-4c0d3.webp 200w,\n/static/EggingGrocers-fb9f3fc2943062dde49cf696d033ad09-98cef.webp 400w,\n/static/EggingGrocers-fb9f3fc2943062dde49cf696d033ad09-ff64f.webp 500w",
+                "sizes": "(max-width: 500px) 100vw, 500px"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

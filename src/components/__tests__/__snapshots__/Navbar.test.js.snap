@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar renders correctly 1`] = `
+<nav
+  aria-label="main navigation"
+  className="navbar is-transparent"
+  id="nav"
+  role="navigation"
+>
+  <div
+    className="container is-fluid"
+  >
+    <div
+      className="navbar-brand"
+    >
+      <a
+        aria-current="page"
+        className="navbar-item"
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        style={Object {}}
+      >
+        <div
+          className=" gatsby-image-wrapper"
+          style={
+            Object {
+              "display": "inline-block",
+              "height": 32,
+              "overflow": "hidden",
+              "position": "relative",
+              "width": 32,
+            }
+          }
+        >
+          <img
+            alt=""
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsSAAALEgHS3X78AAAEQUlEQVQ4y5VUW09bRxDe47RKEUoU4iRAcWzO8eX42MYGTCFAgsDGGGxssLkaU0wAm4vxBRsCmISLTcwlJm1okiZVQgiJkl4itU9tn/vQf1Cpf6FqValSpT6m3zmAG1qqqiuNdrQ7883MN7NLCJYir5K0qa7xKmksDhALPUZZ6XFRqyJ2wqWaE7nZBOVm5ymXal44szITIgs9SkEEHze7QDjxFZJddkU0u7tVC+T/LLsiQvF7q2Lq7xfRrN5Ej0usTLDRLo9GW+TheDMzGYaEWphQDGdTzUywpYkek73hSx0Ba5ANCTtKPYUyZmGcsRQHAibZsMVKTzQB1GyTRxoBZDXLRiyg5SpsN2C7aKEDYt7XXDyyD2oscBCHIibidWQgBcCdykKXGLzY2pWzvm71ynovt7qD/X6PeiUDHgPtqjkXghWikgyCaHhfhyIuqnrXTch09RekPN9OseIakVM5XWuXT2VwqenlUj95NWu/erj0lx7uZsrDrS5DdqH/2MMl/wDXzch6BbZNPGBFgZN6/cNrQs69I82pLupSo+x6GIwiy1beAIBTXs36YCe7mH9ITRe7dApnHmR8A5WcsdLBBnAaRLnWWkmvnjlTcZrUywbnwEO6RR6aQ7RwB3u9E07T/drNdr/+41GIP1j2NObXPzD4DQ9KR/T3u/s1GzVezYazg11woLsDKN0E0Ei9zBcCoC+FJmwC8BkAt1HKzfe1t74d0GY2A4aHzyHJSPmLh9gvTZTuxEb099ID2q3rCPgYwZMAXLLJw8to0A6PRUrzm8WXJX0ygNbzZHexi3UAvHJVd6cBALZw+fOmqPHT2njFq7KI8WXHeOnjtmH9XUufZq0CjbKjeXWgyYxK36uR9HD8hJ8EYBE4pNHBVnC3NqDbGhs1fLIeMb7Ynan86lXi0jffJaq+/h765zjbw92mT3c72MOlkvDx1Et99GWJp/B8Dv3WkXkE2FmU3Mvl1eWapX6hGYO6D5UTpU88kP7hkrt6YW6lQ2L56cpclyrR0aNOXjwCUnLeTBCB6lYvC7MIXmbtTLQKHW3oVa8WoQkeNOXZZNneZ2jQIM4udLHLDTYmUo7gCczh2x7NKjHJhijDBetfwF3qpUNAh0s5H4eTBd1cRFbbwbLdXyA/A/wRuruArFrblXMTsPXu++4nk13jZY8I5knQ2bM1IkROQ8ZcyoTUp/tga6jko98hv6H8JwgmdasSPkgGs5jD+zgV02TSuPfPnwNGBz9HrAAZ3IKhs4UO5SPTFMYk45DHL2K0TLi7jZ05qEjI7uSJ3KNgeKfkTQOMQp5TORMDaBKDa7YUj9ZBX8TZPKop4G062RuCbZ8mffzf5tVuHGaa5QTPsQRAM5AEgIzZatgFwWZIv/3vn6Uqr5rg4ZMDXqgRw71j7dqU16j9zNaI7pzpv39hcCjs+FT5DIWRQiCRHbqNCR+CHuv7J/SJYEGWJxXvAAAAAElFTkSuQmCC"
+            style={
+              Object {
+                "height": "100%",
+                "left": 0,
+                "objectFit": "cover",
+                "objectPosition": "center",
+                "opacity": 0,
+                "position": "absolute",
+                "top": 0,
+                "transition": "opacity 0.5s",
+                "transitionDelay": "0.5s",
+                "width": "100%",
+              }
+            }
+          />
+          <picture>
+            <source
+              srcSet="/static/purple-transparent-c0b4d55ae4337107ab1b1f119eaf81fa-0f203.webp 1x,
+/static/purple-transparent-c0b4d55ae4337107ab1b1f119eaf81fa-4cf92.webp 1.5x,
+/static/purple-transparent-c0b4d55ae4337107ab1b1f119eaf81fa-5c236.webp 2x,
+/static/purple-transparent-c0b4d55ae4337107ab1b1f119eaf81fa-20e61.webp 3x"
+              type="image/webp"
+            />
+            <source
+              srcSet="/static/purple-transparent-c0b4d55ae4337107ab1b1f119eaf81fa-be3e9.png 1x,
+/static/purple-transparent-c0b4d55ae4337107ab1b1f119eaf81fa-92dac.png 1.5x,
+/static/purple-transparent-c0b4d55ae4337107ab1b1f119eaf81fa-76408.png 2x,
+/static/purple-transparent-c0b4d55ae4337107ab1b1f119eaf81fa-570fb.png 3x"
+            />
+            <img
+              alt="Logo"
+              height={32}
+              onLoad={[Function]}
+              src="/static/purple-transparent-c0b4d55ae4337107ab1b1f119eaf81fa-be3e9.png"
+              style={
+                Object {
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": "cover",
+                  "objectPosition": "center",
+                  "opacity": 1,
+                  "position": "absolute",
+                  "top": 0,
+                  "transition": "opacity 0.5s",
+                  "width": "100%",
+                }
+              }
+              width={32}
+            />
+          </picture>
+          <noscript
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<picture><source type='image/webp' srcSet=\\"/static/purple-transparent-c0b4d55ae4337107ab1b1f119eaf81fa-0f203.webp 1x,
+/static/purple-transparent-c0b4d55ae4337107ab1b1f119eaf81fa-4cf92.webp 1.5x,
+/static/purple-transparent-c0b4d55ae4337107ab1b1f119eaf81fa-5c236.webp 2x,
+/static/purple-transparent-c0b4d55ae4337107ab1b1f119eaf81fa-20e61.webp 3x\\" /><source srcSet=\\"/static/purple-transparent-c0b4d55ae4337107ab1b1f119eaf81fa-be3e9.png 1x,
+/static/purple-transparent-c0b4d55ae4337107ab1b1f119eaf81fa-92dac.png 1.5x,
+/static/purple-transparent-c0b4d55ae4337107ab1b1f119eaf81fa-76408.png 2x,
+/static/purple-transparent-c0b4d55ae4337107ab1b1f119eaf81fa-570fb.png 3x\\" /><img width=\\"32\\" height=\\"32\\" src=\\"/static/purple-transparent-c0b4d55ae4337107ab1b1f119eaf81fa-be3e9.png\\" alt=\\"Logo\\" style=\\"position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+              }
+            }
+          />
+        </div>
+      </a>
+      <a
+        aria-label="Discord"
+        className="navbar-item is-hidden-desktop"
+        href="https://discord.gg/JT3wRE6"
+        onClick={[Function]}
+        rel="external"
+      />
+      <a
+        aria-label="Twitch"
+        className="navbar-item is-hidden-desktop"
+        href="https://twitch.tv/PulsarPremierLeague"
+        onClick={[Function]}
+        rel="external"
+      />
+      <a
+        aria-label="Twitter"
+        className="navbar-item is-hidden-desktop"
+        href="https://twitter.com/PulsarPremier"
+        onClick={[Function]}
+        rel="external"
+      />
+      <a
+        aria-label="menu"
+        className="navbar-burger burger"
+        href="#"
+        onClick={[Function]}
+        role="button"
+      >
+        <span
+          aria-hidden="true"
+        />
+        <span
+          aria-hidden="true"
+        />
+        <span
+          aria-hidden="true"
+        />
+      </a>
+    </div>
+    <div
+      className="navbar-menu"
+      onClick={[Function]}
+    >
+      <div
+        className="navbar-start"
+      >
+        <a
+          className="navbar-item"
+          href="/news"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          News
+        </a>
+        <a
+          className="navbar-item"
+          href="/rules"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          Rules
+        </a>
+      </div>
+      <div
+        className="navbar-end"
+      >
+        <a
+          aria-label="Discord"
+          className="navbar-item is-hidden-touch"
+          href="https://discord.gg/JT3wRE6"
+          onClick={[Function]}
+          rel="external"
+        />
+        <a
+          aria-label="Twitch"
+          className="navbar-item is-hidden-touch"
+          href="https://twitch.tv/PulsarPremierLeague"
+          onClick={[Function]}
+          rel="external"
+        />
+        <a
+          aria-label="Twitter"
+          className="navbar-item is-hidden-touch"
+          href="https://twitter.com/PulsarPremier"
+          onClick={[Function]}
+          rel="external"
+        />
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`Social renders correctly 1`] = `
+Array [
+  <a
+    aria-label="Discord"
+    className="navbar-item is-hidden-touch"
+    href="https://discord.gg/JT3wRE6"
+    onClick={[Function]}
+    rel="external"
+  />,
+  <a
+    aria-label="Twitch"
+    className="navbar-item is-hidden-touch"
+    href="https://twitch.tv/PulsarPremierLeague"
+    onClick={[Function]}
+    rel="external"
+  />,
+  <a
+    aria-label="Twitter"
+    className="navbar-item is-hidden-touch"
+    href="https://twitter.com/PulsarPremier"
+    onClick={[Function]}
+    rel="external"
+  />,
+]
+`;
