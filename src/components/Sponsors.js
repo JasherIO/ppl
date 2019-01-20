@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
+import _ from 'lodash'
 import Img from 'gatsby-image'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
@@ -9,7 +10,7 @@ export const Level = ({ sponsors }) => (
       <p className="title is-4">Sponsored By</p>
     </div>
     <div className="level-item">
-      {sponsors.map((sponsor) => (
+      {_.map(sponsors, (sponsor) => (
           <div key={sponsor.name} style={{ padding: "0.5rem" }}>
             <figure className="image is-96x96 is-hidden-touch">
               <OutboundLink href={sponsor.link} aria-label={sponsor.name}>
