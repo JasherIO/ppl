@@ -3,7 +3,7 @@ templateKey: post
 cover: /img/announcement_ppl_s4.png
 title: New Season!
 date: '2018-10-01T19:41:54.023Z'
-category: News
+category: Announcement
 tags:
   - New Season
 ---

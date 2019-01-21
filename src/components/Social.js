@@ -10,8 +10,8 @@ export const PureSocial = ({ data, ...props }) => (
   <div className="field is-grouped is-grouped-centered" {...props}>
     {_.map(data.site.siteMetadata.social, item => {
       return (
-        <p className="control">
-          <OutboundLink href={item.link} key={`${item.platform}`} aria-label={_.lowerCase(item.platform)} rel='external'>
+        <p className="control" key={`${item.platform}`}>
+          <OutboundLink href={item.link} aria-label={_.lowerCase(item.platform)} rel='external'>
             <span className="icon is-large">
               <FontAwesomeIcon icon={['fab', _.toLower(item.platform)]} size="2x" />
             </span>

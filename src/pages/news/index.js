@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
-import Cards from '../../components/News-Cards'
+import _ from 'lodash'
+import Tile from '../../components/Posts/Tile'
 
 const Level = () => (
   <div className="level is-mobile">
@@ -12,7 +13,7 @@ const Level = () => (
       </div>
     </div>
 
-    <div className="level-right">
+    {/* <div className="level-right">
       <div className="level-item">
         <div className="select">
           <select>
@@ -22,7 +23,7 @@ const Level = () => (
           </select>
         </div>
       </div>
-    </div>
+    </div> */}
   </div>
 )
 
@@ -30,16 +31,22 @@ export default class NewsPage extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
+    const lastIndex = posts.length-1
 
     return (
       <>
         <Helmet>
           <title>News</title>
         </Helmet>
-        <div className="section container">
+        <div className="section container" style={{paddingBottom: "1rem"}}>
           <Level />
 
-          <Cards posts={posts} />
+          {_.map(posts, ({ node: post }, index) => (
+            <>
+              <Tile post={post} />
+              {index !== lastIndex && <hr />}
+            </>
+          ))}
         </div>
       </>
     )
@@ -62,7 +69,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
+          excerpt(pruneLength: 175)
           id
           fields {
             slug

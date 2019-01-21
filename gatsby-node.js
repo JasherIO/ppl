@@ -15,13 +15,13 @@ const toTemplate = (edge) => {
   }
 }
 
-const toTagTemplate = (tag) => {
-  const tagPath = `/tags/${_.kebabCase(tag)}/`
+const toCategoryTemplate = (category) => {
+  const categoryPath = `/news/categories/${_.kebabCase(category)}/`
   return {
-    path: tagPath,
-    component: path.resolve(`src/templates/tags.js`),
+    path: categoryPath,
+    component: path.resolve(`src/templates/category.js`),
     context: {
-      tag,
+      category,
     },
   }
 }
@@ -42,7 +42,7 @@ exports.createPages = ({ actions, graphql }) => {
             }
             frontmatter {
               templateKey
-              tags
+              category
             }
           }
         }
@@ -59,9 +59,8 @@ exports.createPages = ({ actions, graphql }) => {
     const posts = _.filter(edges, edge => _.includes(['page', 'post'], edge.node.frontmatter.templateKey))
     _.each(posts, edge => createPage(toTemplate(edge)))
 
-    const tags = _.uniq(_.compact(_.flatMap(posts, edge => edge.node.frontmatter.tags)))
-    _.each(tags, tag => createPage(toTagTemplate(tag)))
-
+    const categories = _.uniq(_.compact(_.flatMap(posts, edge => edge.node.frontmatter.category)))
+    _.each(categories, category => createPage(toCategoryTemplate(category)))
   })
 }
 

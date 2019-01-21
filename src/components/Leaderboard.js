@@ -86,6 +86,7 @@ export const Row = ({ data, rank }) => (
   <tr>
     <th>{rank}</th>
     <td>{data.team}</td>
+    <td>{data.points}</td>
     {/* <td>{data.matchWins}</td> */}
     {/* <td>{data.matchLosses}</td> */}
     {/* <td className="is-hidden-mobile">{data.gameWins}</td> */}
@@ -103,6 +104,7 @@ export const Table = () => {
         <tr>
           <th>Rank</th>
           <th>Team</th>
+          <th>Points</th>
           {/* <th title="Wins">W</th> */}
           {/* <th title="Losses">L</th> */}
           {/* <th title="Game Wins" className="is-hidden-mobile">GW</th> */}
