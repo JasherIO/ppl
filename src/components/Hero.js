@@ -1,37 +1,46 @@
 import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
-
-export const backgroundImage = (img) => {
-  return `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${img})`
-}
+import { Link, graphql, StaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 
 export const PureSection = ({ data }) => {
-  const { hero } = data.markdownRemark.frontmatter
-  
+  const hero = data.markdownRemark
+
   return (
-    <section className="hero is-primary is-medium hero-background" style={{ backgroundImage: backgroundImage(hero.img) }}>
-      <div className="hero-body">
-        <div className="container">
-          <h1 className="title">
-            {hero.title}
-          </h1>
-          <h2 className="subtitle">
-            {hero.subtitle}
-          </h2>
-        </div>
+    <div className="section container gradient" style={{ 
+      padding: 0
+    }}>
+      <Link to="/2018-10-16-pulsar-weeklies">
+        <figure className="image">
+          <Img fluid={hero.frontmatter.cover.childImageSharp.fluid} style={{borderRadius: "10px"}} />
+        </figure>
+      </Link>
+
+      <div className="content" style={{
+        position: "absolute",
+        bottom: "0",
+        left: "1rem"
+      }}>
+        <h1 className="title is-2 has-text-white">{hero.frontmatter.title}</h1>
       </div>
-    </section>
+
+    </div>
   )
 }
 
 const query = graphql`
   query {
-    markdownRemark(frontmatter: { templateKey: { eq: "home-post" } }) {
+    markdownRemark(frontmatter: {templateKey: {in: ["post"]}, feature: {eq: true}}) {
+      fields {
+        slug
+      }
       frontmatter {
-        hero {
-          title
-          subtitle
-          img
+        title
+        cover {
+          childImageSharp {
+            fluid(maxWidth: 1500) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
         }
       }
     }

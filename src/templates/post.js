@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { kebabCase } from 'lodash'
-import { graphql, Link } from 'gatsby'
+// import { kebabCase } from 'lodash'
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import _ from 'lodash'
 import Content, { HTMLContent } from '../components/Content'
@@ -19,7 +19,7 @@ export const PostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <section className="section container content">
       
       {/* Card Validator: https://cards-dev.twitter.com/validator */}
       {/* https://github.com/gatsbyjs/gatsby/blob/445f5ff7508ab613967e18b32490e3feffd7730c/www/src/templates/template-post.js */}
@@ -50,36 +50,30 @@ export const PostTemplate = ({
         {/* TODO: canonical link */}
       </Helmet>
 
-      <div className="container content" id="post">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <figure className="image">
-              {cover && !_.isString(cover) ? (
-                <Img fluid={cover.childImageSharp.fluid} alt={title} style={{ overflow: "visible" }} />
-              ) : (
-                <img src={cover} alt={title} />
-              )}
-              
-            </figure>
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-          </div>
+      <figure className="image" style={{ margin: 0 }}>
+        {cover && !_.isString(cover) ? (
+          <Img fluid={cover.childImageSharp.fluid} alt={title} style={{ overflow: "visible" }} />
+        ) : (
+          <img src={cover} alt={title} />
+        )}
+      </figure>
+      <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+        {title}
+      </h1>
+      <PostContent content={content} />
+      {/* {tags && tags.length ? (
+        <div style={{ marginTop: `4rem` }}>
+          <h4>Tags</h4>
+          <ul className="taglist">
+            {tags.map(tag => (
+              <li key={tag + `tag`}>
+                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
+      ) : null} */}
+
     </section>
   )
 }

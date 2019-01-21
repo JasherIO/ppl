@@ -7,6 +7,7 @@ category: News
 tags:
   - season 4
   - another
+feature: true
 ---
 # Welcome to Pulsar Weeklies!
 

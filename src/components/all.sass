@@ -24,7 +24,7 @@ $black: #2b2c2d
 
 $primary: $purple
 
-$body-background-color: $white-ter
+$body-background-color: #edeef0
 $roundedness: 10px
 
 $navbar-height: 2.5rem
@@ -60,34 +60,43 @@ $nav-shadow: 0 2px 3px rgba(43, 44, 45, 0.1)
 .navbar-burger
   height: 3rem
 
-.hero-background
-  background-size: cover
-  background-position: center center
-  background-repeat: no-repeat
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/Shiawese.jpg")
-
-.background
-  background-repeat: repeat
-
-.is-hexellence
-  background-image: url("/img/Textures/hexellence.png")
-
-.is-honeycomb
-  background-image: url("/img/Textures/honey-im-subtle.png")
-  background-color: $white
-
 .card
   border-radius: $roundedness
 
 .card img
   border-radius: $roundedness $roundedness 0px 0px
 
-img
-  border-radius: $roundedness
+// img
+//   border-radius: $roundedness
 
 #post img
   box-shadow: $img-shadow
 
 .section
   &.is-small
-    padding: 1rem 1.5rem
+    padding: 2rem 1.5rem
+
+.section
+  max-width: 800px
+  margin-top: 1rem
+  background: $white
+  border-radius: $roundedness
+  padding: 1rem 1.5rem
+  box-shadow: $img-shadow
+
+.gradient
+  a:after
+    background-image: radial-gradient(at top, transparent 0%, #4A4A4A 150%)
+    bottom: 0
+    content: ''
+    left: 0
+    position: absolute
+    right: 0
+    top: 0
+    border-radius: $roundedness
+
+img
+  border-radius: $roundedness
+
+picture
+  border-radius: $roundedness

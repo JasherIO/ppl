@@ -4,11 +4,23 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Cards from '../../components/News-Cards'
 
-const Title = () => (
+const Level = () => (
   <div className="level is-mobile">
     <div className="level-left">
       <div className="level-item">
         <h1 className="title is-3">Recent News</h1>
+      </div>
+    </div>
+
+    <div className="level-right">
+      <div className="level-item">
+        <div className="select">
+          <select>
+            <option>All</option>
+            <option>News</option>
+            <option>Review</option>
+          </select>
+        </div>
       </div>
     </div>
   </div>
@@ -24,12 +36,10 @@ export default class NewsPage extends React.Component {
         <Helmet>
           <title>News</title>
         </Helmet>
-        <div className="container">
-          <section className="section">
-            <Title />
+        <div className="section container">
+          <Level />
 
-            <Cards posts={posts} />
-          </section>
+          <Cards posts={posts} />
         </div>
       </>
     )

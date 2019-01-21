@@ -2,8 +2,8 @@
 templateKey: home-post
 hero:
   img: /img/Triangles.png
-  subtitle: 'Notice: The site is unfinished and information posted is for demo purposes. '
-  title: Welcome to the official site for Pulsar Premier League!
+  subtitle: 'The premier source for season based leagues.'
+  title: Welcome to Pulsar Premier League!
 tabs:
   - description: This is where we will post players who are qualified for the league event.
     name: Players

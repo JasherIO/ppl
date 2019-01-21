@@ -1,7 +1,7 @@
 ---
 templateKey: post
 cover: /img/Batmobile.jpg
-title: Conclusion of Pulsar Weekly 10/23/2018
+title: Oct 23rd Pulsar Weekly
 date: '2018-10-04T19:41:54.023Z'
 category: Review
 tags:
@@ -30,7 +30,3 @@ Now lets get to some of their stats.
 \-Average 4.31 goals a game
 
 \-Average 1.92 goals against a game
-
-# 
-
-##

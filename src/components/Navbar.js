@@ -3,21 +3,7 @@
 import React from 'react'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import _ from 'lodash'
-
-export const Social = ({ social, device }) => (
-  <>
-    {_.map(social, item => {
-      return (
-        <OutboundLink href={item.link} key={`${item.platform}-${device}`} aria-label={item.platform} className={`navbar-item is-hidden-${device}`}  rel='external'>
-          <FontAwesomeIcon icon={['fab', _.lowerCase(item.platform)]} />
-        </OutboundLink>
-      )
-    })}
-  </>
-)
 
 export class PureNavbar extends React.Component {
   constructor(props) { 
@@ -46,8 +32,6 @@ export class PureNavbar extends React.Component {
               <Img fixed={this.state.file.childImageSharp.fixed} alt="Logo" />
             </Link>
 
-            <Social social={this.state.site.social} device='desktop' />
-
             <a role="button" aria-label="menu" href="#" className={this.state.isActive ? "navbar-burger burger is-active" : "navbar-burger burger"} onClick={this.onClick}>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
@@ -56,16 +40,10 @@ export class PureNavbar extends React.Component {
           </div>
 
           <div className="navbar-menu" className={this.state.isActive ? "navbar-menu is-active" : "navbar-menu"} onClick={this.onClick}>
-
             <div className="navbar-start">
               {this.state.site.navbar && !_.isEmpty(this.state.site.navbar) && 
                 _.map(this.state.site.navbar, (item) => <Link key={item.label} to={item.link} className='navbar-item' activeClassName="is-active">{item.label}</Link>)}
             </div>
-
-            <div className="navbar-end">
-              <Social social={this.state.site.social} device='touch' />
-            </div>
-
           </div>
 
         </div>
@@ -82,10 +60,6 @@ const query = graphql`
         logo
         navbar {
           label
-          link
-        }
-        social {
-          platform
           link
         }
       }

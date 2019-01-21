@@ -2,8 +2,8 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Hero from '../components/Hero'
 import News from '../components/News'
-import About from '../components/About'
-import Sponsors from '../components/Sponsors'
+import Leaderboard from '../components/Leaderboard'
+
 
 export default class IndexPage extends React.Component {
   render() {
@@ -15,8 +15,7 @@ export default class IndexPage extends React.Component {
 
         <Hero />
         <News />
-        <About />
-        <Sponsors />
+        <Leaderboard />
       </>
     )
   }
