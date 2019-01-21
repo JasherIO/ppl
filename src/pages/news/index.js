@@ -1,55 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
-import _ from 'lodash'
-import Tile from '../../components/Posts/Tile'
 
-const Level = () => (
-  <div className="level is-mobile">
-    <div className="level-left">
-      <div className="level-item">
-        <h1 className="title is-3">Recent News</h1>
-      </div>
-    </div>
-
-    {/* <div className="level-right">
-      <div className="level-item">
-        <div className="select">
-          <select>
-            <option>All</option>
-            <option>News</option>
-            <option>Review</option>
-          </select>
-        </div>
-      </div>
-    </div> */}
-  </div>
-)
+import Tiles from '../../components/Posts/Tiles'
 
 export default class NewsPage extends React.Component {
   render() {
-    const { data } = this.props
+    const { data, location } = this.props
     const { edges: posts } = data.allMarkdownRemark
-    const lastIndex = posts.length-1
 
-    return (
-      <>
-        <Helmet>
-          <title>News</title>
-        </Helmet>
-        <div className="section container" style={{paddingBottom: "1rem"}}>
-          <Level />
-
-          {_.map(posts, ({ node: post }, index) => (
-            <>
-              <Tile post={post} />
-              {index !== lastIndex && <hr />}
-            </>
-          ))}
-        </div>
-      </>
-    )
+    return <Tiles posts={posts} title={"News"} path={location.pathname} />
   }
 }
 

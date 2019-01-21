@@ -1,33 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
-// import _ from 'lodash'
-// import Tile from '../components/Posts/Tile'
+import Tiles from '../components/Posts/Tiles'
 
 export default class CategoryPage extends React.Component {
   render() {
-    const { data, pageContext } = this.props
-    // const { edges: posts } = data.posts
+    const { data, location, pageContext } = this.props
+    const { edges: posts } = data.posts
     const { category } = pageContext
-    console.log(pageContext)
 
-    return (
-      <section className="section container">
-        <Helmet title={`${category}`} />
-        
-        <div className="title is-size-2-tablet is-size-3-mobile">
-          {category}
-        </div>
-
-        {/* {_.map(posts, ({ node: post }) => (
-          <>
-            <Tile post={post} />
-            <hr />
-          </>
-        ))} */}
-      </section>
-    )
+    return <Tiles posts={posts} title={category} path={location.pathname} />
   }
 }
 
@@ -45,7 +27,7 @@ CategoryPage.propTypes = {
             }),
             frontmatter: PropTypes.shape({
               templateKey: PropTypes.string,
-              image: PropTypes.oneOfType([
+              cover: PropTypes.oneOfType([
                 PropTypes.string,
                 PropTypes.object,
               ]),
@@ -79,6 +61,13 @@ export const pageQuery = graphql`
           frontmatter {
             templateKey
             title
+            cover {
+              childImageSharp {
+                fluid(maxWidth: 700) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
             category
             date
           }
