@@ -1,62 +1,66 @@
+/* stylelint-disable */
+
 import React from 'react'
 import PropTypes from 'prop-types'
+import _ from 'lodash'
 
-export const Row = ({ element, index }) => (
+// Headers Structure
+// const headers = [
+//   {
+//     'key': 'gameWins',
+//     'title': 'Game Wins',
+//     'shortTitle': 'GW',
+//     'isHiddenMobile': false
+//   }
+// ]
+
+export const Headers = ({ headers }) => (
+  <thead>
+    <tr>
+      {_.map(headers, header => (
+        <th key={header.key} title={header.title} className={header.isHiddenMobile ? "is-hidden-mobile" : ""}>
+          {header.shortTitle}
+        </th>
+      ))}
+    </tr>
+  </thead>
+)
+
+export const Row = ({ row, headers }) => (
   <tr>
-    <th>{index + 1}</th>
-    <td>{element.name}</td>
-    <td>{element.matchWins}</td>
-    <td>{element.matchLosses}</td>
-    <td className="is-hidden-mobile">{element.gameWins}</td>
-    <td className="is-hidden-mobile">{element.gameLosses}</td>
-    <td className="is-hidden-mobile">{element.goalsFor}</td>
-    <td className="is-hidden-mobile">{element.goalsAgainst}</td>
-    <td className="is-hidden-mobile">{element.goalsFor - element.goalsAgainst}</td>
+    {_.map(headers, header => {
+      if (!(header.key in row))
+        return (<td></td>)
+
+      return (
+        <td key={`cell-${header.key}`} className={header.isHiddenMobile ? "is-hidden-mobile" : ""}>{row[header.key]}</td>
+      )
+    })}
   </tr>
 )
 
-const Table = ({ data }) => (
+export const Rows = ({ headers, rows }) => (
+  <tbody>
+    {_.map(rows, (row, index) => (
+      <Row key={`row-${index}`} row={row} headers={headers} />
+    ))}
+  </tbody>
+)
+
+const Table = ({ headers, rows }) => (
   <table className="table is-striped is-fullwidth is-rounded">
-    <thead>
-      <tr>
-        <th></th>
-        <th>Team</th>
-        <th title="Wins">W</th>
-        <th title="Losses">L</th>
-        <th title="Game Wins" className="is-hidden-mobile">GW</th>
-        <th title="Game Losses" className="is-hidden-mobile">GL</th>
-        <th title="Goals For" className="is-hidden-mobile">GF</th>
-        <th title="Goals Against" className="is-hidden-mobile">GA</th>
-        <th title="Goal Difference" className="is-hidden-mobile">GD</th>
-      </tr>
-    </thead>
-    <tbody>
-      {data
-        .map((element, index) => (
-          <Row element={element} index={index} key={element.id} />
-        ))}
-    </tbody>
+    <Headers headers={headers} />
+    <Rows headers={headers} rows={rows} />
   </table>
 )
 
 Table.propTypes = {
-  data: PropTypes.arrayOf(
+  headers: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number,
-      name: PropTypes.string,
-      roster: PropTypes.string,
-      gameWins: PropTypes.number,
-      gameLosses: PropTypes.number,
-      matchWins: PropTypes.number,
-      matchLosses: PropTypes.number,
-      score: PropTypes.number,
-      goalsFor: PropTypes.number,
-      assists: PropTypes.number,
-      saves: PropTypes.number,
-      shots: PropTypes.number,
-      goalsAgainst: PropTypes.number,
-      shotsAgainst: PropTypes.number,
-      division: PropTypes.string,
+      key: PropTypes.string,
+      title: PropTypes.string,
+      shortTitle: PropTypes.string,
+      isHiddenMobile: PropTypes.boolean
     })
   ),
 }
