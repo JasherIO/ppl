@@ -20,10 +20,9 @@ collections:
       - {label: "Image", name: "cover", widget: "image", hint: "Makes have a 800px width or larger"}
       - {label: "Title", name: "title", widget: "string", pattern: [".{0,20}", "Must have 0-20 characters"]}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      # - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Category", name: "category", widget: "select", options: ["Announcement", "Event", "Interview", "Players", "Review", "Teams", "Video"]}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Keywords", name: "keywords", widget: "list"}
 
   - name: "pages"
     label: "Pages"
