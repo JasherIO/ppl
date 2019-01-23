@@ -1,4 +1,9 @@
+const querystring = require('querystring')
 const config = require('./static/data/site/config.json')
+
+const url = 'https://jups.xyz/API/scrimsmans/top10elo.php'
+const key = 'UhFOsphJOF7ELrArEa6HQK5s'
+const data = querystring.stringify({ key: key })
 
 module.exports = {
   siteMetadata: {
@@ -12,6 +17,32 @@ module.exports = {
     social: config.social || []
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-apiserver',
+      options: {
+        typePrefix: '',
+        url: url,
+        method: 'post',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        data: data,
+        name: 'Ranks',
+        schemaType: {
+          alternative_id: 0,
+          name: 'String',
+          roster: 'String',
+          captain: 1,
+          mmr: 1,
+          uncertainty: 1
+        },
+  
+        localSave: true,
+        path: `${__dirname}/static/data/`,
+
+        // verboseOutput: true, // For debugging purposes
+      }
+    },
     'gatsby-plugin-catch-links',
     {
       resolve: 'gatsby-plugin-favicon',

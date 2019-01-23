@@ -12,6 +12,10 @@
       "link": "/news"
     },
     {
+      "label": "Rankings",
+      "link": "/rankings"
+    },
+    {
       "label": "Rules",
       "link": "/rules"
     }
