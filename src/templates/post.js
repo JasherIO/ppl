@@ -14,7 +14,7 @@ export const PostTemplate = ({
   timeToRead,
   cover,
   title,
-  tags,
+  keywords,
 }) => {
   const PostContent = contentComponent || Content
 
@@ -30,9 +30,9 @@ export const PostTemplate = ({
         <meta name="og:title" content={title} />
         <meta name="twitter:title" content={title} />
         
-        <meta name="description" content={excerpt}/>
-        <meta name="og:description" content={excerpt} />
-        <meta name="twitter:description" content={excerpt} />
+        <meta name="description" content={`${excerpt} ${keywords.join(' ')}`}/>
+        <meta name="og:description" content={`${excerpt} ${keywords.join(' ')}`} />
+        <meta name="twitter:description" content={`${excerpt} ${keywords.join(' ')}`} />
 
         {cover && !_.isString(cover) && <meta name="og:image" content={`https://pulsarpremierleague.com${cover.childImageSharp.fluid.src}`} />}
         {cover && !_.isString(cover) && <meta name="twitter:image" content={`https://pulsarpremierleague.com${cover.childImageSharp.fluid.src}`} />}
@@ -61,18 +61,6 @@ export const PostTemplate = ({
         {title}
       </h1>
       <PostContent content={content} />
-      {/* {tags && tags.length ? (
-        <div style={{ marginTop: `4rem` }}>
-          <h4>Tags</h4>
-          <ul className="taglist">
-            {tags.map(tag => (
-              <li key={tag + `tag`}>
-                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ) : null} */}
 
     </section>
   )
@@ -83,7 +71,7 @@ PostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   // cover: PropTypes.string,
   title: PropTypes.string,
-  tags: PropTypes.array,
+  keywords: PropTypes.array,
 }
 
 const Post = ({ data }) => {
@@ -98,7 +86,7 @@ const Post = ({ data }) => {
         timeToRead={post.timeToRead}
         cover={post.frontmatter.cover}
         title={post.frontmatter.title}
-        tags={post.frontmatter.tags}
+        keywords={post.frontmatter.keywords}
       />
     </>
   )
@@ -129,7 +117,7 @@ export const pageQuery = graphql`
           }
         }
         title
-        tags
+        keywords
       }
     }
   }

@@ -4,7 +4,7 @@ cover: /img/Batmobile.jpg
 title: Oct 23rd Pulsar Weekly
 date: '2018-10-04T19:41:54.023Z'
 category: Review
-tags:
+keywords:
   - season 4
 ---
 What an incredible feeling to be back creating tournaments for the community, and giving players a chance to test their skills against some of the best. Well we got a few highlight stats for you for Pulsar Premier League weekly open 1!
