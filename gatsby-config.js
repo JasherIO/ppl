@@ -1,9 +1,9 @@
 const querystring = require('querystring')
 const config = require('./static/data/site/config.json')
 
-const url = 'https://jups.xyz/API/scrimsmans/top10elo.php'
-const key = 'UhFOsphJOF7ELrArEa6HQK5s'
-const data = querystring.stringify({ key: key })
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   siteMetadata: {
@@ -21,12 +21,12 @@ module.exports = {
       resolve: 'gatsby-source-apiserver',
       options: {
         typePrefix: '',
-        url: url,
+        url: process.env.API_RANKS_URL,
         method: 'post',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         },
-        data: data,
+        data: querystring.stringify({ key: process.env.API_RANKS_KEY }),
         name: 'Ranks',
         schemaType: {
           alternative_id: 0,
