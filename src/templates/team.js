@@ -16,7 +16,7 @@ const TeamPage = (props) => {
   const { teamId } = pageContext
 
   const body = {
-    'key': process.env.API_TEAMS_KEY,
+    'key': process.env.GATSBY_API_TEAMS_KEY,
     'id': teamId
   }
   const options = {
@@ -30,7 +30,7 @@ const TeamPage = (props) => {
 
   useEffect(() => {
     (async () => {
-      const response = await axios.post(process.env.API_TEAMS_URL, querystring.stringify(body), options)
+      const response = await axios.post(process.env.GATSBY_API_TEAMS_URL, querystring.stringify(body), options)
       setTeam(response.data)
     })()
   }, [])

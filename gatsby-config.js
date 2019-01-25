@@ -34,12 +34,12 @@ module.exports = {
       resolve: 'gatsby-source-apiserver',
       options: {
         typePrefix: '',
-        url: process.env.API_RANKS_URL,
+        url: process.env.GATSBY_API_RANKS_URL,
         method: 'post',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         },
-        data: querystring.stringify({ key: process.env.API_RANKS_KEY }),
+        data: querystring.stringify({ key: process.env.GATSBY_API_RANKS_KEY }),
         name: 'Rank',
         schemaType: {
           alternative_id: 0,
