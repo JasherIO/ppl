@@ -1,9 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 
-export const PureSection = ({ data }) => {
-  const hero = data.markdownRemark
+export const PureHero = (props) => {
+  const { data } = props
+
+  const hero = data.allMarkdownRemark.edges[0].node
 
   return (
     <div className="section container gradient" style={{ 
@@ -26,18 +29,49 @@ export const PureSection = ({ data }) => {
   )
 }
 
+PureHero.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            fields: PropTypes.shape({
+              slug: PropTypes.string
+            }),
+            frontmatter: PropTypes.shape({
+              title: PropTypes.string,
+              cover: PropTypes.oneOfType([
+                PropTypes.string,
+                PropTypes.object,
+              ]),
+            })
+          })
+        })
+      ),
+    }),
+  }),
+}
+
 const query = graphql`
   query {
-    markdownRemark(frontmatter: {templateKey: {in: ["post"]}, feature: {eq: true}}) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-        cover {
-          childImageSharp {
-            fluid(maxWidth: 1500) {
-              ...GatsbyImageSharpFluid_withWebp
+    allMarkdownRemark(
+      filter: { frontmatter: {templateKey: {eq: "post"}, feature: {eq: true}} }
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 1
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            cover {
+              childImageSharp {
+                fluid(maxWidth: 700) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
             }
           }
         }
@@ -46,8 +80,8 @@ const query = graphql`
   }
 `
 
-export const Section = props => (
-  <StaticQuery query={query} render={data => <PureSection data={data} {...props} />} />
+export const Hero = props => (
+  <StaticQuery query={query} render={data => <PureHero data={data} {...props} />} />
 )
 
-export default Section
+export default Hero
