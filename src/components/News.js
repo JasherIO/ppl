@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import _ from 'lodash'
 import Section, { Level } from './Section'
@@ -42,11 +43,37 @@ export const PureNews = ({ data }) => {
   )
 }
 
+PureNews.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            id: PropTypes.string,
+            fields: PropTypes.shape({
+              slug: PropTypes.string
+            }),
+            frontmatter: PropTypes.shape({
+              title: PropTypes.string,
+              cover: PropTypes.oneOfType([
+                PropTypes.string,
+                PropTypes.object,
+              ]),
+              category: PropTypes.string,
+              date: PropTypes.string
+            })
+          }),
+        })
+      ),
+    }),
+  }),
+}
+
 const query = graphql`
   query {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: {eq: "post"}, feature: {ne: true} }}
+      filter: { frontmatter: { templateKey: {eq: "post"} }}
       limit: 10
     ) {
       edges {
