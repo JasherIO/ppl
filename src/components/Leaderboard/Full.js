@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql, Link, StaticQuery } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 import _ from 'lodash'
 import Table from '../Table'
-import Section, { Level } from '../Section'
 
 const headers = [
   {
@@ -56,16 +55,7 @@ const PureMini = (props) => {
 
   const rows = _.map(edges, 'node')
 
-  return (
-    <Section>
-      <Level title="Leaderboard" size="4">
-        <Link to="/leaderboard" className="button is-primary is-outlined is-rounded is-small">
-          View Full Leaderboard
-        </Link>
-      </Level>
-      <Table headers={headers} rows={rows} />
-    </Section>
-  )
+  return <Table headers={headers} rows={rows} />
 }
 
 PureMini.propTypes = {
@@ -98,7 +88,6 @@ PureMini.propTypes = {
 const query = graphql`
   query {
     allGoogleSheetLeaderboard20Row(
-      limit: 10,
       sort: {fields: [rank, team]} 
     ) {
       edges {

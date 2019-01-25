@@ -5,6 +5,19 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const credentials = {
+  "type": "service_account",
+  "project_id": process.env.GS_PROJECT_ID,
+  "private_key_id": process.env.GS_PRIVATE_KEY_ID,
+  "private_key": process.env.GS_PRIVATE_KEY.replace(/(\\r)|(\\n)/g, '\n'),
+  "client_email": process.env.GS_CLIENT_EMAIL,
+  "client_id": process.env.GS_CLIENT_ID,
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": process.env.GS_CLIENT_X509_CERT_URL
+}
+
 module.exports = {
   siteMetadata: {
     siteUrl: config.url || "",
@@ -27,7 +40,7 @@ module.exports = {
           'Content-Type': 'application/x-www-form-urlencoded'
         },
         data: querystring.stringify({ key: process.env.API_RANKS_KEY }),
-        name: 'Ranks',
+        name: 'Rank',
         schemaType: {
           alternative_id: 0,
           name: 'String',
@@ -37,10 +50,18 @@ module.exports = {
           uncertainty: 1
         },
   
-        localSave: true,
-        path: `${__dirname}/static/data/`,
+        // localSave: true,
+        // path: `${__dirname}/static/data/`,
 
         // verboseOutput: true, // For debugging purposes
+      }
+    },
+    {
+      resolve: 'gatsby-source-google-sheets',
+      options: {
+          spreadsheetId: '1pF2ojqeMb9dzD98gtlKbJKtvisXcOYczZpHJLWN6voY',
+          worksheetTitle: 'Leaderboard 2.0',
+          credentials: credentials
       }
     },
     'gatsby-plugin-catch-links',
