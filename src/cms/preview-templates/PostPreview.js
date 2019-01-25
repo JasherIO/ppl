@@ -7,7 +7,7 @@ const PostPreview = ({ entry, widgetFor }) => (
     content={widgetFor('body')}
     cover={entry.getIn(['data', 'cover'])}
     title={entry.getIn(['data', 'title'])}
-    tags={entry.getIn(['data', 'tags'])}
+    tags={entry.getIn(['data', 'keywords'])}
   />
 )
 

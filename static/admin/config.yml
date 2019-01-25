@@ -9,31 +9,32 @@ publish_mode: editorial_workflow
 display_url: https://pulsarpremierleague.com
 
 collections:
-  - name: "news"
-    label: "News"
-    label_singular: "Post"
-    folder: "static/data/news"
+  - name: news
+    label: News
+    label_singular: Post
+    folder: static/data/news
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "post"}
-      - {label: "Image", name: "cover", widget: "image", hint: "Makes have a 800px width or larger"}
-      - {label: "Title", name: "title", widget: "string", pattern: [".{0,20}", "Must have 0-20 characters"]}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Category", name: "category", widget: "select", options: ["Announcement", "Event", "Interview", "Players", "Review", "Teams", "Video"]}
-      - {label: "Keywords", name: "keywords", widget: "list"}
+      - {label: Template Key, name: templateKey, widget: hidden, default: post}
+      - {label: Image, name: cover, widget: image, hint: Must have a 800px width or larger}
+      - {label: Title, name: title, widget: string, pattern: [".{0,20}, Must have 0-20 characters"]}
+      - {label: Publish Date, name: date, widget: datetime}
+      - {label: Category, name: category, widget: select, options: [Announcement, Event, Interview, Player, Review, Team, Video]}
+      - {label: Feature, name: feature, widget: boolean, default: false}
+      - {label: Keywords, name: keywords, widget: list, hint: Please enter a comma seperated list of SEO keywords}
+      - {label: Body, name: body, widget: markdown}
 
-  - name: "pages"
-    label: "Pages"
-    label_singular: "Page"
-    folder: "static/data"
+  - name: pages
+    label: Pages
+    label_singular: Page
+    folder: static/data
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: Template Key, name: templateKey, widget: hidden, default: page}
+      - {label: Title, name: title, widget: string}
+      - {label: Body, name: body, widget: markdown}
 
   - name: Site
     label: Site
@@ -48,48 +49,20 @@ collections:
           - {label: Alternate, name: alternate, widget: string}
           - {label: Description, name: description, widget: string}
           - {label: Copyright, name: copyright, widget: hidden}
-          # - {label: Logo, name: logo, widget: image}
+          - {label: Logo, name: logo, widget: hidden}
           - {label: Favicon, name: favicon, widget: hidden}
           - {label: Google Analytics ID, name: googleAnalyticsId, widget: string}
           - {label: Path Prefix, name: pathPrefix, widget: hidden}
           - {label: RSS, name: rss, widget: hidden}
           - {label: Navbar, name: navbar, widget: list, 
               fields: [
-                {label: "Label", name: "label", widget: "string"},
-                {label: "Link", name: "link", widget: "string"},
+                {label: Label, name: label, widget: string},
+                {label: Link, name: link, widget: string},
               ]
             }
           - {label: Social, name: social, widget: list, 
               fields: [
-                {label: "Platform", name: "platform", widget: "string"},
-                {label: "Link", name: "link", widget: "string"},
+                {label: Platform, name: platform, widget: string},
+                {label: Link, name: link, widget: string},
               ]
             }
-
-      - file: "static/data/home/index.md"
-        label: "Home"
-        name: "home"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-post"}
-          - {label: "Hero", name: "hero", widget: "object",
-              fields: [
-                {label: "Title", name: "title", widget: "string"}, 
-                {label: "Subtitle", name: "subtitle", widget: "string"},
-                {label: "Image", name: "img", widget: "image"}
-              ]
-            }
-          - {label: "About", name: "tabs", widget: "list", 
-              fields: [
-                {label: "Name", name: "name", widget: "string"},
-                {label: "Description", name: "description", widget: "markdown"}
-              ]
-            }
-          - {label: "Sponsors", name: "sponsors", widget: "list", 
-              fields: [
-                {label: "Name", name: "name", widget: "string"},
-                # {label: "Description", name: "description", widget: "text", required: false},
-                {label: "Link", name: "link", widget: "string"},
-                {label: "Image", name: "img", widget: "image"}
-              ]
-            }
-          
