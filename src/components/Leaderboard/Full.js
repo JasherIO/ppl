@@ -39,13 +39,13 @@ const headers = [
     'key': 'gf',
     'title': 'Goals For',
     'shortTitle': 'GF',
-    'isHiddenMobile': false
+    'isHiddenMobile': true
   },
   {
     'key': 'ga',
     'title': 'Goals Against',
     'shortTitle': 'GA',
-    'isHiddenMobile': false
+    'isHiddenMobile': true
   },
 ]
 
