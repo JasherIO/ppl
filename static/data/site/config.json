@@ -12,6 +12,10 @@
       "link": "/news"
     },
     {
+      "label": "Leaderboard",
+      "link": "/leaderboard"
+    },
+    {
       "label": "Rankings",
       "link": "/rankings"
     },
