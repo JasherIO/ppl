@@ -32,8 +32,14 @@ export const Row = ({ row, headers }) => (
       if (!(header.key in row))
         return (<td></td>)
 
+      const Render = header.render ? header.render : (props) => <>{props.children}</>
+
       return (
-        <td key={`cell-${header.key}`} className={header.isHiddenMobile ? "is-hidden-mobile" : ""}>{row[header.key]}</td>
+        <td key={`cell-${header.key}`} className={header.isHiddenMobile ? "is-hidden-mobile" : ""}>
+          <Render row={row}>
+            {row[header.key]}
+          </Render>
+        </td>
       )
     })}
   </tr>
@@ -63,6 +69,7 @@ Table.propTypes = {
       isHiddenMobile: PropTypes.boolean
     })
   ),
+  rows: PropTypes.array
 }
 
 export default Table
