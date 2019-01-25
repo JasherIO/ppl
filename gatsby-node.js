@@ -16,13 +16,23 @@ const toTemplate = (edge) => {
 }
 
 const toCategoryTemplate = (category) => {
-  const categoryPath = `/news/categories/${_.kebabCase(category)}/`
+  const categoryPath = `/news/categories/${_.kebabCase(category)}`
   return {
     path: categoryPath,
     component: path.resolve(`src/templates/category.js`),
     context: {
       category,
     },
+  }
+}
+
+const toTeamTemplate = (teamId) => {
+  return {
+    path: `/team/${teamId}`,
+    component: path.resolve(`src/templates/team.js`),
+    context: {
+      teamId,
+    }
   }
 }
 
@@ -47,6 +57,14 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+      allRank(filter: { alternative_id: {gt: 0} }) {
+        edges {
+          node {
+            id
+            alternative_id
+          }
+        }
+      }
     }
   `).then(result => {
     if (result.errors) {
@@ -61,6 +79,9 @@ exports.createPages = ({ actions, graphql }) => {
 
     const categories = _.uniq(_.compact(_.flatMap(posts, edge => edge.node.frontmatter.category)))
     _.each(categories, category => createPage(toCategoryTemplate(category)))
+
+    const teamIds = _.flatMap(result.data.allRank.edges, edge => edge.node.alternative_id)
+    _.each(teamIds, teamId => createPage(toTeamTemplate(teamId)))
   })
 }
 

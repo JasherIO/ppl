@@ -1,18 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
+import Helmet from 'react-helmet'
 import _ from 'lodash'
 import Table from '../../components/Table'
+import Section, { Level } from '../../components/Section'
 
-export const Level = () => (
-  <div className="level is-mobile" style={{ marginBottom: "1rem" }}>
-    <div className="level-left">
-      <div className="level-item">
-        <p className="title is-4">Rankings</p>
-      </div>
-    </div>
-  </div>
-)
+const render = (props) => {
+  const { children, row } = props 
+
+  return (
+    <Link to={`/team/${row.alternative_id}`}>
+      {children}
+    </Link>
+  )
+}
 
 const headers = [
   {
@@ -25,7 +27,8 @@ const headers = [
     'key': 'name',
     'title': 'Name',
     'shortTitle': 'Name',
-    'isHiddenMobile': false
+    'isHiddenMobile': false,
+    'render': render,
   },
   {
     'key': 'mmr',
@@ -35,50 +38,55 @@ const headers = [
   },
 ]
 
-export default class RanksPage extends React.Component {
+export default class RankingsPage extends React.Component {
   render() {
     const { data } = this.props
-    const { edges } = data.allRanks
+    const { edges } = data.allRank
 
-    const filtered = _.filter(_.map(edges, 'node'), (x) => x.alternative_id)
-    const sorted = _.sortBy(filtered, ['mmr'])
-    const ranks = _.map(sorted, (rank, index) => {
-      const obj = { 'rank': index+1 }
-      return { ...obj, ...rank }
-    })
+    const rows = _.map(edges, 'node')
 
     return (
-      <div className="section container">
-        <Level />
-        <Table headers={headers} rows={ranks} />
-      </div>
+      <Section>
+        <Helmet title="Rankings" />
+        <Level title="Rankings" />
+        <Table headers={headers} rows={rows} />
+      </Section>
     )
   }
 }
 
-RanksPage.propTypes = {
+RankingsPage.propTypes = {
   data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.shape({
-        node: PropTypes.shape({
-          alternative_id: PropTypes.number,
-          name: PropTypes.string,
-          roster: PropTypes.string,
-          captain: PropTypes.number,
-          mmr: PropTypes.number,
-          uncertainty: PropTypes.number
+    allRank: PropTypes.shape({
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            id: PropTypes.string,
+            alternative_id: PropTypes.number,
+            rank: PropTypes.number,
+            name: PropTypes.string,
+            roster: PropTypes.string,
+            captain: PropTypes.number,
+            mmr: PropTypes.number,
+            uncertainty: PropTypes.number
+          })
         })
-      }),
+      ),
     }),
   }),
 }
 
 export const pageQuery = graphql`
   query {
-    allRanks {
+    allRank (
+      filter: { alternative_id: {gt: 0} }
+      sort: { fields: [rank, name] }
+    ) {
       edges {
         node {
+          id
           alternative_id
+          rank
           name
           roster
           captain
