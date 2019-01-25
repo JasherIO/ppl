@@ -19,7 +19,7 @@ export const PostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section container content">
+    <div className="section container content">
       
       {/* Card Validator: https://cards-dev.twitter.com/validator */}
       {/* https://github.com/gatsbyjs/gatsby/blob/445f5ff7508ab613967e18b32490e3feffd7730c/www/src/templates/template-post.js */}
@@ -30,9 +30,9 @@ export const PostTemplate = ({
         <meta name="og:title" content={title} />
         <meta name="twitter:title" content={title} />
         
-        <meta name="description" content={`${excerpt} ${keywords.join(' ')}`}/>
-        <meta name="og:description" content={`${excerpt} ${keywords.join(' ')}`} />
-        <meta name="twitter:description" content={`${excerpt} ${keywords.join(' ')}`} />
+        <meta name="description" content={`${excerpt} ${_.join(keywords, ' ')}`}/>
+        <meta name="og:description" content={`${excerpt} ${_.join(keywords, ' ')}`} />
+        <meta name="twitter:description" content={`${excerpt} ${_.join(keywords, ' ')}`} />
 
         {cover && !_.isString(cover) && <meta name="og:image" content={`https://pulsarpremierleague.com${cover.childImageSharp.fluid.src}`} />}
         {cover && !_.isString(cover) && <meta name="twitter:image" content={`https://pulsarpremierleague.com${cover.childImageSharp.fluid.src}`} />}
@@ -62,7 +62,7 @@ export const PostTemplate = ({
       </h1>
       <PostContent content={content} />
 
-    </section>
+    </div>
   )
 }
 
