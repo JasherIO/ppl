@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Content, { HTMLContent } from '../components/Content'
+import Section, { Title } from '../components/Section'
 
 export const PageTemplate = ({
   content,
@@ -13,7 +14,7 @@ export const PageTemplate = ({
   const PageContent = contentComponent || Content
   
   return (
-    <section className="section container content">
+    <Section className="content">
       <Helmet>
         <meta name="og:type" content="website" />
 
@@ -26,11 +27,9 @@ export const PageTemplate = ({
         <meta name="twitter:description" content={excerpt} />
       </Helmet>
 
-      <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-        {title}
-      </h1>
+      <Title title={title} />
       <PageContent content={content} />
-    </section>
+    </Section>
   )
 }
 

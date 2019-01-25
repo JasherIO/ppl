@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import Tiles from '../../components/Posts/Tiles'
+import Tiles from '../../components/Post/Tiles'
 
 export default class NewsPage extends React.Component {
   render() {
@@ -16,7 +16,29 @@ export default class NewsPage extends React.Component {
 NewsPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            id: PropTypes.string,
+            excerpt: PropTypes.string,
+            timeToRead: PropTypes.number,
+            fields: PropTypes.shape({
+              slug: PropTypes.string
+            }),
+            frontmatter: PropTypes.shape({
+              templateKey: PropTypes.string,
+              title: PropTypes.string,
+              description: PropTypes.string,
+              cover: PropTypes.oneOfType([
+                PropTypes.string,
+                PropTypes.object,
+              ]),
+              category: PropTypes.string,
+              date: PropTypes.string
+            })
+          }),
+        })
+      ),
     }),
   }),
 }

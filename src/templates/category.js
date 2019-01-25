@@ -1,21 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Tiles from '../components/Posts/Tiles'
+import Tiles from '../components/Post/Tiles'
 
 export default class CategoryPage extends React.Component {
   render() {
     const { data, location, pageContext } = this.props
-    const { edges: posts } = data.posts
+    const { edges } = data.allMarkdownRemark
     const { category } = pageContext
 
-    return <Tiles posts={posts} title={category} path={location.pathname} />
+    return <Tiles posts={edges} title={category} path={location.pathname} />
   }
 }
 
 CategoryPage.propTypes = {
   data: PropTypes.shape({
-    posts: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.arrayOf(
         PropTypes.shape({
           node: PropTypes.shape({
@@ -27,12 +27,12 @@ CategoryPage.propTypes = {
             }),
             frontmatter: PropTypes.shape({
               templateKey: PropTypes.string,
+              title: PropTypes.string,
+              description: PropTypes.string,
               cover: PropTypes.oneOfType([
                 PropTypes.string,
                 PropTypes.object,
               ]),
-              title: PropTypes.string,
-              description: PropTypes.string,
               category: PropTypes.string,
               date: PropTypes.string
             })
@@ -45,7 +45,7 @@ CategoryPage.propTypes = {
 
 export const pageQuery = graphql`
   query CategoryQuery($category: String) {
-    posts: allMarkdownRemark(
+    allMarkdownRemark(
       limit: 1000
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { in: ["post"] }, category: { in: [$category] } } }

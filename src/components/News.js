@@ -1,23 +1,7 @@
 import React from 'react'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import _ from 'lodash'
-
-export const Level = () => (
-  <div className="level is-mobile" style={{ marginBottom: "0.5rem" }}>
-    <div className="level-left">
-      <div className="level-item">
-        <p className="title is-4">Recent News</p>
-      </div>
-    </div>
-    <div className="level-right">
-      <div className="level-item">
-        <Link to="/news" className="button is-primary is-outlined is-rounded is-small">
-          View All News
-        </Link>
-      </div>
-    </div>
-  </div>
-)
+import Section, { Level } from './Section'
 
 export const List = ({ posts }) => {
   return (
@@ -33,13 +17,17 @@ export const List = ({ posts }) => {
   )
 }
 
-export const PureSection = ({ data }) => {
+export const PureNews = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
   const [column1Posts, column2Posts] = _.chunk(posts, 5)
 
   return (
-    <div className="section container">
-      <Level />
+    <Section>
+      <Level title="Recent News" size="4">
+        <Link to="/news" className="button is-primary is-outlined is-rounded is-small">
+          View All News
+        </Link>
+      </Level>
     
       <div className="columns content">
         <div className="column" style={{ padding: "0.25rem", paddingBottom: "0.75rem"}}>
@@ -50,11 +38,10 @@ export const PureSection = ({ data }) => {
         </div>
       </div>
 
-    </div>
+    </Section>
   )
 }
 
-// TODO: Remove featured post
 const query = graphql`
   query {
     allMarkdownRemark(
@@ -86,8 +73,8 @@ const query = graphql`
   }
 `
 
-export const Section = props => (
-  <StaticQuery query={query} render={data => <PureSection data={data} {...props} />} />
+export const News = props => (
+  <StaticQuery query={query} render={data => <PureNews data={data} {...props} />} />
 )
 
-export default Section
+export default News

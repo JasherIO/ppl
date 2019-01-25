@@ -9,7 +9,7 @@ export const PureSection = ({ data }) => {
     <div className="section container gradient" style={{ 
       padding: 0
     }}>
-      <Link to="/2018-10-16-pulsar-weeklies">
+      <Link to={hero.fields.slug}>
         <figure className="image">
           <Img fluid={hero.frontmatter.cover.childImageSharp.fluid} style={{borderRadius: "10px"}} />
         </figure>
@@ -22,7 +22,6 @@ export const PureSection = ({ data }) => {
       }}>
         <h1 className="title is-2 has-text-white">{hero.frontmatter.title}</h1>
       </div>
-
     </div>
   )
 }
