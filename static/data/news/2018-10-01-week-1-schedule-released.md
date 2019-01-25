@@ -6,6 +6,7 @@ date: '2018-10-01T19:41:54.023Z'
 category: Announcement
 keywords:
   - New Season
+feature: false
 ---
 # Brand New Season:
 
