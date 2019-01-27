@@ -21,8 +21,7 @@ const TeamPage = (props) => {
   }
   const options = {
     headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Content-Type': 'application/json'
+      'Access-Control-Allow-Origin': '*'
     }
   }
 
@@ -31,7 +30,6 @@ const TeamPage = (props) => {
   useEffect(() => {
     (async () => {
       const response = await axios.post(process.env.GATSBY_API_TEAMS_URL, querystring.stringify(body), options)
-      console.log(response)
       setTeam(response.data)
     })()
   }, [])
