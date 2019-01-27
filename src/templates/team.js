@@ -31,6 +31,7 @@ const TeamPage = (props) => {
   useEffect(() => {
     (async () => {
       const response = await axios.post(process.env.GATSBY_API_TEAMS_URL, querystring.stringify(body), options)
+      console.log(response)
       setTeam(response.data)
     })()
   }, [])
@@ -48,7 +49,6 @@ const TeamPage = (props) => {
           <li key={player}>{player}</li>
         ))}
       </ul>
-
     </Section>
   )
 }
