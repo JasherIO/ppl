@@ -1,11 +1,22 @@
 {
-  "url": "https://pulsarpremierleague.com",
-  "title": "Pulsar Premier League",
-  "alternate": "PPL",
-  "description": "Rocket League seasons and weeklies",
   "copyright": "Copyright © 2018-2019",
+  "googleAnalyticsId": "UA-107122749-3",
   "logo": "/img/purple-transparent.png",
-  "favicon": "./static/favicon.png",
+  "social": [
+    {
+      "platform": "Discord",
+      "link": "https://discord.gg/n6a4Tz2"
+    },
+    {
+      "platform": "Twitch",
+      "link": "https://twitch.tv/PulsarPremierLeague"
+    },
+    {
+      "platform": "Twitter",
+      "link": "https://twitter.com/PulsarPremier"
+    }
+  ],
+  "url": "https://pulsarpremierleague.com",
   "navbar": [
     {
       "label": "News",
@@ -24,21 +35,10 @@
       "link": "/rules"
     }
   ],
-  "social": [
-    {
-      "platform": "Discord",
-      "link": "https://discord.gg/JT3wRE6"
-    },
-    {
-      "platform": "Twitch",
-      "link": "https://twitch.tv/PulsarPremierLeague"
-    },
-    {
-      "platform": "Twitter",
-      "link": "https://twitter.com/PulsarPremier"
-    }
-  ],
-  "googleAnalyticsId": "UA-107122749-3",
+  "rss": "/rss.xml",
+  "favicon": "./static/favicon.png",
   "pathPrefix": "",
-  "rss": "/rss.xml"
+  "title": "Pulsar Premier League",
+  "alternate": "PPL",
+  "description": "Rocket League seasons and weeklies"
 }
