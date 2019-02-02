@@ -27,13 +27,13 @@ const headers = [
     'key': 'gw',
     'title': 'Game Wins',
     'shortTitle': 'GW',
-    'isHiddenMobile': false
+    'isHiddenMobile': true
   },
   {
     'key': 'gl',
     'title': 'Game Losses',
     'shortTitle': 'GL',
-    'isHiddenMobile': false
+    'isHiddenMobile': true
   },
   {
     'key': 'gf',
