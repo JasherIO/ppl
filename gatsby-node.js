@@ -100,21 +100,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     }
   }
 
-  if (_.has(node, ['frontmatter', 'sponsors'])) {
-    _.each(node.frontmatter.sponsors, (sponsor) => {
-      const image = sponsor.img
-      if (image.indexOf('/img') === 0) {
-        sponsor.img = path.relative(
-          path.dirname(node.fileAbsolutePath),
-          path.join(__dirname, '/static/', image)
-        )
-      }
-    })
-  }
-
   if (node.internal.type === `MarkdownRemark`) {
-    // const value = createFilePath({ node, getNode, trailingSlash: false })
-
     // Temporary fix for https://github.com/netlify/netlify-cms/issues/1576
     let value
     if ( _.has(node, ['frontmatter', 'title']) && 
