@@ -103,6 +103,7 @@ const query = graphql`
     ) {
       edges {
         node {
+          id
           rank
           team
           season

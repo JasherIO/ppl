@@ -35,7 +35,7 @@ export const Row = ({ row, headers }) => (
       const Render = header.render ? header.render : (props) => <>{props.children}</>
 
       return (
-        <td key={`cell-${header.key}`} className={header.isHiddenMobile ? "is-hidden-mobile" : ""}>
+        <td key={`${row.id}-${header.key}`} className={header.isHiddenMobile ? "is-hidden-mobile" : ""}>
           <Render row={row}>
             {row[header.key]}
           </Render>
@@ -47,8 +47,8 @@ export const Row = ({ row, headers }) => (
 
 export const Rows = ({ headers, rows }) => (
   <tbody>
-    {_.map(rows, (row, index) => (
-      <Row key={`row-${index}`} row={row} headers={headers} />
+    {_.map(rows, (row) => (
+      <Row key={`row-${row.id}`} row={row} headers={headers} />
     ))}
   </tbody>
 )
